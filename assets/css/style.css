@@ -926,12 +926,20 @@ img {
     color: var(--white);
     height: 48px;
     min-height: 48px;
-    min-width: 180px;
+    min-width: 140px;
     padding: 0 24px;
     font-family: var(--holland);
     font-size: 16px;
     letter-spacing: 1.5px;
     border-radius: 4px;
+}
+
+.hwmBtnMaroon--wide {
+    min-width: 240px;
+}
+
+.hwmBtnPrimary--compact {
+    min-width: 140px;
 }
 
 .hwmBtnMaroon:hover {
@@ -1710,7 +1718,7 @@ select.hwmInput {
 
 .hwmLocationMedia {
     position: relative;
-    aspect-ratio: 560 / 340;
+    aspect-ratio: 560 / 720;
     overflow: hidden;
     border-radius: 4px;
 }
