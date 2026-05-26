@@ -16,3 +16,18 @@
    font-family: 'regular-segoe-ui';
    src: url('/assets/fonts/segoe-ui/regular.ttf') format('truetype');
 }
+
+@font-face {
+   font-family: 'holland';
+   src: url('/assets/fonts/Holland/holland.ttf') format('truetype');
+}
+
+
+:root{
+   --blue: #042C65;
+   --blackish-blue: #000B1B;
+   --slate: #333;
+   --bold-segoe-ui: 'bold-segoe-ui', sans-serif;
+   --regular-segoe-ui: 'regular-segoe-ui', sans-serif;
+   --holland: 'holland', sans-serif;
+}
