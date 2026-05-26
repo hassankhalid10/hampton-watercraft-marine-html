@@ -8,3 +8,13 @@
    ============================================================ */
 
 /* --- Reset --- */
+
+@font-face {
+   font-family: 'bold-segoe-ui';
+   src: url('/assets/fonts/segoe-ui/bold.ttf') format('truetype');
+}
+
+@font-face {
+   font-family: 'regular-segoe-ui';
+   src: url('/assets/fonts/segoe-ui/regular.ttf') format('truetype');
+}
