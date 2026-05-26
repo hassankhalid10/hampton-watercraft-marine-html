@@ -1,33 +1,695 @@
-@import url('https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wdth,wght@0,75..125,200..900;1,75..125,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 /* ============================================================
-   Hampton watercraft — HOME PAGE CSS
+   Hampton Watercraft & Marine — HOME PAGE CSS
    Design: Figma node 1:2
+   Fonts: Holland Title AT (local), Segoe UI (local), Amiri (Google)
    ============================================================ */
 
+/* --- Local @font-face --- */
+@font-face {
+    font-family: 'bold-segoe-ui';
+    src: url('../fonts/segoe-ui/bold.ttf') format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'regular-segoe-ui';
+    src: url('../fonts/segoe-ui/regular.ttf') format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'holland';
+    src: url('../fonts/Holland/holland.ttf') format('truetype');
+    font-display: swap;
+}
+
 /* --- Reset --- */
-
-@font-face {
-   font-family: 'bold-segoe-ui';
-   src: url('/assets/fonts/segoe-ui/bold.ttf') format('truetype');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-@font-face {
-   font-family: 'regular-segoe-ui';
-   src: url('/assets/fonts/segoe-ui/regular.ttf') format('truetype');
+:root {
+    /* Colours (Figma tokens) */
+    --navy: #000525;
+    --white: #FFFFFF;
+    --tan: #7A693B;
+    --maroon: #7D1317;
+    --text-gray: #3D3E42;
+    --slate: #6E8DA6;
+    --f7: #F7F7F7;
+    --d9: #D9D9D9;
+    --blackish: #1B2026;
+    --anchor-gray: #79797B;
+
+    /* Legacy aliases (kept for compatibility) */
+    --blue: #042C65;
+    --blackish-blue: #000B1B;
+
+    /* Font stacks */
+    --bold-segoe-ui: 'bold-segoe-ui', 'Segoe UI', system-ui, sans-serif;
+    --regular-segoe-ui: 'regular-segoe-ui', 'Segoe UI', system-ui, sans-serif;
+    --holland: 'holland', Georgia, serif;
+    --amiri: 'Amiri', Georgia, serif;
 }
 
-@font-face {
-   font-family: 'holland';
-   src: url('/assets/fonts/Holland/holland.ttf') format('truetype');
+html {
+    scroll-behavior: smooth;
 }
 
+body {
+    background-color: #fff;
+    font-family: var(--regular-segoe-ui);
+    color: var(--text-gray);
+    overflow-x: hidden;
+    line-height: 1.5;
+}
 
-:root{
-   --blue: #042C65;
-   --blackish-blue: #000B1B;
-   --slate: #333;
-   --bold-segoe-ui: 'bold-segoe-ui', sans-serif;
-   --regular-segoe-ui: 'regular-segoe-ui', sans-serif;
-   --holland: 'holland', sans-serif;
+body, h1, h2, h3, h4, h5, h6, p, blockquote, figure, ol, ul, dl, fieldset, pre {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* ============================================================
+   TYPOGRAPHY UTILITIES
+   ============================================================ */
+.hwmH1 {
+    font-family: var(--holland);
+    font-size: 100px;
+    font-weight: 400;
+    line-height: 80px;
+    letter-spacing: 0;
+    text-transform: uppercase;
+}
+
+.hwmH2 {
+    font-family: var(--holland);
+    font-size: 56px;
+    font-weight: 400;
+    line-height: 48px;
+    letter-spacing: 0;
+    text-transform: uppercase;
+}
+
+.hwmH4 {
+    font-family: var(--amiri);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: -0.5px;
+    text-transform: uppercase;
+}
+
+.hwmH5 {
+    font-family: var(--bold-segoe-ui);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+}
+
+.hwmPara {
+    font-family: var(--regular-segoe-ui);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+/* --- Colour helpers --- */
+.hwmNavyText  { color: var(--navy); }
+.hwmTanText   { color: var(--tan); }
+.hwmWhiteText { color: var(--white); }
+.hwmGrayText  { color: var(--text-gray); }
+
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+.hwmBtnPrimary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--navy);
+    color: var(--white);
+    border: 2px solid rgba(122, 105, 59, 0.6);
+    border-radius: 4px;
+    padding: 12px 28px;
+    min-height: 48px;
+    min-width: 220px;
+    font-family: var(--holland);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.9px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.hwmBtnPrimary:hover {
+    background-color: #0a1245;
+    border-color: rgba(122, 105, 59, 0.9);
+    color: var(--white);
+}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+.hwmHeader {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 200;
+    background-color: var(--white);
+    height: 80px;
+    box-shadow: 0 4px 20px rgba(0, 5, 37, 0.2);
+}
+
+.hwmHeaderInner {
+    height: 80px;
+    padding: 0 6.25%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    position: relative;
+}
+
+/* --- Left nav --- */
+.hwmNav {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    flex: 1;
+}
+
+.hwmNavLink {
+    font-family: var(--holland);
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--navy);
+    transition: color 0.2s ease;
+    white-space: nowrap;
+}
+
+.hwmNavLink:hover {
+    color: var(--maroon);
+}
+
+/* --- Centered logo --- */
+.hwmLogo {
+    position: absolute;
+    left: 50%;
+    top: 8px;
+    transform: translateX(-50%);
+    display: block;
+    z-index: 2;
+}
+
+.hwmLogo img {
+    height: 90px;
+    width: auto;
+    max-width: none;
+    object-fit: contain;
+}
+
+/* --- Right cluster --- */
+.hwmHeaderRight {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.hwmHeaderLoc {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    line-height: 1;
+}
+
+.hwmHeaderLocLabel {
+    font-family: var(--amiri);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    color: var(--navy);
+    text-align: right;
+    margin-bottom: 6px;
+}
+
+.hwmHeaderLocPhone {
+    font-family: var(--holland);
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--navy);
+    transition: color 0.2s ease;
+}
+
+.hwmHeaderLocPhone:hover {
+    color: var(--maroon);
+}
+
+.hwmHeaderMore {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-family: var(--holland);
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--navy);
+    transition: color 0.2s ease;
+}
+
+.hwmHeaderMore:hover {
+    color: var(--maroon);
+}
+
+.hwmHeaderBurger {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 16px;
+}
+
+.hwmHeaderBurger span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--navy);
+    border-radius: 1px;
+    transition: background-color 0.2s ease;
+}
+
+.hwmHeaderMore:hover .hwmHeaderBurger span {
+    background-color: var(--maroon);
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.hwmFooter {
+    background-color: var(--white);
+    width: 100%;
+}
+
+/* --- Top: newsletter (left) + image (right) --- */
+.hwmFooterTop {
+    display: flex;
+    width: 100%;
+    min-height: 520px;
+}
+
+.hwmNewsletter {
+    flex: 1 1 50%;
+    background-color: var(--f7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 40px;
+}
+
+.hwmNewsletterInner {
+    width: 100%;
+    max-width: 480px;
+    text-align: center;
+}
+
+.hwmNewsletter .hwmH2 {
+    margin-bottom: 20px;
+}
+
+.hwmNewsletter .hwmPara {
+    margin-bottom: 28px;
+}
+
+.hwmNewsletterForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.hwmNewsletterInput {
+    width: 100%;
+    max-width: 380px;
+    height: 48px;
+    border: 1px solid var(--d9);
+    border-radius: 4px;
+    background-color: var(--white);
+    padding: 12px 18px;
+    font-family: var(--regular-segoe-ui);
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--blackish);
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.hwmNewsletterInput::placeholder {
+    color: rgba(27, 32, 38, 0.6);
+}
+
+.hwmNewsletterInput:focus {
+    border-color: var(--navy);
+}
+
+.hwmFooterImage {
+    flex: 1 1 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+.hwmFooterImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    min-height: 520px;
+}
+
+/* --- Middle navy panel --- */
+.hwmFooterMid {
+    background-color: var(--navy);
+    margin: 0 6.04%;
+    padding: 60px 56px 72px;
+}
+
+.hwmFooterMidInner {
+    display: grid;
+    grid-template-columns: minmax(280px, 380px) 1fr;
+    gap: 80px;
+    align-items: flex-start;
+}
+
+.hwmFooterBrand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.hwmFooterLogo {
+    display: block;
+    margin-bottom: 36px;
+}
+
+.hwmFooterLogo img {
+    height: 90px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.hwmFooterPhones {
+    width: 100%;
+    margin-bottom: 36px;
+}
+
+.hwmFooterPhoneLabel {
+    font-family: var(--amiri);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: -0.5px;
+    text-transform: uppercase;
+    margin-top: 16px;
+}
+
+.hwmFooterPhoneLabel:first-child {
+    margin-top: 0;
+}
+
+.hwmFooterPhone {
+    display: block;
+    font-family: var(--holland);
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-top: 4px;
+    transition: opacity 0.2s ease;
+}
+
+.hwmFooterPhone:hover {
+    color: var(--white);
+    opacity: 0.85;
+}
+
+.hwmFooterSocial {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.hwmFooterSocial a {
+    width: 36px;
+    height: 36px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 14px;
+    transition: all 0.25s ease;
+}
+
+.hwmFooterSocial a:hover {
+    background-color: var(--white);
+    color: var(--navy);
+}
+
+/* --- Footer link columns --- */
+.hwmFooterCols {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.hwmFooterCol .hwmH4 {
+    margin-bottom: 20px;
+}
+
+.hwmFooterLinks li {
+    margin-bottom: 6px;
+}
+
+.hwmFooterLinks li a {
+    font-family: var(--regular-segoe-ui);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: var(--white);
+    transition: opacity 0.2s ease;
+}
+
+.hwmFooterLinks li a:hover {
+    color: var(--white);
+    opacity: 0.7;
+}
+
+/* --- Policy strip --- */
+.hwmFooterPolicy {
+    padding: 32px 24px;
+    text-align: center;
+    background-color: var(--white);
+}
+
+.hwmFooterPolicy p {
+    font-family: var(--regular-segoe-ui);
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--text-gray);
+}
+
+/* ============================================================
+   RESPONSIVE — ≤ 1200px
+   ============================================================ */
+@media (max-width: 1200px) {
+    .hwmHeaderInner {
+        padding: 0 32px;
+    }
+
+    .hwmNav {
+        gap: 24px;
+    }
+
+    .hwmNavLink,
+    .hwmHeaderLocPhone,
+    .hwmHeaderMore {
+        font-size: 18px;
+    }
+
+    .hwmHeaderRight {
+        gap: 20px;
+    }
+
+    .hwmLogo img {
+        height: 76px;
+    }
+}
+
+/* ============================================================
+   RESPONSIVE — ≤ 991px (tablet)
+   ============================================================ */
+@media (max-width: 991px) {
+    .hwmHeader {
+        height: 72px;
+    }
+
+    .hwmHeaderInner {
+        height: 72px;
+        padding: 0 20px;
+    }
+
+    .hwmNav,
+    .hwmHeaderLoc {
+        display: none;
+    }
+
+    .hwmLogo {
+        position: static;
+        transform: none;
+        margin-right: auto;
+    }
+
+    .hwmLogo img {
+        height: 56px;
+    }
+
+    .hwmHeaderRight {
+        flex: 0 0 auto;
+        gap: 0;
+    }
+
+    .hwmHeaderMore span:first-child {
+        display: none;
+    }
+
+    /* Footer */
+    .hwmFooterTop {
+        flex-direction: column;
+        min-height: 0;
+    }
+
+    .hwmFooterImage img {
+        min-height: 360px;
+        height: 360px;
+    }
+
+    .hwmNewsletter {
+        padding: 56px 24px;
+    }
+
+    .hwmNewsletter .hwmH2 {
+        font-size: 42px;
+        line-height: 44px;
+    }
+
+    .hwmFooterMid {
+        margin: 0;
+        padding: 56px 32px;
+    }
+
+    .hwmFooterMidInner {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    .hwmFooterCols {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
+    }
+
+    .hwmFooterPhone {
+        font-size: 32px;
+    }
+
+    .hwmFooterPolicy p {
+        font-size: 14px;
+        line-height: 22px;
+    }
+}
+
+/* ============================================================
+   RESPONSIVE — ≤ 575px (mobile)
+   ============================================================ */
+@media (max-width: 575px) {
+    .hwmHeaderInner {
+        padding: 0 16px;
+    }
+
+    .hwmLogo img {
+        height: 48px;
+    }
+
+    .hwmNewsletter .hwmH2 {
+        font-size: 32px;
+        line-height: 36px;
+    }
+
+    .hwmFooterMid {
+        padding: 48px 24px;
+    }
+
+    .hwmFooterCols {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        text-align: center;
+    }
+
+    .hwmFooterCol .hwmH4 {
+        margin-bottom: 14px;
+    }
+
+    .hwmFooterPhoneLabel {
+        font-size: 20px;
+    }
+
+    .hwmFooterPhone {
+        font-size: 28px;
+    }
+
+    .hwmFooterPolicy {
+        padding: 24px 16px;
+    }
+
+    .hwmFooterPolicy p {
+        font-size: 13px;
+        line-height: 20px;
+    }
 }
