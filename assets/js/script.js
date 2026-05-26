@@ -10,12 +10,12 @@ $(document).ready(function () {
             loop: true,
             dots: false,
             nav: false,
-            margin: 24,
+            margin: 64,
             smartSpeed: 600,
             responsive: {
-                0: { items: 1.1 },
-                576: { items: 2 },
-                992: { items: 3 }
+                0: { items: 1.05, margin: 20 },
+                576: { items: 2, margin: 32 },
+                992: { items: 3, margin: 64 }
             }
         });
 

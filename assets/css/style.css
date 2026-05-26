@@ -558,8 +558,7 @@ img {
 .hwmHeroOverlay {
     position: absolute;
     inset: 0;
-    background:
-        linear-gradient(180deg, rgba(0, 5, 37, 0.45) 0%, rgba(0, 5, 37, 0.85) 100%);
+    background: linear-gradient(180deg, rgba(0, 5, 37, 0.35) 0%, rgba(0, 5, 37, 0.7) 100%);
 }
 
 .hwmHeroInner {
@@ -573,11 +572,11 @@ img {
 }
 
 .hwmHero .hwmH1 {
-    max-width: 800px;
+    max-width: 900px;
 }
 
 .hwmHeroBtn {
-    margin-top: 64px;
+    margin-top: 40px;
     align-self: flex-start;
 }
 
@@ -587,7 +586,7 @@ img {
 .hwmIntro {
     position: relative;
     background-color: var(--navy);
-    padding: 80px 0 100px;
+    padding: 100px 0 0;
     overflow: hidden;
 }
 
@@ -597,28 +596,28 @@ img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 0.35;
+    opacity: 0.25;
 }
 
 .hwmIntroOverlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, rgba(0, 5, 37, 0.85) 0%, rgba(0, 5, 37, 0.95) 100%);
+    background: linear-gradient(180deg, rgba(0, 5, 37, 0.7) 0%, rgba(0, 5, 37, 0.95) 100%);
 }
 
 .hwmIntroInner {
     position: relative;
     z-index: 2;
-    padding: 0 6.04%;
 }
 
 /* --- Intro head (heading + paragraph) --- */
 .hwmIntroHead {
     display: grid;
-    grid-template-columns: 1fr 1.6fr;
+    grid-template-columns: 400px 1fr;
     gap: 120px;
-    align-items: center;
-    margin-bottom: 80px;
+    align-items: flex-start;
+    padding: 0 14.58%;
+    margin-bottom: 60px;
 }
 
 .hwmIntroHead .hwmPara {
@@ -629,42 +628,44 @@ img {
 .hwmCtaCards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 60px;
-    margin-bottom: 80px;
+    gap: 120px;
+    padding: 0 14.06%;
+    margin-bottom: 60px;
 }
 
 .hwmCtaCard {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 16px;
-    height: 80px;
-    padding: 0 24px;
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    gap: 20px;
+    height: 140px;
+    padding: 0 32px;
+    border: 1px solid rgba(122, 105, 59, 0.5);
     border-radius: 4px;
-    background-color: rgba(255, 255, 255, 0.04);
+    background-color: rgba(0, 5, 37, 0.7);
     transition: all 0.25s ease;
     color: var(--white);
-    text-align: center;
+    text-align: left;
 }
 
 .hwmCtaCard:hover {
     background-color: rgba(122, 105, 59, 0.18);
-    border-color: rgba(122, 105, 59, 0.6);
+    border-color: var(--tan);
     color: var(--white);
 }
 
 .hwmCtaCardIcon {
-    width: 36px;
-    height: 36px;
+    width: 48px;
+    height: 48px;
     object-fit: contain;
     flex-shrink: 0;
+    filter: brightness(0) invert(1);
 }
 
 .hwmCtaCardText {
     font-family: var(--holland);
-    font-size: 22px;
-    line-height: 26px;
+    font-size: 32px;
+    line-height: 36px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     color: var(--white);
@@ -674,28 +675,29 @@ img {
 .hwmBrandGrid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+    gap: 4px;
+    padding: 0 6.04%;
+    padding-bottom: 0;
 }
 
 .hwmBrandCard {
     position: relative;
     background-color: var(--navy);
     overflow: hidden;
-    border-radius: 4px;
     display: flex;
     flex-direction: column;
-    min-height: 720px;
+    aspect-ratio: 560 / 720;
 }
 
 .hwmBrandCardImg {
     width: 100%;
-    height: 380px;
+    height: 52.78%;
     object-fit: cover;
     flex-shrink: 0;
 }
 
 .hwmBrandCardBody {
-    padding: 40px;
+    padding: 53px 48px 48px;
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -705,15 +707,16 @@ img {
 .hwmBrandWordmark {
     display: block;
     font-family: var(--holland);
-    font-size: 32px;
+    font-size: 40px;
     line-height: 1;
     letter-spacing: 2px;
     text-transform: uppercase;
     color: var(--white);
-    margin-bottom: 20px;
+    margin-bottom: 24px;
 }
 
 .hwmBrandCardBody .hwmPara {
+    max-width: 380px;
     opacity: 0.85;
 }
 
@@ -731,10 +734,11 @@ img {
 
 .hwmArrivalsHead {
     display: grid;
-    grid-template-columns: 1fr 1.6fr;
+    grid-template-columns: 400px 1fr;
     gap: 120px;
-    align-items: center;
-    margin-bottom: 60px;
+    align-items: flex-start;
+    padding: 0 8.54%;
+    margin-bottom: 56px;
 }
 
 .hwmArrivalsHead .hwmPara {
@@ -743,37 +747,38 @@ img {
 
 .hwmArrivalsCarouselWrap {
     position: relative;
+    padding: 0 32px;
 }
 
 /* --- Carousel arrows --- */
 .hwmArrivalsBtn {
     position: absolute;
-    top: 50%;
+    top: calc(360px / 2);
     transform: translateY(-50%);
     z-index: 5;
     width: 48px;
     height: 80px;
-    background-color: rgba(0, 5, 37, 0.85);
+    background-color: var(--navy);
     color: var(--white);
     border: none;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 18px;
+    font-size: 16px;
     transition: background-color 0.2s ease;
 }
 
 .hwmArrivalsBtn:hover {
-    background-color: var(--navy);
+    background-color: var(--maroon);
 }
 
 .hwmArrivalsPrev {
-    left: -24px;
+    left: 0;
 }
 
 .hwmArrivalsNext {
-    right: -24px;
+    right: 0;
 }
 
 /* --- Arrival card --- */
@@ -808,14 +813,16 @@ img {
     transform: translate(-50%, -50%);
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 10px;
-    padding: 10px 22px;
-    border-radius: 4px;
-    border: 1px solid rgba(255, 255, 255, 0.85);
-    background-color: rgba(0, 5, 37, 0.4);
+    width: 160px;
+    height: 48px;
+    padding: 0 18px;
+    border: 1px solid rgba(255, 255, 255, 0.95);
+    background-color: rgba(0, 5, 37, 0.45);
     color: var(--white);
     font-family: var(--regular-segoe-ui);
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1;
     cursor: pointer;
     transition: all 0.2s ease;
@@ -827,17 +834,20 @@ img {
 }
 
 .hwmArrivalInfo {
-    padding: 28px 8px 20px;
+    padding: 24px 40px 16px;
+    background-color: var(--white);
     flex: 1;
+    margin-top: 4px;
+    height: 240px;
 }
 
 .hwmArrivalStatus {
     font-family: var(--amiri);
-    font-size: 18px;
-    line-height: 24px;
-    letter-spacing: 0.5px;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.5px;
     text-transform: uppercase;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
 }
 
 .hwmArrivalTitle {
@@ -846,22 +856,22 @@ img {
     line-height: 32px;
     letter-spacing: 0.5px;
     text-transform: uppercase;
-    margin-bottom: 18px;
+    margin-bottom: 16px;
     min-height: 64px;
 }
 
 .hwmArrivalPrice {
     font-family: var(--holland);
-    font-size: 26px;
+    font-size: 28px;
     line-height: 1;
     letter-spacing: 0.5px;
     text-transform: uppercase;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
 }
 
 .hwmArrivalPrice span {
     font-family: var(--regular-segoe-ui);
-    font-size: 14px;
+    font-size: 16px;
     text-transform: none;
     letter-spacing: 0;
     color: var(--text-gray);
@@ -879,10 +889,13 @@ img {
     text-align: center;
     background-color: var(--navy);
     color: var(--white);
-    padding: 14px 16px;
+    padding: 12px 16px;
+    margin-top: 4px;
+    height: 48px;
+    line-height: 24px;
     font-family: var(--holland);
     font-size: 16px;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
     text-transform: uppercase;
     transition: background-color 0.2s ease;
 }
@@ -900,13 +913,21 @@ img {
 
 .hwmBtnMaroon {
     background-color: var(--maroon);
-    border-color: rgba(255, 255, 255, 0.6);
-    min-width: 220px;
+    border: none;
+    color: var(--white);
+    height: 48px;
+    min-height: 48px;
+    min-width: 180px;
+    padding: 0 24px;
+    font-family: var(--holland);
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    border-radius: 4px;
 }
 
 .hwmBtnMaroon:hover {
     background-color: #8d171b;
-    border-color: rgba(255, 255, 255, 0.85);
+    color: var(--white);
 }
 
 /* ============================================================
@@ -922,6 +943,8 @@ img {
     position: relative;
     min-height: 720px;
     overflow: hidden;
+    display: flex;
+    align-items: center;
 }
 
 .hwmServiceCardImg {
@@ -941,12 +964,12 @@ img {
 .hwmServiceCardBody {
     position: relative;
     z-index: 2;
-    padding: 100px 80px;
+    padding: 0 120px;
     max-width: 720px;
 }
 
 .hwmServiceCardBody .hwmH2 {
-    margin-bottom: 28px;
+    margin-bottom: 32px;
 }
 
 /* ============================================================
@@ -954,18 +977,19 @@ img {
    ============================================================ */
 .hwmMarinas {
     background-color: var(--navy);
-    padding: 100px 0;
+    padding: 100px 0 0;
 }
 
 .hwmMarinasInner {
-    padding: 0 6.04%;
+    padding: 0;
 }
 
 .hwmMarinasHead {
     display: grid;
-    grid-template-columns: 1fr 1.6fr;
+    grid-template-columns: 400px 1fr;
     gap: 120px;
-    align-items: center;
+    align-items: flex-start;
+    padding: 0 14.58%;
     margin-bottom: 60px;
 }
 
@@ -976,38 +1000,42 @@ img {
 .hwmMarinaGrid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+    gap: 4px;
+    padding: 0 6.04%;
 }
 
 .hwmMarinaCard {
-    background-color: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 4px;
+    position: relative;
+    background-color: var(--navy);
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    min-height: 720px;
+    aspect-ratio: 560 / 720;
 }
 
 .hwmMarinaImg {
     width: 100%;
-    height: 380px;
+    height: 52.78%;
     object-fit: cover;
     flex-shrink: 0;
 }
 
 .hwmMarinaBody {
-    padding: 40px;
+    padding: 53px 48px 48px;
     flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .hwmMarinaBody .hwmH4 {
     margin-bottom: 18px;
+    font-size: 28px;
     line-height: 32px;
 }
 
 .hwmMarinaBody .hwmPara {
-    opacity: 0.85;
+    max-width: 380px;
+    opacity: 0.9;
 }
 
 /* ============================================================
@@ -1015,22 +1043,20 @@ img {
    ============================================================ */
 .hwmCtaBar {
     background-color: var(--white);
-    padding: 60px 6.04%;
+    padding: 80px 13.02%;
 }
 
 .hwmCtaBarInner {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
-    max-width: 1420px;
-    margin: 0 auto;
+    gap: 80px;
 }
 
 .hwmCtaBarItem {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 16px;
+    gap: 20px;
     height: 120px;
     background-color: var(--white);
     border: 1px solid var(--d9);
@@ -1059,10 +1085,532 @@ img {
 
 .hwmCtaBarText {
     font-family: var(--holland);
-    font-size: 28px;
+    font-size: 36px;
     line-height: 1;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
     text-transform: uppercase;
+}
+
+/* ============================================================
+   INTERIOR PAGES — Service / Sell-Trade
+   Page-specific patterns layered on top of the home utilities.
+   ============================================================ */
+
+/* --- Hero modifier for interior pages --- */
+.hwmHero.hwmHeroPage {
+    height: 720px;
+    max-height: none;
+}
+
+.hwmHero.hwmHeroPage--short {
+    height: 600px;
+}
+
+.hwmHero.hwmHeroPage .hwmHeroInner {
+    padding: 80px 14.58% 80px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.hwmBreadcrumb {
+    font-family: var(--regular-segoe-ui);
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--white);
+    opacity: 0.8;
+    margin-bottom: 24px;
+}
+
+.hwmHeroSub {
+    margin-top: 32px;
+}
+
+.hwmHeroDesc {
+    max-width: 880px;
+    margin-top: 16px;
+    opacity: 0.9;
+}
+
+.hwmHero .hwmHeroBtn {
+    margin-top: 32px;
+}
+
+.hwmMt-16 {
+    margin-top: 16px;
+}
+
+/* --- Generic 50/50 split section --- */
+.hwmSplit {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    padding: 100px 10.42%;
+    width: 100%;
+}
+
+.hwmSplit--dark {
+    background-color: var(--navy);
+}
+
+.hwmSplit--light {
+    background-color: var(--white);
+}
+
+.hwmSplitImg {
+    width: 100%;
+    aspect-ratio: 720 / 480;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.hwmSplitImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hwmSplitBody {
+    max-width: 600px;
+}
+
+.hwmSplitBody .hwmH2 {
+    margin-bottom: 24px;
+}
+
+.hwmSplitBody .hwmPara {
+    margin-bottom: 28px;
+}
+
+.hwmSplit--dark .hwmSplitBody .hwmPara {
+    opacity: 0.9;
+}
+
+/* --- 3-column card grid (Our Services) --- */
+.hwmCardGrid {
+    display: grid;
+    gap: 30px;
+    padding: 0 12.5%;
+}
+
+.hwmCardGrid--3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.hwmCardItem {
+    background-color: var(--white);
+    border: 1px solid var(--d9);
+    border-radius: 4px;
+    padding: 32px;
+    min-height: 260px;
+}
+
+.hwmCardItemIcon {
+    width: 38px;
+    height: 48px;
+    object-fit: contain;
+    margin-bottom: 16px;
+}
+
+.hwmCardItem .hwmH4 {
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 16px;
+}
+
+/* --- Horizontal gallery strip (Mercury Award images) --- */
+.hwmGallery {
+    width: 100%;
+    overflow-x: auto;
+    padding: 56px 0 0;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.hwmGallery::-webkit-scrollbar {
+    display: none;
+}
+
+.hwmGalleryTrack {
+    display: flex;
+    gap: 24px;
+    padding: 0 6.04%;
+    width: max-content;
+}
+
+.hwmGalleryItem {
+    flex: 0 0 auto;
+    height: 520px;
+    width: 600px;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.hwmGalleryItem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* --- Travel Lift (dark section, centered head, 2 images) --- */
+.hwmTravelLift {
+    background-color: var(--navy);
+    padding: 100px 6.04%;
+}
+
+.hwmTravelLiftHead {
+    text-align: center;
+    max-width: 880px;
+    margin: 0 auto 56px;
+}
+
+.hwmTravelLiftHead .hwmH2 {
+    margin-bottom: 20px;
+}
+
+.hwmTravelLiftHead .hwmPara {
+    opacity: 0.85;
+}
+
+.hwmTravelLiftGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.hwmTravelLiftItem {
+    position: relative;
+    aspect-ratio: 720 / 480;
+    overflow: hidden;
+    border-radius: 4px;
+    display: block;
+}
+
+.hwmTravelLiftItem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hwmTravelLiftPlay {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: var(--maroon);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease;
+}
+
+.hwmTravelLiftPlay img {
+    width: 22px;
+    height: 22px;
+}
+
+.hwmTravelLiftItem:hover .hwmTravelLiftPlay {
+    background-color: #8d171b;
+}
+
+/* --- Brand logo strip --- */
+.hwmLogoStrip {
+    background-color: var(--white);
+    padding: 60px 6.04%;
+}
+
+.hwmLogoStripInner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px 100px;
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+.hwmLogoStripItem {
+    font-family: var(--holland);
+    font-size: 36px;
+    line-height: 1;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--navy);
+}
+
+/* --- Steps section (How It Works) --- */
+.hwmSteps {
+    background-color: var(--f7);
+    padding: 80px 6.04%;
+}
+
+.hwmStepsHead {
+    text-align: center;
+    margin-bottom: 56px;
+}
+
+.hwmStepsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 80px;
+    max-width: 1552px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.hwmStepItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.hwmStepNum {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    background-color: var(--tan);
+    color: var(--white);
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--holland);
+    font-size: 20px;
+    line-height: 1;
+}
+
+.hwmStepBody {
+    flex: 1;
+    min-width: 0;
+}
+
+.hwmStepBody .hwmH4 {
+    font-size: 22px;
+    line-height: 28px;
+    margin-bottom: 10px;
+}
+
+/* --- Reasons (Why sell/trade — dark bg with 2x2 grid) --- */
+.hwmReasons {
+    position: relative;
+    background-color: var(--navy);
+    padding: 100px 6.04%;
+    overflow: hidden;
+}
+
+.hwmReasonsBg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.25;
+}
+
+.hwmReasonsOverlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 5, 37, 0.7) 0%, rgba(0, 5, 37, 0.9) 100%);
+}
+
+.hwmReasonsInner {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 80px;
+    max-width: 1588px;
+    margin: 0 auto;
+    align-items: flex-start;
+}
+
+.hwmReasonsHead .hwmH2 {
+    margin-bottom: 32px;
+}
+
+.hwmReasonsGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+}
+
+.hwmReason {
+    padding-left: 24px;
+    border-left: 2px solid rgba(255, 255, 255, 0.25);
+}
+
+.hwmReason .hwmH4 {
+    font-size: 22px;
+    line-height: 28px;
+    margin-bottom: 12px;
+}
+
+.hwmReason .hwmPara {
+    opacity: 0.85;
+}
+
+/* --- Form section (Request Service / Submit Boat) --- */
+.hwmFormSection {
+    padding: 100px 6.04%;
+}
+
+.hwmFormSection--dark {
+    background-color: var(--navy);
+}
+
+.hwmFormSection--light {
+    background-color: var(--white);
+}
+
+.hwmFormGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    max-width: 1500px;
+    margin: 0 auto;
+    align-items: flex-start;
+}
+
+.hwmFormInfo .hwmH2 {
+    margin-bottom: 16px;
+}
+
+.hwmContactBlock {
+    margin-top: 32px;
+}
+
+.hwmContactBlock .hwmH4 {
+    font-size: 22px;
+    line-height: 28px;
+    margin-bottom: 6px;
+}
+
+.hwmContactPhone {
+    display: block;
+    font-family: var(--holland);
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-bottom: 6px;
+    transition: opacity 0.2s ease;
+}
+
+.hwmContactPhone:hover {
+    color: var(--white);
+    opacity: 0.85;
+}
+
+.hwmContactPhone--dark {
+    color: var(--navy);
+}
+
+.hwmContactPhone--dark:hover {
+    color: var(--navy);
+}
+
+.hwmFormCard {
+    background-color: var(--white);
+    padding: 32px;
+    border-radius: 4px;
+    box-shadow: 0 4px 20px rgba(0, 5, 37, 0.08);
+}
+
+.hwmField {
+    margin-bottom: 16px;
+}
+
+.hwmFieldRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.hwmInput {
+    width: 100%;
+    height: 48px;
+    border: 1px solid var(--d9);
+    border-radius: 4px;
+    background-color: var(--white);
+    padding: 0 18px;
+    font-family: var(--regular-segoe-ui);
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--blackish);
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+select.hwmInput {
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: linear-gradient(45deg, transparent 50%, var(--navy) 50%),
+                      linear-gradient(135deg, var(--navy) 50%, transparent 50%);
+    background-position: calc(100% - 22px) 22px, calc(100% - 16px) 22px;
+    background-size: 6px 6px;
+    background-repeat: no-repeat;
+    padding-right: 40px;
+    cursor: pointer;
+}
+
+.hwmInput::placeholder {
+    color: rgba(27, 32, 38, 0.6);
+}
+
+.hwmInput:focus {
+    border-color: var(--navy);
+}
+
+.hwmInput--textarea {
+    height: 96px;
+    padding: 12px 18px;
+    resize: vertical;
+    line-height: 24px;
+}
+
+.hwmRadioLabel {
+    font-family: var(--regular-segoe-ui);
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--text-gray);
+    margin: 4px 0 12px;
+}
+
+.hwmRadioGroup {
+    display: flex;
+    gap: 32px;
+    margin-bottom: 16px;
+}
+
+.hwmRadio {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-family: var(--regular-segoe-ui);
+    font-size: 16px;
+    color: var(--text-gray);
+    margin: 0;
+}
+
+.hwmRadio input[type="radio"] {
+    width: 16px;
+    height: 16px;
+    accent-color: var(--navy);
+    cursor: pointer;
+}
+
+.hwmFormSubmit {
+    margin-top: 8px;
+    min-width: 160px;
 }
 
 /* ============================================================
@@ -1219,7 +1767,7 @@ img {
 
     /* Intro */
     .hwmIntro {
-        padding: 64px 0 72px;
+        padding: 64px 0 0;
     }
 
     .hwmIntroHead,
@@ -1227,7 +1775,8 @@ img {
     .hwmMarinasHead {
         grid-template-columns: 1fr;
         gap: 24px;
-        margin-bottom: 48px;
+        padding: 0 24px;
+        margin-bottom: 40px;
     }
 
     .hwmH2 {
@@ -1238,17 +1787,29 @@ img {
     .hwmCtaCards {
         grid-template-columns: 1fr;
         gap: 16px;
+        padding: 0 24px;
         margin-bottom: 56px;
+    }
+
+    .hwmCtaCard {
+        height: 100px;
+    }
+
+    .hwmCtaCardText {
+        font-size: 24px;
+        line-height: 28px;
     }
 
     .hwmBrandGrid,
     .hwmMarinaGrid {
         grid-template-columns: 1fr 1fr;
-        gap: 20px;
+        gap: 4px;
+        padding: 0;
     }
 
     .hwmBrandCard,
     .hwmMarinaCard {
+        aspect-ratio: auto;
         min-height: 0;
     }
 
@@ -1259,7 +1820,11 @@ img {
 
     .hwmBrandCardBody,
     .hwmMarinaBody {
-        padding: 28px;
+        padding: 32px 28px;
+    }
+
+    .hwmBrandWordmark {
+        font-size: 30px;
     }
 
     /* Arrivals */
@@ -1267,12 +1832,20 @@ img {
         padding: 64px 0;
     }
 
+    .hwmArrivalsInner {
+        padding: 0 24px;
+    }
+
+    .hwmArrivalsCarouselWrap {
+        padding: 0;
+    }
+
     .hwmArrivalsPrev {
-        left: -16px;
+        left: -8px;
     }
 
     .hwmArrivalsNext {
-        right: -16px;
+        right: -8px;
     }
 
     /* Service + Storage */
@@ -1285,18 +1858,18 @@ img {
     }
 
     .hwmServiceCardBody {
-        padding: 56px 32px;
+        padding: 0 32px;
         max-width: 100%;
     }
 
     /* Marinas */
     .hwmMarinas {
-        padding: 64px 0;
+        padding: 64px 0 0;
     }
 
     /* CTA Bar */
     .hwmCtaBar {
-        padding: 40px 24px;
+        padding: 48px 24px;
     }
 
     .hwmCtaBarInner {
@@ -1304,17 +1877,85 @@ img {
     }
 
     .hwmCtaBarItem {
-        height: 96px;
+        height: 100px;
         gap: 12px;
     }
 
     .hwmCtaBarIcon {
-        width: 36px;
-        height: 36px;
+        width: 40px;
+        height: 40px;
     }
 
     .hwmCtaBarText {
-        font-size: 22px;
+        font-size: 24px;
+    }
+
+    /* Interior pages */
+    .hwmHero.hwmHeroPage,
+    .hwmHero.hwmHeroPage--short {
+        height: 520px;
+    }
+
+    .hwmHero.hwmHeroPage .hwmHeroInner {
+        padding: 64px 24px;
+    }
+
+    .hwmSplit {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 64px 24px;
+    }
+
+    .hwmCardGrid {
+        padding: 0 24px;
+    }
+
+    .hwmCardGrid--3 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .hwmTravelLift,
+    .hwmReasons,
+    .hwmFormSection,
+    .hwmSteps {
+        padding: 64px 24px;
+    }
+
+    .hwmTravelLiftGrid {
+        gap: 16px;
+    }
+
+    .hwmStepsGrid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .hwmReasonsInner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .hwmReasonsGrid {
+        gap: 32px;
+    }
+
+    .hwmFormGrid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    .hwmGalleryItem {
+        height: 360px;
+        width: 440px;
+    }
+
+    .hwmLogoStripInner {
+        gap: 24px 56px;
+    }
+
+    .hwmLogoStripItem {
+        font-size: 28px;
     }
 }
 
@@ -1387,9 +2028,24 @@ img {
     }
 
     .hwmIntro,
-    .hwmArrivals,
+    .hwmArrivals {
+        padding: 48px 0 0;
+    }
+
+    .hwmArrivals {
+        padding-bottom: 56px;
+    }
+
     .hwmMarinas {
-        padding: 48px 0 56px;
+        padding: 48px 0 0;
+    }
+
+    .hwmCtaCard {
+        height: 88px;
+    }
+
+    .hwmCtaCardText {
+        font-size: 22px;
     }
 
     .hwmBrandGrid,
@@ -1402,11 +2058,111 @@ img {
         height: 240px;
     }
 
+    .hwmBrandWordmark {
+        font-size: 26px;
+    }
+
     .hwmServiceCardBody {
-        padding: 44px 24px;
+        padding: 0 24px;
     }
 
     .hwmCtaBarInner {
         grid-template-columns: 1fr;
+    }
+
+    .hwmCtaBarItem {
+        height: 88px;
+    }
+
+    .hwmCtaBarText {
+        font-size: 22px;
+    }
+
+    .hwmArrivalsHead {
+        padding: 0 16px;
+    }
+
+    .hwmArrivalsInner {
+        padding: 0 16px;
+    }
+
+    .hwmArrivalInfo {
+        padding: 20px 24px 14px;
+        height: auto;
+    }
+
+    .hwmArrivalTitle {
+        font-size: 22px;
+        line-height: 28px;
+        min-height: 0;
+    }
+
+    .hwmArrivalPrice {
+        font-size: 24px;
+    }
+
+    /* Interior pages — mobile */
+    .hwmHero.hwmHeroPage,
+    .hwmHero.hwmHeroPage--short {
+        height: 460px;
+    }
+
+    .hwmHero.hwmHeroPage .hwmHeroInner {
+        padding: 48px 16px;
+    }
+
+    .hwmBreadcrumb {
+        font-size: 12px;
+        margin-bottom: 16px;
+    }
+
+    .hwmHeroSub {
+        margin-top: 20px;
+    }
+
+    .hwmSplit,
+    .hwmTravelLift,
+    .hwmReasons,
+    .hwmFormSection,
+    .hwmSteps {
+        padding: 48px 16px;
+    }
+
+    .hwmCardGrid {
+        padding: 0 16px;
+    }
+
+    .hwmCardGrid--3 {
+        grid-template-columns: 1fr;
+    }
+
+    .hwmTravelLiftGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .hwmReasonsGrid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .hwmFormCard {
+        padding: 24px;
+    }
+
+    .hwmFieldRow {
+        grid-template-columns: 1fr;
+    }
+
+    .hwmGalleryItem {
+        height: 260px;
+        width: 320px;
+    }
+
+    .hwmLogoStripItem {
+        font-size: 24px;
+    }
+
+    .hwmContactPhone {
+        font-size: 22px;
     }
 }
