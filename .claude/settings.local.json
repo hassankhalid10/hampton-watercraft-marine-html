@@ -1,7 +1,10 @@
 {
   "permissions": {
     "allow": [
-      "Bash(powershell -Command \"Get-Content home.html | Select-String -Pattern 'script src|jquery|fancybox|owl' | Select-Object -First 15\")"
+      "mcp__figma-dev-mode-mcp-server__get_variable_defs",
+      "mcp__figma-dev-mode-mcp-server__get_metadata",
+      "mcp__figma-dev-mode-mcp-server__get_screenshot",
+      "mcp__figma-dev-mode-mcp-server__get_design_context"
     ]
   }
 }
