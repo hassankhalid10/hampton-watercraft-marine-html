@@ -329,6 +329,7 @@ img {
     display: flex;
     width: 100%;
     min-height: 520px;
+    padding: 0 6.04%;
 }
 
 .hwmNewsletter {
@@ -342,28 +343,32 @@ img {
 
 .hwmNewsletterInner {
     width: 100%;
-    max-width: 480px;
+    max-width: 600px;
     text-align: center;
 }
 
 .hwmNewsletter .hwmH2 {
-    margin-bottom: 20px;
+    margin-bottom: 16px;
 }
 
 .hwmNewsletter .hwmPara {
-    margin-bottom: 28px;
+    margin-bottom: 40px;
 }
 
 .hwmNewsletterForm {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 24px;
+}
+
+.hwmNewsletterForm .hwmBtnPrimary {
+    min-width: 120px;
 }
 
 .hwmNewsletterInput {
     width: 100%;
-    max-width: 380px;
+    max-width: 400px;
     height: 48px;
     border: 1px solid var(--d9);
     border-radius: 4px;
@@ -614,7 +619,7 @@ img {
 .hwmIntroHead {
     display: grid;
     grid-template-columns: 400px 1fr;
-    gap: 120px;
+    gap: 240px;
     align-items: flex-start;
     padding: 0 14.58%;
     margin-bottom: 60px;
@@ -697,7 +702,7 @@ img {
 }
 
 .hwmBrandCardBody {
-    padding: 53px 48px 48px;
+    padding: 53px 48px 40px;
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -705,14 +710,16 @@ img {
 }
 
 .hwmBrandWordmark {
-    display: block;
+    display: flex;
+    align-items: flex-end;
+    min-height: 63px;
     font-family: var(--holland);
     font-size: 40px;
     line-height: 1;
     letter-spacing: 2px;
     text-transform: uppercase;
     color: var(--white);
-    margin-bottom: 24px;
+    margin-bottom: 40px;
 }
 
 .hwmBrandCardBody .hwmPara {
@@ -735,7 +742,7 @@ img {
 .hwmArrivalsHead {
     display: grid;
     grid-template-columns: 400px 1fr;
-    gap: 120px;
+    gap: 240px;
     align-items: flex-start;
     padding: 0 8.54%;
     margin-bottom: 56px;
@@ -987,7 +994,7 @@ img {
 .hwmMarinasHead {
     display: grid;
     grid-template-columns: 400px 1fr;
-    gap: 120px;
+    gap: 240px;
     align-items: flex-start;
     padding: 0 14.58%;
     margin-bottom: 60px;
@@ -1021,14 +1028,14 @@ img {
 }
 
 .hwmMarinaBody {
-    padding: 53px 48px 48px;
+    padding: 100px 48px 40px;
     flex: 1;
     display: flex;
     flex-direction: column;
 }
 
 .hwmMarinaBody .hwmH4 {
-    margin-bottom: 18px;
+    margin-bottom: 16px;
     font-size: 28px;
     line-height: 32px;
 }
@@ -2072,6 +2079,7 @@ select.hwmInput {
     .hwmFooterTop {
         flex-direction: column;
         min-height: 0;
+        padding: 0;
     }
 
     .hwmFooterImage img {
