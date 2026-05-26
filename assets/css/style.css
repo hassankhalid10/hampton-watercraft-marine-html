@@ -139,17 +139,15 @@ img {
 /* ============================================================
    BUTTONS
    ============================================================ */
-.hwmBtnPrimary {
+.hwmBtnPrimary,
+.hwmBtnMaroon {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--navy);
-    color: var(--white);
-    border: 2px solid rgba(122, 105, 59, 0.6);
-    border-radius: 4px;
-    padding: 12px 28px;
+    height: 48px;
     min-height: 48px;
-    min-width: 220px;
+    padding: 0 24px;
+    border-radius: 4px;
     font-family: var(--holland);
     font-size: 18px;
     font-weight: 400;
@@ -158,6 +156,16 @@ img {
     text-transform: uppercase;
     cursor: pointer;
     transition: all 0.25s ease;
+    white-space: nowrap;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.hwmBtnPrimary {
+    background-color: var(--navy);
+    color: var(--white);
+    border: 2px solid rgba(122, 105, 59, 0.6);
+    min-width: 180px;
 }
 
 .hwmBtnPrimary:hover {
@@ -922,16 +930,14 @@ img {
 
 .hwmBtnMaroon {
     background-color: var(--maroon);
-    border: none;
     color: var(--white);
-    height: 48px;
-    min-height: 48px;
+    border: none;
     min-width: 140px;
-    padding: 0 24px;
-    font-family: var(--holland);
-    font-size: 16px;
-    letter-spacing: 1.5px;
-    border-radius: 4px;
+}
+
+.hwmBtnMaroon:hover {
+    background-color: #8d171b;
+    color: var(--white);
 }
 
 .hwmBtnMaroon--wide {
@@ -940,11 +946,6 @@ img {
 
 .hwmBtnPrimary--compact {
     min-width: 140px;
-}
-
-.hwmBtnMaroon:hover {
-    background-color: #8d171b;
-    color: var(--white);
 }
 
 /* ============================================================
@@ -1128,6 +1129,22 @@ img {
 
 .hwmHero.hwmHeroPage--short {
     height: 600px;
+}
+
+/* Dark CTA strip directly below hero (Service) */
+.hwmHeroCta {
+    background-color: var(--navy);
+    min-height: 200px;
+    padding: 24px 12.5%;
+    display: flex;
+    align-items: flex-start;
+}
+
+@media (max-width: 991px) {
+    .hwmHeroCta {
+        min-height: 0;
+        padding: 24px;
+    }
 }
 
 .hwmHero.hwmHeroPage .hwmHeroInner {
@@ -1637,6 +1654,12 @@ select.hwmInput {
     min-width: 160px;
 }
 
+.hwmBtnPrimary.hwmFormSubmit {
+    min-width: 160px;
+    align-self: center;
+    margin-top: 16px;
+}
+
 /* ============================================================
    INTERIOR PAGES — Contact
    ============================================================ */
@@ -1891,8 +1914,8 @@ select.hwmInput {
 }
 
 .hwmWhyItemIcon {
-    width: 28px;
-    height: 28px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     background-color: var(--tan);
     color: var(--white);
@@ -1900,7 +1923,7 @@ select.hwmInput {
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    font-size: 12px;
+    font-size: 16px;
 }
 
 .hwmWhyItem p {
