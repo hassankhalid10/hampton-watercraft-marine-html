@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(powershell -Command \"Get-Content home.html | Select-String -Pattern 'script src|jquery|fancybox|owl' | Select-Object -First 15\")"
+    ]
+  }
+}
