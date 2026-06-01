@@ -1981,10 +1981,11 @@ select.hwmInput {
 }
 
 .hwmCalc {
-    background-color: var(--white);
+    background-color: var(--f7);
+    border: 1px solid var(--d9);
     border-radius: 4px;
     padding: 40px;
-    max-width: 480px;
+    max-width: 520px;
     width: 100%;
     margin-left: auto;
     box-shadow: 0 4px 20px rgba(0, 5, 37, 0.12);
@@ -2711,5 +2712,884 @@ select.hwmInput {
     .hwmCalcTitle {
         font-size: 32px;
         line-height: 36px;
+    }
+}
+
+/* ============================================================
+   BUTTONS — TAN VARIANT
+   ============================================================ */
+.hwmBtnTan {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    min-height: 48px;
+    padding: 0 24px;
+    border-radius: 4px;
+    background-color: var(--tan);
+    color: var(--white);
+    border: 2px solid rgba(122, 105, 59, 0.6);
+    min-width: 160px;
+    font-family: var(--holland);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.9px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    white-space: nowrap;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.hwmBtnTan:hover {
+    background-color: #8a7944;
+    border-color: var(--tan);
+    color: var(--white);
+}
+
+/* ============================================================
+   INTERIOR PAGES — Parts
+   ============================================================ */
+
+/* --- Parts hero: image right, gradient navy left --- */
+.hwmHero.hwmHeroPage--parts {
+    height: 600px;
+}
+
+.hwmHero.hwmHeroPage--parts .hwmHeroOverlay {
+    background: linear-gradient(90deg, var(--navy) 0%, rgba(0, 5, 37, 0.4) 100%);
+}
+
+.hwmHero.hwmHeroPage--parts .hwmHeroInner {
+    padding: 80px 14.58%;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.hwmHero.hwmHeroPage--parts .hwmHeroSubLabel {
+    margin-top: 32px;
+    max-width: 720px;
+}
+
+/* --- Inspection list (Parts) --- */
+.hwmInspectList {
+    list-style: disc;
+    padding-left: 22px;
+    margin-top: 16px;
+}
+
+.hwmInspectList li {
+    font-family: var(--regular-segoe-ui);
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--text-gray);
+    margin-bottom: 8px;
+}
+
+.hwmInspectList li strong {
+    font-family: var(--bold-segoe-ui);
+    font-weight: 700;
+    color: var(--text-gray);
+}
+
+/* --- Browse Parts Categories grid --- */
+.hwmCategories {
+    background-color: var(--white);
+    padding: 100px 6.04%;
+}
+
+.hwmCategoriesHead {
+    text-align: center;
+    margin-bottom: 56px;
+}
+
+.hwmCategoriesGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 36px;
+    max-width: 1520px;
+    margin: 0 auto;
+}
+
+.hwmCategoryCard {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.hwmCategoryImg {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 484 / 280;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.hwmCategoryImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.hwmCategoryCard:hover .hwmCategoryImg img {
+    transform: scale(1.04);
+}
+
+.hwmCategoryImg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 5, 37, 0) 0%, rgba(0, 5, 37, 0.7) 100%);
+    pointer-events: none;
+}
+
+.hwmCategoryName {
+    position: absolute;
+    left: 24px;
+    bottom: 20px;
+    z-index: 2;
+    font-family: var(--bold-segoe-ui);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    color: var(--white);
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.hwmCategoryDesc {
+    font-family: var(--regular-segoe-ui);
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--text-gray);
+    margin: 0;
+}
+
+/* --- Callout strip (We Can Get It For You) --- */
+.hwmCallout {
+    background-color: var(--f7);
+    padding: 50px 6.04%;
+}
+
+.hwmCalloutInner {
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hwmCalloutInner .hwmH2 {
+    margin-bottom: 16px;
+}
+
+/* --- Ordering Parts (navy bg, info + form) --- */
+.hwmOrderParts {
+    background-color: var(--navy);
+    padding: 100px 6.04%;
+}
+
+.hwmOrderPartsInner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    max-width: 1500px;
+    margin: 0 auto;
+    align-items: flex-start;
+}
+
+.hwmOrderPartsInfo .hwmH2 {
+    margin-bottom: 20px;
+}
+
+.hwmOrderPartsInfo .hwmPara {
+    opacity: 0.9;
+    margin-bottom: 36px;
+    max-width: 460px;
+}
+
+.hwmOrderLoc {
+    margin-bottom: 24px;
+}
+
+.hwmOrderLocLabel {
+    font-family: var(--amiri);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: -1.2px;
+    text-transform: uppercase;
+    color: var(--tan);
+    margin-bottom: 6px;
+}
+
+.hwmOrderLocPhone {
+    display: block;
+    font-family: var(--holland);
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-bottom: 6px;
+    transition: opacity 0.2s ease;
+}
+
+.hwmOrderLocPhone:hover {
+    color: var(--white);
+    opacity: 0.85;
+}
+
+.hwmOrderLocAddress {
+    display: inline-block;
+    font-family: var(--regular-segoe-ui);
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--white);
+    text-decoration: underline;
+}
+
+.hwmOrderLocAddress:hover {
+    color: var(--white);
+    opacity: 0.85;
+}
+
+.hwmOrderForm {
+    width: 100%;
+    max-width: 440px;
+    margin-left: auto;
+}
+
+.hwmOrderForm .hwmField {
+    margin-bottom: 14px;
+}
+
+.hwmOrderFormSubmit {
+    margin-top: 8px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* ============================================================
+   INTERIOR PAGES — About
+   ============================================================ */
+
+/* --- About hero: image top + navy panel below with secondary heading --- */
+.hwmHero.hwmHeroPage--about {
+    height: 720px;
+}
+
+.hwmHero.hwmHeroPage--about .hwmHeroOverlay {
+    background: linear-gradient(180deg, rgba(0, 5, 37, 0) 0%, var(--navy) 100%);
+}
+
+.hwmHero.hwmHeroPage--about .hwmHeroInner {
+    padding: 0 14.58%;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.hwmHero.hwmHeroPage--about .hwmH1 {
+    max-width: 900px;
+}
+
+.hwmHero.hwmHeroPage--about .hwmHeroBtn {
+    margin-top: 40px;
+}
+
+/* --- About hero secondary panel (navy, sits directly below hero) --- */
+.hwmAboutSubHero {
+    background-color: var(--navy);
+    padding: 80px 14.58% 100px;
+}
+
+.hwmAboutSubHeroInner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: flex-start;
+}
+
+.hwmAboutSubHero .hwmH2 {
+    max-width: 500px;
+}
+
+.hwmAboutSubHeroLabel {
+    font-family: var(--bold-segoe-ui);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    color: var(--tan);
+    margin-bottom: 16px;
+}
+
+.hwmAboutSubHero .hwmPara {
+    color: var(--white);
+    opacity: 0.9;
+    max-width: 720px;
+}
+
+/* --- About culture/quote — extra typography helpers --- */
+.hwmSubhead {
+    font-family: var(--amiri);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: -1.2px;
+    text-transform: uppercase;
+    color: var(--tan);
+    margin: 16px 0 24px;
+}
+
+.hwmCultureList {
+    list-style: disc;
+    padding-left: 22px;
+    margin-top: 16px;
+    margin-bottom: 28px;
+}
+
+.hwmCultureList li {
+    font-family: var(--regular-segoe-ui);
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--text-gray);
+    margin-bottom: 8px;
+}
+
+.hwmCultureList li strong {
+    font-family: var(--bold-segoe-ui);
+    font-weight: 700;
+    color: var(--text-gray);
+}
+
+.hwmQuote {
+    position: relative;
+    padding-left: 24px;
+    margin: 24px 0;
+    font-family: var(--regular-segoe-ui);
+    font-size: 18px;
+    font-style: italic;
+    line-height: 28px;
+    color: var(--navy);
+    max-width: 560px;
+}
+
+.hwmQuote::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 6px;
+    bottom: 6px;
+    width: 2px;
+    background-color: var(--tan);
+}
+
+.hwmQuote em {
+    display: block;
+    font-style: italic;
+    font-size: 18px;
+    line-height: 28px;
+    margin-top: 8px;
+    color: var(--navy);
+    font-weight: 400;
+}
+
+/* ============================================================
+   RESPONSIVE — Parts / About — ≤ 991px
+   ============================================================ */
+@media (max-width: 991px) {
+    .hwmHero.hwmHeroPage--parts {
+        height: 480px;
+    }
+
+    .hwmHero.hwmHeroPage--parts .hwmHeroInner,
+    .hwmHero.hwmHeroPage--about .hwmHeroInner {
+        padding: 64px 24px;
+    }
+
+    .hwmHero.hwmHeroPage--about {
+        height: 560px;
+    }
+
+    .hwmAboutSubHero {
+        padding: 48px 24px 64px;
+    }
+
+    .hwmAboutSubHeroInner {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .hwmCategories {
+        padding: 64px 24px;
+    }
+
+    .hwmCategoriesGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+
+    .hwmCallout {
+        padding: 40px 24px;
+    }
+
+    .hwmOrderParts {
+        padding: 64px 24px;
+    }
+
+    .hwmOrderPartsInner {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    .hwmOrderForm {
+        margin-left: 0;
+        max-width: 100%;
+    }
+
+    .hwmOrderLocPhone {
+        font-size: 32px;
+    }
+}
+
+/* ============================================================
+   RESPONSIVE — Parts / About — ≤ 575px
+   ============================================================ */
+@media (max-width: 575px) {
+    .hwmHero.hwmHeroPage--parts {
+        height: 420px;
+    }
+
+    .hwmHero.hwmHeroPage--about {
+        height: 480px;
+    }
+
+    .hwmAboutSubHeroLabel {
+        font-size: 18px;
+    }
+
+    .hwmCategoriesGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .hwmCategoryName {
+        font-size: 18px;
+    }
+
+    .hwmCalloutInner .hwmH2 {
+        font-size: 32px;
+        line-height: 36px;
+    }
+
+    .hwmOrderLocPhone {
+        font-size: 28px;
+    }
+
+    .hwmQuote {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+/* ============================================================
+   INTERIOR PAGES — Live Cams / Videos / Staff
+   ============================================================ */
+
+/* --- Hero button row (Staff) --- */
+.hwmHeroBtnRow {
+    position: absolute;
+    left: 50%;
+    bottom: 24px;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    z-index: 3;
+    width: max-content;
+    max-width: 100%;
+    padding: 0 16px;
+    flex-wrap: wrap;
+}
+
+.hwmHeroBtnRow .hwmBtnMaroon {
+    min-width: 280px;
+}
+
+/* --- Live Cams: 2-up grid in navy section --- */
+.hwmCams {
+    background-color: var(--navy);
+    padding: 0 12.92% 100px;
+    margin-top: -80px;
+    position: relative;
+    z-index: 2;
+}
+
+.hwmCamsGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+}
+
+.hwmCamCard {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.hwmCamMedia {
+    position: relative;
+    aspect-ratio: 680 / 440;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: #1a1f3a;
+}
+
+.hwmCamMedia img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.hwmCamCard:hover .hwmCamMedia img {
+    transform: scale(1.03);
+}
+
+.hwmCamPlay {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.95);
+    background-color: rgba(0, 5, 37, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 20px;
+    padding-left: 4px;
+}
+
+.hwmCamTitle {
+    font-family: var(--holland);
+    font-size: 40px;
+    line-height: 32px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--white);
+    margin: 0;
+}
+
+/* --- Videos: filter tabs + grid --- */
+.hwmVideoFilters {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    margin-top: 32px;
+    flex-wrap: wrap;
+}
+
+.hwmVideoFilter {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-family: var(--holland);
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0.9px;
+    text-transform: uppercase;
+    color: var(--white);
+    transition: color 0.2s ease;
+}
+
+.hwmVideoFilter--active {
+    color: var(--tan);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.hwmVideoFilter:hover {
+    color: var(--tan);
+}
+
+.hwmVideos {
+    background-color: var(--navy);
+    padding: 80px 11.46% 100px;
+}
+
+.hwmVideosGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 56px 40px;
+}
+
+.hwmVideoCard {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    cursor: pointer;
+}
+
+.hwmVideoThumb {
+    position: relative;
+    aspect-ratio: 440 / 280;
+    background-color: #c4c4c4;
+    overflow: hidden;
+}
+
+.hwmVideoThumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hwmVideoThumbPlay {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.92);
+    color: var(--navy);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    padding-left: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.hwmVideoCard:hover .hwmVideoThumbPlay {
+    background-color: var(--white);
+}
+
+.hwmVideoTitle {
+    font-family: var(--bold-segoe-ui);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+    color: var(--white);
+    margin: 0;
+}
+
+/* --- Staff: section heading with rules + card grid --- */
+.hwmStaff {
+    background-color: var(--white);
+    padding: 100px 6.04% 0;
+}
+
+.hwmStaff:last-of-type {
+    padding-bottom: 100px;
+}
+
+.hwmStaffSectionHead {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    max-width: 1520px;
+    margin: 0 auto 56px;
+}
+
+.hwmStaffRule {
+    flex: 1 1 0;
+    height: 1px;
+    background-color: var(--anchor-gray);
+    max-width: 320px;
+    min-width: 40px;
+}
+
+.hwmStaffSectionHead .hwmH2 {
+    flex: 0 0 auto;
+    margin: 0;
+}
+
+.hwmStaffGrid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 400px));
+    justify-content: center;
+    gap: 64px;
+    max-width: 1520px;
+    margin: 0 auto;
+}
+
+.hwmStaffCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    color: inherit;
+    text-decoration: none;
+}
+
+.hwmStaffImg {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background-color: rgba(217, 217, 217, 0.6);
+    overflow: hidden;
+}
+
+.hwmStaffImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hwmStaffName {
+    margin: 24px 0 4px;
+    font-family: var(--bold-segoe-ui);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    color: var(--navy);
+    text-transform: uppercase;
+}
+
+.hwmStaffTitle {
+    margin: 0;
+    font-family: var(--bold-segoe-ui);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+    color: var(--text-gray);
+}
+
+/* ============================================================
+   RESPONSIVE — Live Cams / Videos / Staff — ≤ 991px
+   ============================================================ */
+@media (max-width: 991px) {
+    .hwmHeroBtnRow {
+        position: static;
+        transform: none;
+        margin-top: 32px;
+        padding: 0;
+        gap: 12px;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hwmHeroBtnRow .hwmBtnMaroon {
+        min-width: 0;
+        width: 100%;
+    }
+
+    .hwmCams {
+        padding: 0 24px 64px;
+        margin-top: -40px;
+    }
+
+    .hwmCamsGrid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .hwmCamTitle {
+        font-size: 30px;
+        line-height: 32px;
+    }
+
+    .hwmVideoFilters {
+        gap: 20px;
+    }
+
+    .hwmVideos {
+        padding: 48px 24px 64px;
+    }
+
+    .hwmVideosGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px 24px;
+    }
+
+    .hwmStaff {
+        padding: 64px 24px 0;
+    }
+
+    .hwmStaff:last-of-type {
+        padding-bottom: 64px;
+    }
+
+    .hwmStaffSectionHead {
+        gap: 16px;
+        margin-bottom: 40px;
+    }
+
+    .hwmStaffRule {
+        max-width: 120px;
+    }
+
+    .hwmStaffGrid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 40px 24px;
+    }
+
+    .hwmStaffName {
+        font-size: 18px;
+    }
+
+    .hwmStaffTitle {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+/* ============================================================
+   RESPONSIVE — Live Cams / Videos / Staff — ≤ 575px
+   ============================================================ */
+@media (max-width: 575px) {
+    .hwmCamTitle {
+        font-size: 24px;
+        line-height: 26px;
+    }
+
+    .hwmCamPlay,
+    .hwmVideoThumbPlay {
+        width: 48px;
+        height: 48px;
+        font-size: 16px;
+    }
+
+    .hwmVideoFilters {
+        gap: 16px;
+    }
+
+    .hwmVideoFilter {
+        font-size: 16px;
+    }
+
+    .hwmVideosGrid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .hwmStaffSectionHead {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .hwmStaffRule {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .hwmStaffGrid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        max-width: 320px;
     }
 }
