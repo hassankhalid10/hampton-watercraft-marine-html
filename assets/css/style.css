@@ -4102,3 +4102,606 @@ select.hwmInput {
         grid-template-columns: repeat(2, 1fr);
     }
 }
+
+/* ============================================================
+   INTERIOR PAGES — Brand / Storage / Custom Hull Graphics
+   ============================================================ */
+
+/* --- Hero variant: brand (logo left, body right, dark bg) --- */
+.hwmHero.hwmHeroPage--brand {
+    height: 720px;
+    background-color: var(--navy);
+}
+
+.hwmHero.hwmHeroPage--brand .hwmHeroOverlay {
+    background: linear-gradient(180deg, rgba(0, 5, 37, 0.35) 0%, var(--navy) 100%);
+}
+
+.hwmHero.hwmHeroPage--brand .hwmHeroInner {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 80px;
+    align-items: center;
+    padding: 0 14.58%;
+}
+
+.hwmBrandLogo {
+    width: 100%;
+    max-width: 320px;
+}
+
+.hwmBrandLogo img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.hwmBrandHeroBody .hwmBrandHeroLabel {
+    font-family: var(--bold-segoe-ui);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    color: var(--tan);
+    text-transform: uppercase;
+    margin: 16px 0;
+}
+
+.hwmBrandHeroBtns {
+    margin-top: 32px;
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+/* --- Tan promotion strip --- */
+.hwmPromoStrip {
+    background-color: var(--tan);
+    padding: 48px 6.04%;
+    text-align: center;
+}
+
+.hwmPromoStrip p {
+    font-family: var(--bold-segoe-ui);
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: var(--white);
+    margin: 0;
+}
+
+/* --- Model section (Tiara series + 2x3 grid) --- */
+.hwmModels {
+    background-color: var(--white);
+    padding: 100px 6.04%;
+    text-align: center;
+}
+
+.hwmModelsHead {
+    margin-bottom: 32px;
+}
+
+.hwmModelsTabs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-bottom: 48px;
+}
+
+.hwmModelsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    max-width: 1620px;
+    margin: 0 auto;
+}
+
+.hwmModelCard {
+    position: relative;
+    aspect-ratio: 460 / 240;
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: #c4c4c4;
+}
+
+.hwmModelCard img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.hwmModelCard:hover img {
+    transform: scale(1.04);
+}
+
+.hwmModelCard::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 5, 37, 0) 0%, rgba(0, 5, 37, 0.65) 100%);
+    pointer-events: none;
+}
+
+.hwmModelCardSize {
+    position: absolute;
+    left: 24px;
+    bottom: 20px;
+    z-index: 2;
+    font-family: var(--holland);
+    font-size: 56px;
+    line-height: 48px;
+    color: var(--white);
+    text-transform: uppercase;
+    margin: 0;
+}
+
+/* --- Brand horizontal image strip (7 images full-width) --- */
+.hwmBrandStrip {
+    width: 100%;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.hwmBrandStrip::-webkit-scrollbar {
+    display: none;
+}
+
+.hwmBrandStripTrack {
+    display: flex;
+    width: max-content;
+}
+
+.hwmBrandStripItem {
+    flex: 0 0 600px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.hwmBrandStripItem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* --- Inventory section heading + buttons --- */
+.hwmInventorySection {
+    background-color: var(--white);
+    padding: 80px 0 0;
+    text-align: center;
+}
+
+.hwmInventoryHead {
+    margin-bottom: 24px;
+}
+
+.hwmInventoryBtnRow {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 48px;
+}
+
+/* --- Hero centered button pair (Storage) --- */
+.hwmHeroBtnPair {
+    margin-top: 32px;
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-self: center;
+}
+
+.hwmHero.hwmHeroPage--center .hwmHeroBtnPair {
+    align-self: center;
+}
+
+/* --- Storage "Ways to store" 2x2 grid --- */
+.hwmWays {
+    background-color: var(--white);
+    padding: 100px 6.04%;
+}
+
+.hwmWaysHead {
+    text-align: center;
+    margin-bottom: 56px;
+    padding-top: 24px;
+    border-top: 1px solid var(--d9);
+    max-width: 1640px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hwmWaysGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.hwmWayCard {
+    display: flex;
+    flex-direction: column;
+}
+
+.hwmWayCardImg {
+    width: 100%;
+    aspect-ratio: 640 / 400;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 32px;
+}
+
+.hwmWayCardImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hwmWayCardTitle {
+    font-family: var(--holland);
+    font-size: 40px;
+    line-height: 32px;
+    color: var(--navy);
+    text-transform: uppercase;
+    margin: 0 0 16px;
+    letter-spacing: 0.5px;
+}
+
+/* --- Storage Locations dark section --- */
+.hwmStorageLocs {
+    background-color: var(--navy);
+    padding: 100px 6.04%;
+}
+
+.hwmStorageLocsHead {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 80px;
+    align-items: flex-start;
+    margin-bottom: 56px;
+    max-width: 1680px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hwmStorageLocsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 64px;
+    max-width: 1680px;
+    margin: 0 auto;
+}
+
+.hwmStorageLocCard {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.hwmStorageLocCardImg {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    margin-bottom: 32px;
+}
+
+.hwmStorageLocCardImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.hwmStorageLocCard:hover .hwmStorageLocCardImg img {
+    transform: scale(1.04);
+}
+
+.hwmStorageLocCardTitle {
+    font-family: var(--holland);
+    font-size: 40px;
+    line-height: 32px;
+    color: var(--white);
+    text-transform: uppercase;
+    margin: 0 0 20px;
+    letter-spacing: 0.5px;
+}
+
+.hwmStorageLocCardTag {
+    font-family: var(--amiri);
+    font-size: 24px;
+    line-height: 32px;
+    color: var(--tan);
+    text-transform: uppercase;
+    letter-spacing: -1.2px;
+    margin: 0 0 24px;
+}
+
+.hwmStorageLocCardCapacity {
+    font-family: var(--bold-segoe-ui);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    color: var(--white);
+    margin: 0 0 12px;
+}
+
+.hwmStorageLocCardDesc {
+    font-family: var(--regular-segoe-ui);
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--white);
+    margin: 0;
+}
+
+/* --- Storage Quote section --- */
+.hwmQuoteSection {
+    position: relative;
+    padding: 100px 12.5%;
+    background-color: var(--navy);
+    overflow: hidden;
+}
+
+.hwmQuoteBg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.4;
+}
+
+.hwmQuoteOverlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 5, 37, 0.75);
+}
+
+.hwmQuoteInner {
+    position: relative;
+    z-index: 2;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hwmQuoteSection .hwmH2 {
+    margin-bottom: 32px;
+}
+
+.hwmQuoteText {
+    font-family: var(--regular-segoe-ui);
+    font-style: italic;
+    font-size: 22px;
+    line-height: 36px;
+    color: var(--white);
+    padding-top: 24px;
+    border-top: 2px solid var(--tan);
+    max-width: 880px;
+    margin: 0 auto;
+}
+
+/* --- Storage Request (light f7 bg variant of hwmOrderParts) --- */
+.hwmOrderParts--light {
+    background-color: var(--f7);
+}
+
+.hwmOrderParts--light .hwmH2,
+.hwmOrderParts--light .hwmPara,
+.hwmOrderParts--light .hwmOrderLocPhone {
+    color: var(--navy);
+}
+
+.hwmOrderParts--light .hwmOrderLocAddress {
+    color: var(--text-gray);
+}
+
+.hwmOrderParts--light .hwmOrderForm .hwmInput {
+    background-color: var(--white);
+}
+
+/* --- Why Finance grid 4-col modifier --- */
+.hwmWhyGrid--4 {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1620px;
+    gap: 24px 40px;
+}
+
+/* --- Before / After tan section --- */
+.hwmBeforeAfter {
+    background-color: var(--tan);
+    padding: 80px 6.04%;
+    text-align: center;
+}
+
+.hwmBeforeAfterHead {
+    color: var(--white);
+    max-width: 1080px;
+    margin: 0 auto 40px;
+}
+
+.hwmBeforeAfterHead .hwmH2 {
+    color: var(--white);
+    margin-bottom: 16px;
+}
+
+.hwmBeforeAfterHead .hwmPara {
+    color: var(--white);
+    opacity: 0.95;
+}
+
+.hwmBeforeAfterGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.hwmBaItem {
+    position: relative;
+    aspect-ratio: 720 / 520;
+    overflow: hidden;
+}
+
+.hwmBaItem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hwmBaLabel {
+    position: absolute;
+    left: 24px;
+    top: 24px;
+    z-index: 2;
+    font-family: var(--holland);
+    font-size: 40px;
+    line-height: 32px;
+    text-transform: uppercase;
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+/* ============================================================
+   RESPONSIVE — Brand / Storage / Custom Hull — ≤ 991px
+   ============================================================ */
+@media (max-width: 991px) {
+    .hwmHero.hwmHeroPage--brand {
+        height: auto;
+        min-height: 520px;
+    }
+
+    .hwmHero.hwmHeroPage--brand .hwmHeroInner {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        padding: 64px 24px;
+    }
+
+    .hwmBrandLogo {
+        max-width: 220px;
+    }
+
+    .hwmPromoStrip {
+        padding: 32px 24px;
+    }
+
+    .hwmModels {
+        padding: 64px 24px;
+    }
+
+    .hwmModelsGrid {
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+    }
+
+    .hwmModelCardSize {
+        font-size: 40px;
+        line-height: 36px;
+    }
+
+    .hwmBrandStripItem {
+        flex: 0 0 400px;
+        height: 280px;
+    }
+
+    .hwmInventorySection {
+        padding: 56px 0 0;
+    }
+
+    .hwmWays {
+        padding: 64px 24px;
+    }
+
+    .hwmWaysGrid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    .hwmWayCardTitle {
+        font-size: 32px;
+        line-height: 30px;
+    }
+
+    .hwmStorageLocs {
+        padding: 64px 24px;
+    }
+
+    .hwmStorageLocsHead {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .hwmStorageLocsGrid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    .hwmStorageLocCardTitle {
+        font-size: 32px;
+        line-height: 30px;
+    }
+
+    .hwmQuoteSection {
+        padding: 64px 24px;
+    }
+
+    .hwmQuoteText {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .hwmWhyGrid--4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hwmBeforeAfter {
+        padding: 56px 24px;
+    }
+
+    .hwmBeforeAfterGrid {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .hwmBaLabel {
+        font-size: 28px;
+        line-height: 28px;
+    }
+}
+
+/* ============================================================
+   RESPONSIVE — Brand / Storage / Custom Hull — ≤ 575px
+   ============================================================ */
+@media (max-width: 575px) {
+    .hwmModelsGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .hwmModelCardSize {
+        font-size: 32px;
+        line-height: 30px;
+    }
+
+    .hwmBrandStripItem {
+        flex: 0 0 280px;
+        height: 200px;
+    }
+
+    .hwmStorageLocCardTag {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .hwmWhyGrid--4 {
+        grid-template-columns: 1fr;
+    }
+}
