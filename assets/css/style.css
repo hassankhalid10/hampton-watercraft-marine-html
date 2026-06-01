@@ -5162,3 +5162,401 @@ select.hwmInput {
         line-height: 32px;
     }
 }
+
+/* ============================================================
+   INTERIOR PAGES — Awards / Marina Facilities / Ship Store / Links
+   ============================================================ */
+
+/* --- Awards intro: 3-column icon row on navy --- */
+.hwmIconRow {
+    background-color: var(--navy);
+    padding: 24px 6.04% 64px;
+}
+
+.hwmIconRowHead {
+    text-align: center;
+    margin-bottom: 56px;
+}
+
+.hwmIconRowGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 80px;
+    max-width: 1620px;
+    margin: 0 auto;
+}
+
+.hwmIconRowItem {
+    text-align: center;
+    color: var(--white);
+}
+
+.hwmIconRowCircle {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: var(--tan);
+    color: var(--white);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin-bottom: 32px;
+}
+
+.hwmIconRowTitle {
+    font-family: var(--amiri);
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -1.2px;
+    text-transform: uppercase;
+    color: var(--white);
+    margin: 0 0 16px;
+}
+
+.hwmIconRowItem .hwmPara {
+    color: var(--white);
+    max-width: 360px;
+    margin: 0 auto;
+}
+
+/* --- Awards: navy section wrapping the 4x2 card grid --- */
+.hwmAwards {
+    background-color: var(--navy);
+    padding: 24px 6.04% 100px;
+}
+
+.hwmAwards .hwmAmenitiesGrid {
+    background-color: transparent;
+}
+
+/* --- Ship Store: product categories cards (3-col rounded cards) --- */
+.hwmShipProducts {
+    background-color: var(--f7);
+    padding: 80px 9.17% 100px;
+}
+
+.hwmShipProductsHead {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.hwmShipProductsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    max-width: 1571px;
+    margin: 0 auto;
+}
+
+.hwmShipProductCard {
+    background-color: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+}
+
+.hwmShipProductImg {
+    width: 100%;
+    aspect-ratio: 497 / 360;
+    overflow: hidden;
+}
+
+.hwmShipProductImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.hwmShipProductCard:hover .hwmShipProductImg img {
+    transform: scale(1.04);
+}
+
+.hwmShipProductBody {
+    padding: 32px;
+}
+
+.hwmShipProductLabel {
+    font-family: var(--amiri);
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -1.2px;
+    color: var(--tan);
+    text-transform: uppercase;
+    margin: 0 0 8px;
+}
+
+.hwmShipProductTitle {
+    font-family: var(--holland);
+    font-size: 40px;
+    line-height: 32px;
+    color: var(--navy);
+    text-transform: uppercase;
+    margin: 0 0 16px;
+    letter-spacing: 0.5px;
+}
+
+.hwmShipProductDesc {
+    font-family: var(--regular-segoe-ui);
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--text-gray);
+    margin: 0;
+}
+
+/* --- Ship Store 4-image strip --- */
+.hwmShipStrip {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    overflow: hidden;
+}
+
+.hwmShipStrip > div {
+    aspect-ratio: 478 / 320;
+    overflow: hidden;
+}
+
+.hwmShipStrip img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* --- Ship Store callout (navy bg with centered visit-us card) --- */
+.hwmShipCallout {
+    background-color: var(--navy);
+    padding: 100px 6.04%;
+    text-align: center;
+}
+
+.hwmShipCalloutHead {
+    max-width: 800px;
+    margin: 0 auto 32px;
+}
+
+.hwmShipCalloutHead .hwmH2 {
+    color: var(--tan);
+    margin-bottom: 24px;
+}
+
+.hwmShipCalloutHead .hwmPara {
+    color: var(--white);
+    opacity: 0.95;
+}
+
+.hwmShipCalloutBtn {
+    margin: 0 0 56px;
+    display: flex;
+    justify-content: center;
+}
+
+.hwmShipCalloutCard {
+    background-color: rgba(255, 255, 255, 0.08);
+    border-radius: 4px;
+    padding: 32px 40px;
+    max-width: 420px;
+    margin: 0 auto;
+    text-align: center;
+    color: var(--white);
+}
+
+.hwmShipCalloutLabel {
+    font-family: var(--amiri);
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -1.2px;
+    color: var(--tan);
+    text-transform: uppercase;
+    margin: 0 0 12px;
+}
+
+.hwmShipCalloutSub {
+    font-family: var(--bold-segoe-ui);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+    color: var(--white);
+    margin: 0 0 12px;
+}
+
+.hwmShipCalloutAddr {
+    display: block;
+    font-family: var(--regular-segoe-ui);
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--white);
+    text-decoration: underline;
+    margin: 0 0 16px;
+}
+
+.hwmShipCalloutAddr:hover {
+    color: var(--white);
+    opacity: 0.85;
+}
+
+.hwmShipCalloutPhone {
+    display: block;
+    font-family: var(--holland);
+    font-size: 40px;
+    line-height: 32px;
+    color: var(--white);
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+}
+
+.hwmShipCalloutPhone:hover {
+    color: var(--white);
+    opacity: 0.85;
+}
+
+/* --- Links page --- */
+.hwmLinksPage {
+    padding: 56px 6.04% 100px;
+    background-color: var(--white);
+}
+
+.hwmLinksPageHead {
+    text-align: center;
+    margin-bottom: 56px;
+}
+
+.hwmLinksPageHead .hwmPara {
+    margin-top: 16px;
+}
+
+.hwmLinksGroup {
+    max-width: 1500px;
+    margin: 0 auto 56px;
+}
+
+.hwmLinksGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.hwmLinksGrid--center {
+    grid-template-columns: minmax(0, 460px);
+    justify-content: center;
+}
+
+.hwmLinkCard {
+    background-color: var(--f7);
+    padding: 32px;
+    border-radius: 4px;
+    min-height: 180px;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transition: background-color 0.2s ease;
+}
+
+.hwmLinkCard:hover {
+    background-color: #eeece5;
+    color: inherit;
+}
+
+.hwmLinkCardIcon {
+    color: var(--navy);
+    font-size: 32px;
+    line-height: 1;
+}
+
+.hwmLinkCardTitle {
+    font-family: var(--bold-segoe-ui);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    color: var(--navy);
+    text-transform: uppercase;
+    margin: 0;
+}
+
+/* ============================================================
+   RESPONSIVE — Awards / Ship Store / Links — ≤ 991px
+   ============================================================ */
+@media (max-width: 991px) {
+    .hwmIconRow {
+        padding: 16px 24px 48px;
+    }
+
+    .hwmIconRowGrid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .hwmAwards {
+        padding: 16px 24px 64px;
+    }
+
+    .hwmShipProducts {
+        padding: 56px 24px 72px;
+    }
+
+    .hwmShipProductsGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+
+    .hwmShipProductTitle {
+        font-size: 32px;
+        line-height: 30px;
+    }
+
+    .hwmShipStrip {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hwmShipCallout {
+        padding: 64px 24px;
+    }
+
+    .hwmShipCalloutPhone {
+        font-size: 32px;
+    }
+
+    .hwmLinksPage {
+        padding: 40px 24px 72px;
+    }
+
+    .hwmLinksGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+/* ============================================================
+   RESPONSIVE — Awards / Ship Store / Links — ≤ 575px
+   ============================================================ */
+@media (max-width: 575px) {
+    .hwmShipProductsGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .hwmShipStrip {
+        grid-template-columns: 1fr;
+    }
+
+    .hwmShipCalloutPhone {
+        font-size: 28px;
+    }
+
+    .hwmLinksGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .hwmLinksGrid--center {
+        grid-template-columns: 1fr;
+    }
+}
