@@ -4705,3 +4705,460 @@ select.hwmInput {
         grid-template-columns: 1fr;
     }
 }
+
+/* ============================================================
+   INTERIOR PAGES — Location / FAQ
+   ============================================================ */
+
+/* --- Location hero (tall, full image, gradient overlay) --- */
+.hwmHero.hwmHeroPage--loc {
+    height: 1080px;
+    max-height: none;
+}
+
+.hwmHero.hwmHeroPage--loc .hwmHeroOverlay {
+    background: linear-gradient(180deg, rgba(0, 5, 37, 0.15) 18%, var(--navy) 100%);
+}
+
+.hwmHero.hwmHeroPage--loc .hwmHeroInner {
+    padding: 80px 14.58% 0;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 200px;
+}
+
+.hwmHero.hwmHeroPage--loc .hwmH4 {
+    margin-top: 32px;
+    max-width: 900px;
+}
+
+.hwmHero.hwmHeroPage--loc .hwmH5 {
+    margin-top: 16px;
+    max-width: 900px;
+}
+
+/* --- Info panels overlaying the hero bottom --- */
+.hwmLocPanels {
+    background-color: var(--navy);
+    padding: 0 14.58% 64px;
+    margin-top: -400px;
+    position: relative;
+    z-index: 2;
+}
+
+.hwmLocPanelsInner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+    gap: 0;
+}
+
+.hwmLocPanel {
+    background-color: rgba(230, 230, 230, 0.1);
+    padding: 32px 40px;
+    color: var(--white);
+    min-height: 320px;
+    border-radius: 4px 0 0 4px;
+}
+
+.hwmLocPanel--map {
+    background-color: rgba(230, 230, 230, 0.18);
+    border-radius: 0 4px 4px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hwmLocPanel--map span {
+    font-family: var(--holland);
+    font-size: 56px;
+    line-height: 48px;
+    color: rgba(0, 5, 37, 0.4);
+    text-transform: uppercase;
+}
+
+.hwmLocPanelGroup {
+    margin-bottom: 20px;
+}
+
+.hwmLocPanelLabel {
+    font-family: var(--bold-segoe-ui);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    color: var(--white);
+    text-transform: uppercase;
+    margin: 0 0 4px;
+}
+
+.hwmLocPanelValue {
+    font-family: var(--regular-segoe-ui);
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--white);
+    margin: 0;
+}
+
+.hwmLocPanelPhone {
+    display: inline-block;
+    font-family: var(--holland);
+    font-size: 56px;
+    line-height: 48px;
+    color: var(--tan);
+    text-transform: uppercase;
+    text-decoration: none;
+    margin: 4px 0 0;
+}
+
+.hwmLocPanelPhone:hover {
+    color: var(--tan);
+    opacity: 0.85;
+}
+
+/* --- Hours section (navy bg, 3 card grid) --- */
+.hwmHours {
+    background-color: var(--navy);
+    padding: 0 6.04% 100px;
+}
+
+.hwmHoursHead {
+    padding: 0 8.54%;
+    margin-bottom: 32px;
+}
+
+.hwmHoursGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 1680px;
+    margin: 0 auto;
+}
+
+.hwmHoursCard {
+    background-color: rgba(230, 230, 230, 0.07);
+    border: 2px solid var(--white);
+    border-radius: 4px;
+    padding: 32px;
+    color: var(--white);
+}
+
+.hwmHoursCardIcon {
+    color: var(--tan);
+    font-size: 22px;
+    margin-bottom: 16px;
+    display: block;
+}
+
+.hwmHoursCardTitle {
+    font-family: var(--bold-segoe-ui);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    color: var(--tan);
+    text-transform: uppercase;
+    margin: 0 0 16px;
+}
+
+.hwmHoursRow {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 4px;
+}
+
+.hwmHoursRow > span:first-child {
+    font-family: var(--regular-segoe-ui);
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--white);
+}
+
+.hwmHoursRow > span:last-child {
+    font-family: var(--bold-segoe-ui);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--white);
+    text-align: right;
+}
+
+/* --- Amenities section (f7 bg, 4 cards) --- */
+.hwmAmenities {
+    background-color: var(--f7);
+    padding: 80px 6.04% 100px;
+}
+
+.hwmAmenitiesHead {
+    text-align: center;
+    margin-bottom: 56px;
+}
+
+.hwmAmenitiesHead .hwmPara {
+    margin-top: 16px;
+}
+
+.hwmAmenitiesGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 48px 24px;
+    max-width: 1680px;
+    margin: 0 auto;
+}
+
+.hwmAmenityCard {
+    display: flex;
+    flex-direction: column;
+}
+
+.hwmAmenityImg {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background-color: #c4c4c4;
+    overflow: hidden;
+}
+
+.hwmAmenityImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hwmAmenityBody {
+    background-color: var(--white);
+    padding: 32px 30px;
+    flex: 1;
+}
+
+.hwmAmenityIcon {
+    color: var(--tan);
+    font-size: 28px;
+    margin-bottom: 16px;
+}
+
+.hwmAmenityTitle {
+    font-family: var(--bold-segoe-ui);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    color: var(--navy);
+    text-transform: uppercase;
+    margin: 0 0 12px;
+}
+
+.hwmAmenityDesc {
+    font-family: var(--regular-segoe-ui);
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--text-gray);
+    margin: 0;
+}
+
+/* --- Location 5-image strip (reuse pattern of hwmBrandStrip) --- */
+.hwmLocStrip {
+    width: 100%;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.hwmLocStrip > div {
+    aspect-ratio: 720 / 520;
+    overflow: hidden;
+}
+
+.hwmLocStrip img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ============================================================
+   INTERIOR PAGES — FAQ accordion
+   ============================================================ */
+
+.hwmFaqPage {
+    padding: 80px 6.04% 100px;
+    background-color: var(--white);
+}
+
+.hwmFaqHead {
+    text-align: center;
+    margin-bottom: 56px;
+}
+
+.hwmFaqList {
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+.hwmFaqSection {
+    border-bottom: 1px solid var(--d9);
+}
+
+.hwmFaqSection > summary {
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 28px 0;
+    font-family: var(--amiri);
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -1.2px;
+    color: var(--navy);
+    text-transform: uppercase;
+}
+
+.hwmFaqSection > summary::-webkit-details-marker {
+    display: none;
+}
+
+.hwmFaqSection > summary::after {
+    content: '+';
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    font-family: var(--regular-segoe-ui);
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 1;
+    color: var(--navy);
+}
+
+.hwmFaqSection[open] > summary::after {
+    content: '−';
+}
+
+.hwmFaqSectionBody {
+    padding: 8px 30px 32px;
+}
+
+.hwmFaqItem {
+    padding: 24px 0;
+    border-bottom: 1px solid var(--d9);
+}
+
+.hwmFaqItem:last-child {
+    border-bottom: none;
+}
+
+.hwmFaqQ,
+.hwmFaqA {
+    font-family: var(--regular-segoe-ui);
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--text-gray);
+    margin: 0;
+}
+
+.hwmFaqQ {
+    margin-bottom: 16px;
+}
+
+.hwmFaqMark {
+    color: var(--tan);
+}
+
+.hwmFaqQ strong {
+    font-family: var(--bold-segoe-ui);
+    font-weight: 700;
+    color: var(--text-gray);
+}
+
+/* ============================================================
+   RESPONSIVE — Location / FAQ — ≤ 991px
+   ============================================================ */
+@media (max-width: 991px) {
+    .hwmHero.hwmHeroPage--loc {
+        height: 720px;
+    }
+
+    .hwmHero.hwmHeroPage--loc .hwmHeroInner {
+        padding: 96px 24px 0;
+    }
+
+    .hwmLocPanels {
+        padding: 0 24px 40px;
+        margin-top: -240px;
+    }
+
+    .hwmLocPanelsInner {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .hwmLocPanel,
+    .hwmLocPanel--map {
+        border-radius: 4px;
+        min-height: 240px;
+    }
+
+    .hwmLocPanelPhone {
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    .hwmHours {
+        padding: 0 24px 64px;
+    }
+
+    .hwmHoursHead {
+        padding: 0;
+    }
+
+    .hwmHoursGrid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .hwmAmenities {
+        padding: 64px 24px;
+    }
+
+    .hwmAmenitiesGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px 16px;
+    }
+
+    .hwmLocStrip {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hwmFaqPage {
+        padding: 56px 24px 64px;
+    }
+
+    .hwmFaqSectionBody {
+        padding: 4px 16px 24px;
+    }
+
+    .hwmFaqSection > summary {
+        font-size: 20px;
+        line-height: 28px;
+    }
+}
+
+/* ============================================================
+   RESPONSIVE — Location / FAQ — ≤ 575px
+   ============================================================ */
+@media (max-width: 575px) {
+    .hwmHero.hwmHeroPage--loc {
+        height: 640px;
+    }
+
+    .hwmAmenitiesGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .hwmLocStrip {
+        grid-template-columns: 1fr;
+    }
+
+    .hwmLocPanelPhone {
+        font-size: 32px;
+        line-height: 32px;
+    }
+}
