@@ -3593,3 +3593,512 @@ select.hwmInput {
         max-width: 320px;
     }
 }
+
+/* ============================================================
+   INTERIOR PAGES — Blog / Events
+   ============================================================ */
+
+/* --- 40px Holland navy utility (Figma "Listing Title") --- */
+.hwmH3Listing {
+    font-family: var(--holland);
+    font-size: 40px;
+    line-height: 32px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--navy);
+}
+
+/* --- Listing filters (blog/events) --- */
+.hwmListFilters {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 56px 12.92% 56px;
+    flex-wrap: wrap;
+}
+
+.hwmListFilter {
+    background: none;
+    border: none;
+    padding: 0 0 6px;
+    cursor: pointer;
+    font-family: var(--amiri);
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -1.2px;
+    text-transform: uppercase;
+    color: var(--navy);
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s ease;
+}
+
+.hwmListFilter--active {
+    color: var(--maroon);
+    border-bottom-color: var(--maroon);
+}
+
+.hwmListFilter:hover {
+    color: var(--maroon);
+}
+
+/* --- Article grid (blog 2-col / events 3-col) --- */
+.hwmArticleGrid {
+    display: grid;
+    gap: 72px 64px;
+    padding: 0 12.92% 100px;
+}
+
+.hwmArticleGrid--2 { grid-template-columns: repeat(2, 1fr); }
+.hwmArticleGrid--3 { grid-template-columns: repeat(3, 1fr); gap: 56px 32px; padding: 0 12.29% 100px; }
+
+.hwmArticleCard {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
+
+.hwmArticleCardImg {
+    width: 100%;
+    aspect-ratio: 680 / 363;
+    background-color: #c4c4c4;
+    overflow: hidden;
+}
+
+.hwmArticleGrid--3 .hwmArticleCardImg {
+    aspect-ratio: 440 / 235;
+}
+
+.hwmArticleCardImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.hwmArticleCard:hover .hwmArticleCardImg img {
+    transform: scale(1.03);
+}
+
+.hwmArticleCard .hwmH4 {
+    margin: 8px 0 0;
+}
+
+.hwmArticleCard .hwmH3Listing {
+    margin: 0;
+}
+
+.hwmArticleCard .hwmPara {
+    margin: 0;
+}
+
+/* --- Blog detail --- */
+.hwmDetailCrumb {
+    padding: 24px 6.04% 0;
+    font-family: var(--regular-segoe-ui);
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--anchor-gray);
+}
+
+.hwmBlogDetail {
+    padding: 40px 6.04% 100px;
+}
+
+.hwmBlogDetailInner {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 360px;
+    gap: 80px;
+    max-width: 1640px;
+    margin: 0 auto;
+    align-items: flex-start;
+}
+
+.hwmBlogMain {
+    min-width: 0;
+}
+
+.hwmBlogMainImg {
+    width: 100%;
+    aspect-ratio: 1000 / 500;
+    background-color: #c4c4c4;
+    margin-bottom: 40px;
+    overflow: hidden;
+}
+
+.hwmBlogMainImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hwmBlogMeta {
+    font-family: var(--regular-segoe-ui);
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(61, 62, 66, 0.6);
+    margin: 16px 0;
+    text-transform: uppercase;
+}
+
+.hwmBlogBody p {
+    font-family: var(--regular-segoe-ui);
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--text-gray);
+    margin-bottom: 16px;
+}
+
+.hwmBlogBody p:last-child {
+    margin-bottom: 0;
+}
+
+.hwmBlogSidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.hwmBlogSidebarTitle {
+    margin: 0 0 8px;
+}
+
+.hwmSimilarCard {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
+
+.hwmSimilarImg {
+    width: 100%;
+    aspect-ratio: 360 / 200;
+    background-color: #c4c4c4;
+    overflow: hidden;
+}
+
+.hwmSimilarImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hwmSimilarTitle {
+    margin: 0;
+    font-family: var(--bold-segoe-ui);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    color: var(--navy);
+    text-transform: uppercase;
+}
+
+/* ============================================================
+   INTERIOR PAGES — Event Detail
+   ============================================================ */
+
+/* --- Centered hero variant --- */
+.hwmHero.hwmHeroPage--center .hwmHeroInner {
+    padding: 0 14.58%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hwmHero.hwmHeroPage--center .hwmH1,
+.hwmHero.hwmHeroPage--center .hwmPara {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hwmHero.hwmHeroPage--center .hwmHeroSub {
+    margin-top: 24px;
+    max-width: 600px;
+}
+
+.hwmHero.hwmHeroPage--center .hwmHeroBtn {
+    margin-top: 32px;
+    align-self: center;
+    min-width: 300px;
+}
+
+/* --- Event meta row (Where / When / About) --- */
+.hwmEventMeta {
+    background-color: var(--f7);
+    padding: 64px 10.42%;
+}
+
+.hwmEventMetaInner {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    gap: 80px;
+    max-width: 1520px;
+    margin: 0 auto;
+    align-items: flex-start;
+}
+
+.hwmEventMetaLabel {
+    font-family: var(--amiri);
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -1.2px;
+    color: var(--tan);
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+.hwmEventMetaValue {
+    font-family: var(--holland);
+    font-size: 56px;
+    line-height: 48px;
+    color: var(--navy);
+    text-transform: uppercase;
+    margin: 0 0 16px;
+}
+
+/* --- Event 2x2 image gallery + features text --- */
+.hwmEventFeatures {
+    padding: 80px 10.42%;
+}
+
+.hwmEventFeaturesGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    max-width: 1520px;
+    margin: 0 auto;
+}
+
+.hwmEventFeatureImg {
+    width: 100%;
+    aspect-ratio: 720 / 440;
+    background-color: #c4c4c4;
+    overflow: hidden;
+}
+
+.hwmEventFeatureImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hwmEventFeaturesFoot {
+    display: flex;
+    justify-content: center;
+    margin-top: 56px;
+}
+
+.hwmEventCopy {
+    padding: 0 10.42% 40px;
+}
+
+.hwmEventCopyGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    max-width: 1520px;
+    margin: 0 auto;
+}
+
+.hwmEventCopyItem .hwmH3Listing {
+    margin: 0 0 16px;
+}
+
+/* --- Event brands strip --- */
+.hwmEventBrands {
+    background-color: var(--f7);
+    padding: 80px 6.04%;
+    text-align: center;
+}
+
+.hwmEventBrandsHead {
+    margin-bottom: 40px;
+}
+
+.hwmEventBrandsGrid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 40px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.hwmEventBrandsItem {
+    height: 100px;
+    background-color: var(--d9);
+}
+
+/* --- Event featured inventory horizontal scroll (reuse hwmArrivalCard) --- */
+.hwmEventInventory {
+    padding: 100px 0 80px;
+}
+
+.hwmEventInventoryHead {
+    padding: 0 6.04%;
+    max-width: 1800px;
+    margin: 0 auto 32px;
+}
+
+.hwmEventInventoryStrip {
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.hwmEventInventoryStrip::-webkit-scrollbar {
+    display: none;
+}
+
+.hwmEventInventoryTrack {
+    display: flex;
+    gap: 24px;
+    padding: 0 6.04%;
+    width: max-content;
+}
+
+.hwmEventInventoryTrack .hwmArrivalCard {
+    width: 520px;
+    flex: 0 0 520px;
+}
+
+.hwmEventInventoryTrack .hwmArrivalImg {
+    aspect-ratio: 520 / 360;
+}
+
+/* ============================================================
+   RESPONSIVE — Blog / Events / Event Detail — ≤ 991px
+   ============================================================ */
+@media (max-width: 991px) {
+    .hwmListFilters {
+        padding: 32px 24px;
+        gap: 24px;
+    }
+
+    .hwmListFilter {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .hwmArticleGrid {
+        padding: 0 24px 64px;
+        gap: 48px 32px;
+    }
+
+    .hwmArticleGrid--3 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px 24px;
+        padding: 0 24px 64px;
+    }
+
+    .hwmH3Listing {
+        font-size: 32px;
+        line-height: 30px;
+    }
+
+    .hwmBlogDetail {
+        padding: 32px 24px 64px;
+    }
+
+    .hwmBlogDetailInner {
+        grid-template-columns: 1fr;
+        gap: 56px;
+    }
+
+    .hwmDetailCrumb {
+        padding: 16px 24px 0;
+    }
+
+    .hwmEventMeta {
+        padding: 48px 24px;
+    }
+
+    .hwmEventMetaInner {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .hwmEventMetaValue {
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    .hwmEventFeatures,
+    .hwmEventCopy {
+        padding: 48px 24px;
+    }
+
+    .hwmEventFeaturesGrid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .hwmEventCopyGrid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .hwmEventBrands {
+        padding: 48px 24px;
+    }
+
+    .hwmEventBrandsGrid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+    }
+
+    .hwmEventInventory {
+        padding: 64px 0 48px;
+    }
+
+    .hwmEventInventoryHead {
+        padding: 0 24px;
+    }
+
+    .hwmEventInventoryTrack {
+        gap: 16px;
+        padding: 0 24px;
+    }
+
+    .hwmEventInventoryTrack .hwmArrivalCard {
+        width: 320px;
+        flex: 0 0 320px;
+    }
+}
+
+/* ============================================================
+   RESPONSIVE — Blog / Events / Event Detail — ≤ 575px
+   ============================================================ */
+@media (max-width: 575px) {
+    .hwmListFilters {
+        gap: 16px;
+    }
+
+    .hwmListFilter {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .hwmArticleGrid--2,
+    .hwmArticleGrid--3 {
+        grid-template-columns: 1fr;
+    }
+
+    .hwmH3Listing {
+        font-size: 26px;
+        line-height: 28px;
+    }
+
+    .hwmEventMetaValue {
+        font-size: 32px;
+        line-height: 32px;
+    }
+
+    .hwmEventBrandsGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
