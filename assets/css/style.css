@@ -112,7 +112,7 @@ img {
     font-size: 24px;
     font-weight: 400;
     line-height: 32px;
-    letter-spacing: -0.5px;
+    letter-spacing: -0.05em;
     text-transform: uppercase;
 }
 
@@ -222,18 +222,20 @@ img {
     color: var(--maroon);
 }
 
-/* --- Centered logo --- */
+/* --- Centered logo (site-logo.png is already the full maroon-ribbon badge) --- */
 .hwmLogo {
     position: absolute;
     left: 50%;
-    top: 8px;
+    top: 6px;
     transform: translateX(-50%);
     display: block;
     z-index: 2;
+    line-height: 0;
+    filter: drop-shadow(0 4px 10px rgba(0, 5, 37, 0.18));
 }
 
 .hwmLogo img {
-    height: 90px;
+    height: 96px;
     width: auto;
     max-width: none;
     object-fit: contain;
@@ -593,6 +595,65 @@ img {
     align-self: flex-start;
 }
 
+/* --- Hero background video (home) --- */
+.hwmHeroVideo {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+/* --- Hero collage variant (Sell/Trade): heading left, 3 stacked photos right --- */
+.hwmHeroCollage {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    z-index: 0;
+}
+
+.hwmHeroCollageLeft {
+    background-color: var(--navy);
+    position: relative;
+    overflow: hidden;
+}
+
+.hwmHeroCollageLeft::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 5, 37, 0.45) 0%, rgba(0, 5, 37, 0.85) 100%);
+}
+
+.hwmHeroCollageLeft img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hwmHeroCollageStack {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 4px;
+    height: 100%;
+}
+
+.hwmHeroCollageStack img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hwmHero--collage .hwmHeroInner {
+    width: 50%;
+    padding: 80px 64px;
+    justify-content: center;
+}
+
 /* ============================================================
    INTRO + CTA CARDS + BRAND GRID
    ============================================================ */
@@ -724,13 +785,21 @@ img {
 .hwmBrandWordmark {
     display: block;
     font-family: var(--holland);
-    font-size: 40px;
+    font-size: 48px;
     line-height: 1;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     text-transform: uppercase;
     color: var(--white);
-    margin-bottom: 40px;
+    margin-bottom: 32px;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
 }
+
+.hwmBrandWordmark--tiara        { font-style: italic; letter-spacing: 4px; }
+.hwmBrandWordmark--whaler       { font-size: 38px; letter-spacing: 5px; }
+.hwmBrandWordmark--keywest      { font-size: 44px; letter-spacing: 4px; }
+.hwmBrandWordmark--navan        { font-size: 50px; letter-spacing: 6px; font-weight: 700; }
+.hwmBrandWordmark--brig         { font-size: 54px; letter-spacing: 8px; }
+.hwmBrandWordmark--yamaha       { font-size: 44px; letter-spacing: 5px; color: #cc0000; text-shadow: 0 2px 12px rgba(0, 0, 0, 0.55); }
 
 .hwmBrandCardBody .hwmPara {
     max-width: 380px;
@@ -767,14 +836,15 @@ img {
     padding: 0 32px;
 }
 
-/* --- Carousel arrows --- */
+/* --- Carousel arrows (circular navy w/ white chevron, per Figma) --- */
 .hwmArrivalsBtn {
     position: absolute;
     top: calc(360px / 2);
     transform: translateY(-50%);
     z-index: 5;
-    width: 48px;
-    height: 80px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
     background-color: var(--navy);
     color: var(--white);
     border: none;
@@ -783,11 +853,13 @@ img {
     align-items: center;
     justify-content: center;
     font-size: 16px;
-    transition: background-color 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0, 5, 37, 0.25);
+    transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 .hwmArrivalsBtn:hover {
     background-color: var(--maroon);
+    transform: translateY(-50%) scale(1.05);
 }
 
 .hwmArrivalsPrev {
@@ -946,6 +1018,79 @@ img {
 
 .hwmBtnPrimary--compact {
     min-width: 140px;
+}
+
+/* ============================================================
+   SERVICE GRID (dedicated, replaces .hwmArrivals reuse on Service page)
+   ============================================================ */
+.hwmServiceGrid {
+    background-color: var(--white);
+    padding: 100px 6.04%;
+}
+
+.hwmServiceGridHead {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 240px;
+    align-items: flex-start;
+    padding: 0 8.54%;
+    margin-bottom: 56px;
+}
+
+.hwmServiceGridHead .hwmPara {
+    max-width: 720px;
+}
+
+.hwmServiceGridInner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.hwmServiceGridCard {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+    transition: transform 0.25s ease;
+}
+
+.hwmServiceGridCard:hover {
+    transform: translateY(-4px);
+}
+
+.hwmServiceGridImg {
+    width: 100%;
+    aspect-ratio: 520 / 360;
+    overflow: hidden;
+    margin-bottom: 24px;
+}
+
+.hwmServiceGridImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.hwmServiceGridCard:hover .hwmServiceGridImg img {
+    transform: scale(1.04);
+}
+
+.hwmServiceGridTitle {
+    font-family: var(--holland);
+    font-size: 28px;
+    line-height: 32px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--navy);
+    margin-bottom: 12px;
+}
+
+.hwmServiceGridDesc {
+    font-family: var(--regular-segoe-ui);
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--text-gray);
 }
 
 /* ============================================================
@@ -1114,6 +1259,22 @@ img {
     line-height: 1;
     letter-spacing: 0.5px;
     text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.hwmCtaBarText::after {
+    content: "\203A";
+    font-size: 32px;
+    line-height: 1;
+    color: var(--tan);
+    transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.hwmCtaBarItem:hover .hwmCtaBarText::after {
+    color: var(--white);
+    transform: translateX(4px);
 }
 
 /* ============================================================
@@ -3046,18 +3207,30 @@ select.hwmInput {
 }
 
 .hwmCultureList {
-    list-style: disc;
-    padding-left: 22px;
+    list-style: none;
+    padding-left: 0;
     margin-top: 16px;
     margin-bottom: 28px;
 }
 
 .hwmCultureList li {
+    position: relative;
+    padding-left: 22px;
     font-family: var(--regular-segoe-ui);
     font-size: 16px;
     line-height: 24px;
     color: var(--text-gray);
     margin-bottom: 8px;
+}
+
+.hwmCultureList li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 9px;
+    width: 8px;
+    height: 8px;
+    background-color: var(--tan);
 }
 
 .hwmCultureList li strong {
