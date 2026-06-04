@@ -251,6 +251,16 @@ img {
     color: var(--maroon);
 }
 
+.hwmBrandLogoWrap{
+    max-width: 200px;
+    margin-bottom: 40px;
+}
+
+.hwmBrandLogoWrap img{
+    width: 100%;
+    object-fit: contain;
+}
+
 /* --- Centered logo (site-logo.png is already the full maroon-ribbon badge) --- */
 .hwmLogo {
     position: absolute;
@@ -794,16 +804,23 @@ img {
     object-fit: cover;
 }
 
+.hwmBrandCard::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(180deg, rgba(0, 5, 37, 0.00) 0%, #000525 100%);
+}
+
 .hwmBrandCardBody {
     position: absolute;
     left: 0;
     right: 0;
     bottom: 0;
-    height: 47.22%;
-    padding: 53px 48px 40px;
-    display: flex;
-    flex-direction: column;
-    background: linear-gradient(180deg, rgba(0, 5, 37, 0) 0%, rgba(0, 5, 37, 0.9) 32%, var(--navy) 56%);
+    left: 8%;
+    bottom: 40px;
     z-index: 2;
 }
 
