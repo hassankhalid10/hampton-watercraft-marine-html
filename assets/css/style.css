@@ -32,6 +32,10 @@
     box-sizing: border-box;
 }
 
+a:hover {
+    text-decoration: none;
+}
+
 :root {
     /* Colours (Figma tokens) */
     --navy: #000525;
@@ -739,17 +743,14 @@ img {
     gap: 20px;
     height: 140px;
     padding: 0 32px;
-    border: 1px solid rgba(122, 105, 59, 0.5);
     border-radius: 4px;
-    background-color: rgba(0, 5, 37, 0.7);
     transition: all 0.25s ease;
     color: var(--white);
     text-align: left;
 }
 
 .hwmCtaCard:hover {
-    background-color: rgba(122, 105, 59, 0.18);
-    border-color: var(--tan);
+    border: 2px solid #2a2d30;
     color: var(--white);
 }
 
@@ -758,16 +759,15 @@ img {
     height: 48px;
     object-fit: contain;
     flex-shrink: 0;
-    filter: brightness(0) invert(1);
 }
 
 .hwmCtaCardText {
-    font-family: var(--holland);
-    font-size: 32px;
-    line-height: 36px;
+    font-family: var(--amiri);
+    font-size: 40px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 40px;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
-    color: var(--white);
 }
 
 /* --- Brand grid (6 cards) --- */
@@ -5482,7 +5482,7 @@ select.hwmInput {
         gap: 32px;
         max-width: 320px;
     }
-    
+
     .hwmListFilters {
         gap: 16px;
     }
@@ -5571,7 +5571,7 @@ select.hwmInput {
         grid-template-columns: 1fr;
     }
 
-        .hwmCareersGrid {
+    .hwmCareersGrid {
         grid-template-columns: 1fr;
     }
 
