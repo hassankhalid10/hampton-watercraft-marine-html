@@ -68,7 +68,21 @@ body {
     line-height: 1.5;
 }
 
-body, h1, h2, h3, h4, h5, h6, p, blockquote, figure, ol, ul, dl, fieldset, pre {
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+figure,
+ol,
+ul,
+dl,
+fieldset,
+pre {
     margin: 0;
 }
 
@@ -131,10 +145,21 @@ img {
 }
 
 /* --- Colour helpers --- */
-.hwmNavyText  { color: var(--navy); }
-.hwmTanText   { color: var(--tan); }
-.hwmWhiteText { color: var(--white); }
-.hwmGrayText  { color: var(--text-gray); }
+.hwmNavyText {
+    color: var(--navy);
+}
+
+.hwmTanText {
+    color: var(--tan);
+}
+
+.hwmWhiteText {
+    color: var(--white);
+}
+
+.hwmGrayText {
+    color: var(--text-gray);
+}
 
 /* ============================================================
    BUTTONS
@@ -794,12 +819,38 @@ img {
     text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
 }
 
-.hwmBrandWordmark--tiara        { font-style: italic; letter-spacing: 4px; }
-.hwmBrandWordmark--whaler       { font-size: 38px; letter-spacing: 5px; }
-.hwmBrandWordmark--keywest      { font-size: 44px; letter-spacing: 4px; }
-.hwmBrandWordmark--navan        { font-size: 50px; letter-spacing: 6px; font-weight: 700; }
-.hwmBrandWordmark--brig         { font-size: 54px; letter-spacing: 8px; }
-.hwmBrandWordmark--yamaha       { font-size: 44px; letter-spacing: 5px; color: #cc0000; text-shadow: 0 2px 12px rgba(0, 0, 0, 0.55); }
+.hwmBrandWordmark--tiara {
+    font-style: italic;
+    letter-spacing: 4px;
+}
+
+.hwmBrandWordmark--whaler {
+    font-size: 38px;
+    letter-spacing: 5px;
+}
+
+.hwmBrandWordmark--keywest {
+    font-size: 44px;
+    letter-spacing: 4px;
+}
+
+.hwmBrandWordmark--navan {
+    font-size: 50px;
+    letter-spacing: 6px;
+    font-weight: 700;
+}
+
+.hwmBrandWordmark--brig {
+    font-size: 54px;
+    letter-spacing: 8px;
+}
+
+.hwmBrandWordmark--yamaha {
+    font-size: 44px;
+    letter-spacing: 5px;
+    color: #cc0000;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.55);
+}
 
 .hwmBrandCardBody .hwmPara {
     max-width: 380px;
@@ -1755,7 +1806,7 @@ select.hwmInput {
     appearance: none;
     -webkit-appearance: none;
     background-image: linear-gradient(45deg, transparent 50%, var(--navy) 50%),
-                      linear-gradient(135deg, var(--navy) 50%, transparent 50%);
+        linear-gradient(135deg, var(--navy) 50%, transparent 50%);
     background-position: calc(100% - 22px) 22px, calc(100% - 16px) 22px;
     background-size: 6px 6px;
     background-repeat: no-repeat;
@@ -3821,8 +3872,15 @@ select.hwmInput {
     padding: 0 12.92% 100px;
 }
 
-.hwmArticleGrid--2 { grid-template-columns: repeat(2, 1fr); }
-.hwmArticleGrid--3 { grid-template-columns: repeat(3, 1fr); gap: 56px 32px; padding: 0 12.29% 100px; }
+.hwmArticleGrid--2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.hwmArticleGrid--3 {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 56px 32px;
+    padding: 0 12.29% 100px;
+}
 
 .hwmArticleCard {
     display: flex;
@@ -5039,14 +5097,14 @@ select.hwmInput {
     margin-bottom: 4px;
 }
 
-.hwmHoursRow > span:first-child {
+.hwmHoursRow>span:first-child {
     font-family: var(--regular-segoe-ui);
     font-size: 16px;
     line-height: 24px;
     color: var(--white);
 }
 
-.hwmHoursRow > span:last-child {
+.hwmHoursRow>span:last-child {
     font-family: var(--bold-segoe-ui);
     font-weight: 700;
     font-size: 16px;
@@ -5134,7 +5192,7 @@ select.hwmInput {
     grid-template-columns: repeat(5, 1fr);
 }
 
-.hwmLocStrip > div {
+.hwmLocStrip>div {
     aspect-ratio: 720 / 520;
     overflow: hidden;
 }
@@ -5168,7 +5226,7 @@ select.hwmInput {
     border-bottom: 1px solid var(--d9);
 }
 
-.hwmFaqSection > summary {
+.hwmFaqSection>summary {
     list-style: none;
     cursor: pointer;
     display: flex;
@@ -5183,11 +5241,11 @@ select.hwmInput {
     text-transform: uppercase;
 }
 
-.hwmFaqSection > summary::-webkit-details-marker {
+.hwmFaqSection>summary::-webkit-details-marker {
     display: none;
 }
 
-.hwmFaqSection > summary::after {
+.hwmFaqSection>summary::after {
     content: '+';
     display: inline-flex;
     align-items: center;
@@ -5201,7 +5259,7 @@ select.hwmInput {
     color: var(--navy);
 }
 
-.hwmFaqSection[open] > summary::after {
+.hwmFaqSection[open]>summary::after {
     content: '−';
 }
 
@@ -5308,7 +5366,7 @@ select.hwmInput {
         padding: 4px 16px 24px;
     }
 
-    .hwmFaqSection > summary {
+    .hwmFaqSection>summary {
         font-size: 20px;
         line-height: 28px;
     }
@@ -5490,7 +5548,7 @@ select.hwmInput {
     overflow: hidden;
 }
 
-.hwmShipStrip > div {
+.hwmShipStrip>div {
     aspect-ratio: 478 / 320;
     overflow: hidden;
 }
