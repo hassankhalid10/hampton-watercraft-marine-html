@@ -194,7 +194,6 @@ img {
     background-color: var(--navy);
     color: var(--white);
     border: 2px solid rgba(122, 105, 59, 0.6);
-    min-width: 180px;
 }
 
 .hwmBtnPrimary:hover {
@@ -965,9 +964,8 @@ img {
 
 .hwmArrivalPlay {
     position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    right: 16px;
+    bottom: 20px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -975,14 +973,26 @@ img {
     width: 160px;
     height: 48px;
     padding: 0 18px;
-    border: 1px solid rgba(255, 255, 255, 0.95);
-    background-color: rgba(0, 5, 37, 0.45);
+    background-color: #7A693B;
+    border: none;
+    outline: none;
+    border-radius: 4px;
     color: var(--white);
     font-family: var(--regular-segoe-ui);
     font-size: 16px;
     line-height: 1;
     cursor: pointer;
     transition: all 0.2s ease;
+}
+
+.hwmArrivalPlay img{
+    background-color: #FFFFFF33;
+    border-radius: 50%;
+    width: 32px !important;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .hwmArrivalPlay:hover {
@@ -1117,7 +1127,6 @@ img {
     background-color: var(--maroon);
     color: var(--white);
     border: none;
-    min-width: 140px;
 }
 
 .hwmBtnMaroon:hover {
@@ -1125,13 +1134,6 @@ img {
     color: var(--white);
 }
 
-.hwmBtnMaroon--wide {
-    min-width: 240px;
-}
-
-.hwmBtnPrimary--compact {
-    min-width: 140px;
-}
 
 /* ============================================================
    SERVICE GRID (dedicated, replaces .hwmArrivals reuse on Service page)
@@ -1234,7 +1236,7 @@ img {
 .hwmServiceCardOverlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, rgba(0, 5, 37, 0.55) 0%, rgba(0, 5, 37, 0.85) 100%);
+    background: linear-gradient(180deg, rgba(0, 5, 37, 0.40) 60%, #000525 100%);
 }
 
 .hwmServiceCardBody {
@@ -1972,10 +1974,6 @@ select.hwmInput {
     justify-content: center;
 }
 
-.hwmHeroFormSubmit .hwmBtnMaroon {
-    min-width: 140px;
-}
-
 /* --- Locations section --- */
 .hwmLocations {
     background-color: var(--navy);
@@ -2280,9 +2278,6 @@ select.hwmInput {
     margin-top: 8px;
 }
 
-.hwmCalcSubmit .hwmBtnMaroon {
-    min-width: 140px;
-}
 
 
 /* ============================================================
@@ -2702,9 +2697,6 @@ select.hwmInput {
     flex-wrap: wrap;
 }
 
-.hwmHeroBtnRow .hwmBtnMaroon {
-    min-width: 280px;
-}
 
 /* --- Live Cams: 2-up grid in navy section --- */
 .hwmCams {
@@ -4685,7 +4677,6 @@ select.hwmInput {
     }
 
     .hwmHeroBtnRow .hwmBtnMaroon {
-        min-width: 0;
         width: 100%;
     }
 
