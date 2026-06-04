@@ -1325,6 +1325,14 @@ img {
     margin-bottom: 24px;
 }
 
+.hwmHeroBreadcrumb {
+    position: absolute;
+    top: 14px;
+    left: 14.58%;
+    z-index: 3;
+    margin: 0;
+}
+
 .hwmHeroSub {
     margin-top: 32px;
 }
@@ -1402,11 +1410,28 @@ img {
 }
 
 .hwmCardItem {
-    background-color: var(--white);
-    border: 1px solid var(--d9);
-    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.hwmCardItemImg {
+    height: 260px;
+    background-color: #c4c4c4;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.hwmCardItemImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hwmCardItemBody {
+    background-color: var(--f7);
     padding: 32px;
-    min-height: 260px;
+    flex: 1;
 }
 
 .hwmCardItemIcon {
@@ -1414,46 +1439,50 @@ img {
     height: 48px;
     object-fit: contain;
     margin-bottom: 16px;
+    display: block;
 }
 
-.hwmCardItem .hwmH4 {
-    font-size: 24px;
+.hwmCardTitle {
+    font-family: var(--bold-segoe-ui);
+    font-size: 20px;
+    font-weight: 700;
     line-height: 24px;
+    text-transform: uppercase;
     margin-bottom: 16px;
 }
 
-/* --- Horizontal gallery strip (Mercury Award images) --- */
+/* Bold paragraph utility */
+.hwmParaBold {
+    font-family: var(--bold-segoe-ui);
+    font-weight: 700;
+}
+
+/* --- Horizontal gallery carousel (Mercury Award images) --- */
+/*
+ * .hwmServiceGrid has padding: 100px 6.04% on each side.
+ * Negative margin-right pulls the gallery flush to the right viewport edge.
+ * -6.04vw of right padding / 87.92% content width = -6.87% of content width.
+ */
 .hwmGallery {
+    padding-top: 56px;
+    margin-right: -6.87%;
+    overflow: hidden;
+}
+
+.hwmAwardCarousel {
     width: 100%;
-    overflow-x: auto;
-    padding: 56px 0 0;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-}
-
-.hwmGallery::-webkit-scrollbar {
-    display: none;
-}
-
-.hwmGalleryTrack {
-    display: flex;
-    gap: 24px;
-    padding: 0 6.04%;
-    width: max-content;
 }
 
 .hwmGalleryItem {
-    flex: 0 0 auto;
     height: 520px;
-    width: 600px;
     overflow: hidden;
-    border-radius: 4px;
 }
 
 .hwmGalleryItem img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
 }
 
 /* --- Travel Lift (dark section, centered head, 2 images) --- */
@@ -1545,6 +1574,13 @@ img {
     letter-spacing: 3px;
     text-transform: uppercase;
     color: var(--navy);
+}
+
+.hwmLogoStripImg {
+    height: 64px;
+    width: auto;
+    max-width: 280px;
+    object-fit: contain;
 }
 
 /* --- Steps section (How It Works) --- */
@@ -1675,7 +1711,7 @@ img {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 80px;
-    max-width: 1500px;
+    max-width: 1050px;
     margin: 0 auto;
     align-items: flex-start;
 }
@@ -1720,7 +1756,6 @@ img {
 }
 
 .hwmFormCard {
-    background-color: var(--white);
     padding: 32px;
     border-radius: 4px;
     box-shadow: 0 4px 20px rgba(0, 5, 37, 0.08);
@@ -2019,6 +2054,16 @@ select.hwmInput {
 /* ============================================================
    INTERIOR PAGES — Financing
    ============================================================ */
+
+/* --- Service hero: fade image into the dark CTA strip below --- */
+.hwmHero.hwmHeroPage--service .hwmHeroOverlay {
+    background: linear-gradient(180deg,
+            rgba(0, 5, 37, 0.25) 0%,
+            rgba(0, 5, 37, 0.45) 25%,
+            rgba(0, 5, 37, 0.7) 45%,
+            var(--navy) 70%,
+            var(--navy) 100%);
+}
 
 /* --- Hero split: title left / description right --- */
 .hwmHero.hwmHeroPage--finance .hwmHeroOverlay {
@@ -2502,6 +2547,10 @@ select.hwmInput {
         gap: 20px;
     }
 
+    .hwmCardItemImg {
+        height: 200px;
+    }
+
     .hwmTravelLift,
     .hwmReasons,
     .hwmFormSection,
@@ -2534,7 +2583,6 @@ select.hwmInput {
 
     .hwmGalleryItem {
         height: 360px;
-        width: 440px;
     }
 
     .hwmLogoStripInner {
@@ -2817,6 +2865,10 @@ select.hwmInput {
         grid-template-columns: 1fr;
     }
 
+    .hwmCardItemImg {
+        height: 220px;
+    }
+
     .hwmTravelLiftGrid {
         grid-template-columns: 1fr;
     }
@@ -2835,8 +2887,7 @@ select.hwmInput {
     }
 
     .hwmGalleryItem {
-        height: 260px;
-        width: 320px;
+        height: 240px;
     }
 
     .hwmLogoStripItem {
