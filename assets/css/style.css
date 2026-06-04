@@ -615,6 +615,14 @@ img {
     background: linear-gradient(180deg, rgba(0, 5, 37, 0.35) 0%, rgba(0, 5, 37, 0.7) 100%);
 }
 
+.ss-event{
+background: linear-gradient(
+  to left,
+  rgba(0, 5, 37, 0.6) 0%,
+  rgba(0, 5, 37, 1) 100%
+) !important;
+}
+
 .hwmHeroInner {
     position: relative;
     z-index: 2;
@@ -1402,7 +1410,7 @@ img {
 }
 
 .hwmHero.hwmHeroPage--short {
-    height: 700px;
+    height: 600px;
 }
 
 /* Dark CTA strip directly below hero (Service) */
