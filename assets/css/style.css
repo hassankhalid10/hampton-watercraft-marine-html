@@ -1352,12 +1352,6 @@ img {
     align-items: flex-start;
 }
 
-@media (max-width: 991px) {
-    .hwmHeroCta {
-        min-height: 0;
-        padding: 24px;
-    }
-}
 
 .hwmHero.hwmHeroPage .hwmHeroInner {
     padding: 80px 14.58% 80px;
@@ -2219,713 +2213,6 @@ select.hwmInput {
     min-width: 140px;
 }
 
-/* ============================================================
-   RESPONSIVE — ≤ 1200px
-   ============================================================ */
-@media (max-width: 1200px) {
-    .hwmHeaderInner {
-        padding: 0 32px;
-    }
-
-    .hwmNav {
-        gap: 24px;
-    }
-
-    .hwmNavLink,
-    .hwmHeaderLocPhone,
-    .hwmHeaderMore {
-        font-size: 18px;
-    }
-
-    .hwmHeaderRight {
-        gap: 20px;
-    }
-
-    .hwmLogo img {
-        height: 76px;
-    }
-
-    /* Hero */
-    .hwmH1 {
-        font-size: 76px;
-        line-height: 76px;
-    }
-
-    .hwmHeroInner {
-        padding: 0 8%;
-    }
-
-    /* Intro */
-    .hwmIntroHead,
-    .hwmArrivalsHead,
-    .hwmMarinasHead {
-        gap: 60px;
-    }
-
-    .hwmH2 {
-        font-size: 48px;
-        line-height: 48px;
-    }
-
-    .hwmCtaCards {
-        gap: 32px;
-    }
-
-    .hwmServiceCardBody {
-        padding: 80px 56px;
-    }
-
-    /* Contact / Financing — split heroes */
-    .hwmHero.hwmHeroPage--split .hwmHeroInner,
-    .hwmHero.hwmHeroPage--finance .hwmHeroInner {
-        gap: 48px;
-    }
-
-    .hwmLocationsHead {
-        gap: 60px;
-    }
-
-    .hwmStat {
-        font-size: 64px;
-        line-height: 60px;
-    }
-}
-
-/* ============================================================
-   RESPONSIVE — ≤ 991px (tablet)
-   ============================================================ */
-@media (max-width: 991px) {
-    .hwmHeader {
-        height: 72px;
-    }
-
-    .hwmHeaderInner {
-        height: 72px;
-        padding: 0 20px;
-    }
-
-    .hwmNav,
-    .hwmHeaderLoc {
-        display: none;
-    }
-
-    .hwmLogo {
-        position: static;
-        transform: none;
-        margin-right: auto;
-    }
-
-    .hwmLogo img {
-        height: 56px;
-    }
-
-    .hwmHeaderRight {
-        flex: 0 0 auto;
-        gap: 0;
-    }
-
-    .hwmHeaderMore span:first-child {
-        display: none;
-    }
-
-    /* Footer */
-    .hwmFooterTop {
-        flex-direction: column;
-        min-height: 0;
-        padding: 0;
-    }
-
-    .hwmFooterImage img {
-        min-height: 360px;
-        height: 360px;
-    }
-
-    .hwmNewsletter {
-        padding: 56px 24px;
-    }
-
-    .hwmNewsletter .hwmH2 {
-        font-size: 42px;
-        line-height: 44px;
-    }
-
-    .hwmFooterMid {
-        margin: 0;
-        padding: 56px 32px;
-    }
-
-    .hwmFooterMidInner {
-        grid-template-columns: 1fr;
-        gap: 48px;
-    }
-
-    .hwmFooterCols {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 32px;
-    }
-
-    .hwmFooterPhone {
-        font-size: 32px;
-    }
-
-    .hwmFooterPolicy p {
-        font-size: 14px;
-        line-height: 22px;
-    }
-
-    /* Hero */
-    .hwmHero {
-        height: 720px;
-    }
-
-    .hwmH1 {
-        font-size: 52px;
-        line-height: 56px;
-    }
-
-    .hwmHeroBtn {
-        margin-top: 40px;
-    }
-
-    /* Intro */
-    .hwmIntro {
-        padding: 64px 0 0;
-    }
-
-    .hwmIntroHead,
-    .hwmArrivalsHead,
-    .hwmMarinasHead {
-        grid-template-columns: 1fr;
-        gap: 24px;
-        padding: 0 24px;
-        margin-bottom: 40px;
-    }
-
-    .hwmH2 {
-        font-size: 40px;
-        line-height: 44px;
-    }
-
-    .hwmCtaCards {
-        grid-template-columns: 1fr;
-        gap: 16px;
-        padding: 0 24px;
-        margin-bottom: 56px;
-    }
-
-    .hwmCtaCard {
-        height: 100px;
-    }
-
-    .hwmCtaCardText {
-        font-size: 24px;
-        line-height: 28px;
-    }
-
-    .hwmBrandGrid,
-    .hwmMarinaGrid {
-        grid-template-columns: 1fr 1fr;
-        gap: 4px;
-        padding: 0;
-    }
-
-    .hwmBrandCard,
-    .hwmMarinaCard {
-        aspect-ratio: 4 / 5;
-        min-height: 0;
-    }
-
-    .hwmBrandCardBody,
-    .hwmMarinaBody {
-        height: 50%;
-        padding: 32px 24px 24px;
-    }
-
-    .hwmMarinaBody {
-        padding: 60px 24px 24px;
-    }
-
-    .hwmBrandWordmark {
-        font-size: 30px;
-        margin-bottom: 24px;
-    }
-
-    .hwmMarinaBody .hwmH4 {
-        font-size: 30px;
-        line-height: 28px;
-        margin-bottom: 12px;
-    }
-
-    /* Arrivals */
-    .hwmArrivals {
-        padding: 64px 0;
-    }
-
-    .hwmArrivalsInner {
-        padding: 0 24px;
-    }
-
-    .hwmArrivalsCarouselWrap {
-        padding: 0;
-    }
-
-    .hwmArrivalsPrev {
-        left: -8px;
-    }
-
-    .hwmArrivalsNext {
-        right: -8px;
-    }
-
-    /* Service + Storage */
-    .hwmServiceStorage {
-        grid-template-columns: 1fr;
-    }
-
-    .hwmServiceCard {
-        min-height: 480px;
-    }
-
-    .hwmServiceCardBody {
-        padding: 0 32px;
-        max-width: 100%;
-    }
-
-    /* Marinas */
-    .hwmMarinas {
-        padding: 64px 0 0;
-    }
-
-    /* CTA Bar */
-    .hwmCtaBar {
-        padding: 48px 24px;
-    }
-
-    .hwmCtaBarInner {
-        gap: 16px;
-    }
-
-    .hwmCtaBarItem {
-        height: 100px;
-        gap: 12px;
-    }
-
-    .hwmCtaBarIcon {
-        width: 40px;
-        height: 40px;
-    }
-
-    .hwmCtaBarText {
-        font-size: 24px;
-    }
-
-    /* Interior pages */
-    .hwmHero.hwmHeroPage,
-    .hwmHero.hwmHeroPage--short {
-        height: 520px;
-    }
-
-    .hwmHero.hwmHeroPage .hwmHeroInner {
-        padding: 64px 24px;
-    }
-
-    .hwmSplit {
-        grid-template-columns: 1fr;
-        gap: 40px;
-        padding: 64px 24px;
-    }
-
-    .hwmCardGrid {
-        padding: 0 24px;
-    }
-
-    .hwmCardGrid--3 {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-    }
-
-    .hwmTravelLift,
-    .hwmReasons,
-    .hwmFormSection,
-    .hwmSteps {
-        padding: 64px 24px;
-    }
-
-    .hwmTravelLiftGrid {
-        gap: 16px;
-    }
-
-    .hwmStepsGrid {
-        grid-template-columns: 1fr;
-        gap: 32px;
-    }
-
-    .hwmReasonsInner {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-
-    .hwmReasonsGrid {
-        gap: 32px;
-    }
-
-    .hwmFormGrid {
-        grid-template-columns: 1fr;
-        gap: 48px;
-    }
-
-    .hwmGalleryItem {
-        height: 360px;
-        width: 440px;
-    }
-
-    .hwmLogoStripInner {
-        gap: 24px 56px;
-    }
-
-    .hwmLogoStripItem {
-        font-size: 28px;
-    }
-
-    /* Contact split hero stacks */
-    .hwmHero.hwmHeroPage--split {
-        height: auto;
-        min-height: 0;
-    }
-
-    .hwmHero.hwmHeroPage--split .hwmHeroInner {
-        grid-template-columns: 1fr;
-        padding: 64px 24px;
-        gap: 40px;
-    }
-
-    .hwmHeroBody {
-        max-width: 100%;
-    }
-
-    .hwmHeroForm {
-        padding: 32px 24px 24px;
-    }
-
-    /* Locations stack */
-    .hwmLocations {
-        padding: 64px 0 80px;
-    }
-
-    .hwmLocationsHead {
-        grid-template-columns: 1fr;
-        gap: 24px;
-        padding: 0 24px;
-        margin-bottom: 40px;
-    }
-
-    .hwmLocationGrid {
-        grid-template-columns: 1fr;
-        gap: 32px;
-        padding: 0 24px;
-    }
-
-    .hwmLocationName {
-        font-size: 30px;
-        line-height: 32px;
-    }
-
-    /* Financing hero */
-    .hwmHero.hwmHeroPage--finance .hwmHeroInner {
-        grid-template-columns: 1fr;
-        padding: 64px 24px;
-        gap: 32px;
-    }
-
-    /* Why Finance */
-    .hwmWhy {
-        padding: 64px 24px;
-    }
-
-    .hwmWhyGrid {
-        grid-template-columns: 1fr 1fr;
-        gap: 24px 32px;
-    }
-
-    /* Stat + Calculator */
-    .hwmStatCalcInner {
-        grid-template-columns: 1fr;
-        gap: 48px;
-        padding: 64px 24px;
-    }
-
-    .hwmStat {
-        font-size: 56px;
-        line-height: 56px;
-        max-width: 100%;
-    }
-
-    .hwmCalc {
-        max-width: 100%;
-        margin: 0 auto;
-        padding: 32px;
-    }
-}
-
-/* ============================================================
-   RESPONSIVE — ≤ 575px (mobile)
-   ============================================================ */
-@media (max-width: 575px) {
-    .hwmHeaderInner {
-        padding: 0 16px;
-    }
-
-    .hwmLogo img {
-        height: 48px;
-    }
-
-    .hwmNewsletter .hwmH2 {
-        font-size: 32px;
-        line-height: 36px;
-    }
-
-    .hwmFooterMid {
-        padding: 48px 24px;
-    }
-
-    .hwmFooterCols {
-        grid-template-columns: 1fr;
-        gap: 28px;
-        text-align: center;
-    }
-
-    .hwmFooterCol .hwmH4 {
-        margin-bottom: 14px;
-    }
-
-    .hwmFooterPhoneLabel {
-        font-size: 20px;
-    }
-
-    .hwmFooterPhone {
-        font-size: 28px;
-    }
-
-    .hwmFooterPolicy {
-        padding: 24px 16px;
-    }
-
-    .hwmFooterPolicy p {
-        font-size: 13px;
-        line-height: 20px;
-    }
-
-    /* Hero */
-    .hwmHero {
-        height: 600px;
-    }
-
-    .hwmH1 {
-        font-size: 38px;
-        line-height: 42px;
-    }
-
-    .hwmHeroInner {
-        padding: 0 24px;
-    }
-
-    /* Sections */
-    .hwmH2 {
-        font-size: 32px;
-        line-height: 36px;
-    }
-
-    .hwmIntro,
-    .hwmArrivals {
-        padding: 48px 0 0;
-    }
-
-    .hwmArrivals {
-        padding-bottom: 56px;
-    }
-
-    .hwmMarinas {
-        padding: 48px 0 0;
-    }
-
-    .hwmCtaCard {
-        height: 88px;
-    }
-
-    .hwmCtaCardText {
-        font-size: 22px;
-    }
-
-    .hwmBrandGrid,
-    .hwmMarinaGrid {
-        grid-template-columns: 1fr;
-    }
-
-    .hwmBrandCard,
-    .hwmMarinaCard {
-        aspect-ratio: 3 / 4;
-    }
-
-    .hwmBrandCardBody,
-    .hwmMarinaBody {
-        padding: 28px 20px 20px;
-    }
-
-    .hwmMarinaBody {
-        padding: 52px 20px 20px;
-    }
-
-    .hwmBrandWordmark {
-        font-size: 26px;
-        margin-bottom: 20px;
-    }
-
-    .hwmMarinaBody .hwmH4 {
-        font-size: 26px;
-        line-height: 26px;
-    }
-
-    .hwmServiceCardBody {
-        padding: 0 24px;
-    }
-
-    .hwmCtaBarInner {
-        grid-template-columns: 1fr;
-    }
-
-    .hwmCtaBarItem {
-        height: 88px;
-    }
-
-    .hwmCtaBarText {
-        font-size: 22px;
-    }
-
-    .hwmArrivalsHead {
-        padding: 0 16px;
-    }
-
-    .hwmArrivalsInner {
-        padding: 0 16px;
-    }
-
-    .hwmArrivalInfo {
-        padding: 20px 24px 14px;
-        height: auto;
-    }
-
-    .hwmArrivalTitle {
-        font-size: 22px;
-        line-height: 28px;
-        min-height: 0;
-    }
-
-    .hwmArrivalPrice {
-        font-size: 24px;
-    }
-
-    /* Interior pages — mobile */
-    .hwmHero.hwmHeroPage,
-    .hwmHero.hwmHeroPage--short {
-        height: 460px;
-    }
-
-    .hwmHero.hwmHeroPage .hwmHeroInner {
-        padding: 48px 16px;
-    }
-
-    .hwmBreadcrumb {
-        font-size: 12px;
-        margin-bottom: 16px;
-    }
-
-    .hwmHeroSub {
-        margin-top: 20px;
-    }
-
-    .hwmSplit,
-    .hwmTravelLift,
-    .hwmReasons,
-    .hwmFormSection,
-    .hwmSteps {
-        padding: 48px 16px;
-    }
-
-    .hwmCardGrid {
-        padding: 0 16px;
-    }
-
-    .hwmCardGrid--3 {
-        grid-template-columns: 1fr;
-    }
-
-    .hwmTravelLiftGrid {
-        grid-template-columns: 1fr;
-    }
-
-    .hwmReasonsGrid {
-        grid-template-columns: 1fr;
-        gap: 24px;
-    }
-
-    .hwmFormCard {
-        padding: 24px;
-    }
-
-    .hwmFieldRow {
-        grid-template-columns: 1fr;
-    }
-
-    .hwmGalleryItem {
-        height: 260px;
-        width: 320px;
-    }
-
-    .hwmLogoStripItem {
-        font-size: 24px;
-    }
-
-    .hwmContactPhone {
-        font-size: 22px;
-    }
-
-    .hwmHeroForm {
-        padding: 24px 20px 20px;
-    }
-
-    .hwmHeroFormTitle {
-        font-size: 36px;
-        line-height: 40px;
-    }
-
-    .hwmLocationName {
-        font-size: 26px;
-        line-height: 30px;
-    }
-
-    .hwmLocationPhoneLink {
-        font-size: 26px;
-        line-height: 28px;
-    }
-
-    .hwmWhyGrid {
-        grid-template-columns: 1fr;
-    }
-
-    .hwmStat {
-        font-size: 42px;
-        line-height: 44px;
-    }
-
-    .hwmCalc {
-        padding: 24px;
-    }
-
-    .hwmCalcTitle {
-        font-size: 32px;
-        line-height: 36px;
-    }
-}
 
 /* ============================================================
    BUTTONS — TAN VARIANT
@@ -3322,102 +2609,6 @@ select.hwmInput {
     font-weight: 400;
 }
 
-/* ============================================================
-   RESPONSIVE — Parts / About — ≤ 991px
-   ============================================================ */
-@media (max-width: 991px) {
-    .hwmHero.hwmHeroPage--parts {
-        height: 480px;
-    }
-
-    .hwmHero.hwmHeroPage--parts .hwmHeroInner,
-    .hwmHero.hwmHeroPage--about .hwmHeroInner {
-        padding: 64px 24px;
-    }
-
-    .hwmHero.hwmHeroPage--about {
-        height: 560px;
-    }
-
-    .hwmAboutSubHero {
-        padding: 48px 24px 64px;
-    }
-
-    .hwmAboutSubHeroInner {
-        grid-template-columns: 1fr;
-        gap: 24px;
-    }
-
-    .hwmCategories {
-        padding: 64px 24px;
-    }
-
-    .hwmCategoriesGrid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 24px;
-    }
-
-    .hwmCallout {
-        padding: 40px 24px;
-    }
-
-    .hwmOrderParts {
-        padding: 64px 24px;
-    }
-
-    .hwmOrderPartsInner {
-        grid-template-columns: 1fr;
-        gap: 48px;
-    }
-
-    .hwmOrderForm {
-        margin-left: 0;
-        max-width: 100%;
-    }
-
-    .hwmOrderLocPhone {
-        font-size: 32px;
-    }
-}
-
-/* ============================================================
-   RESPONSIVE — Parts / About — ≤ 575px
-   ============================================================ */
-@media (max-width: 575px) {
-    .hwmHero.hwmHeroPage--parts {
-        height: 420px;
-    }
-
-    .hwmHero.hwmHeroPage--about {
-        height: 480px;
-    }
-
-    .hwmAboutSubHeroLabel {
-        font-size: 18px;
-    }
-
-    .hwmCategoriesGrid {
-        grid-template-columns: 1fr;
-    }
-
-    .hwmCategoryName {
-        font-size: 18px;
-    }
-
-    .hwmCalloutInner .hwmH2 {
-        font-size: 32px;
-        line-height: 36px;
-    }
-
-    .hwmOrderLocPhone {
-        font-size: 28px;
-    }
-
-    .hwmQuote {
-        font-size: 16px;
-        line-height: 24px;
-    }
-}
 
 /* ============================================================
    INTERIOR PAGES — Live Cams / Videos / Staff
@@ -3693,130 +2884,6 @@ select.hwmInput {
     color: var(--text-gray);
 }
 
-/* ============================================================
-   RESPONSIVE — Live Cams / Videos / Staff — ≤ 991px
-   ============================================================ */
-@media (max-width: 991px) {
-    .hwmHeroBtnRow {
-        position: static;
-        transform: none;
-        margin-top: 32px;
-        padding: 0;
-        gap: 12px;
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .hwmHeroBtnRow .hwmBtnMaroon {
-        min-width: 0;
-        width: 100%;
-    }
-
-    .hwmCams {
-        padding: 0 24px 64px;
-        margin-top: -40px;
-    }
-
-    .hwmCamsGrid {
-        grid-template-columns: 1fr;
-        gap: 32px;
-    }
-
-    .hwmCamTitle {
-        font-size: 30px;
-        line-height: 32px;
-    }
-
-    .hwmVideoFilters {
-        gap: 20px;
-    }
-
-    .hwmVideos {
-        padding: 48px 24px 64px;
-    }
-
-    .hwmVideosGrid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 40px 24px;
-    }
-
-    .hwmStaff {
-        padding: 64px 24px 0;
-    }
-
-    .hwmStaff:last-of-type {
-        padding-bottom: 64px;
-    }
-
-    .hwmStaffSectionHead {
-        gap: 16px;
-        margin-bottom: 40px;
-    }
-
-    .hwmStaffRule {
-        max-width: 120px;
-    }
-
-    .hwmStaffGrid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 40px 24px;
-    }
-
-    .hwmStaffName {
-        font-size: 18px;
-    }
-
-    .hwmStaffTitle {
-        font-size: 16px;
-        line-height: 24px;
-    }
-}
-
-/* ============================================================
-   RESPONSIVE — Live Cams / Videos / Staff — ≤ 575px
-   ============================================================ */
-@media (max-width: 575px) {
-    .hwmCamTitle {
-        font-size: 24px;
-        line-height: 26px;
-    }
-
-    .hwmCamPlay,
-    .hwmVideoThumbPlay {
-        width: 48px;
-        height: 48px;
-        font-size: 16px;
-    }
-
-    .hwmVideoFilters {
-        gap: 16px;
-    }
-
-    .hwmVideoFilter {
-        font-size: 16px;
-    }
-
-    .hwmVideosGrid {
-        grid-template-columns: 1fr;
-        gap: 28px;
-    }
-
-    .hwmStaffSectionHead {
-        flex-direction: column;
-        gap: 12px;
-    }
-
-    .hwmStaffRule {
-        width: 100%;
-        max-width: 200px;
-    }
-
-    .hwmStaffGrid {
-        grid-template-columns: 1fr;
-        gap: 32px;
-        max-width: 320px;
-    }
-}
 
 /* ============================================================
    INTERIOR PAGES — Blog / Events
@@ -4201,138 +3268,6 @@ select.hwmInput {
     aspect-ratio: 520 / 360;
 }
 
-/* ============================================================
-   RESPONSIVE — Blog / Events / Event Detail — ≤ 991px
-   ============================================================ */
-@media (max-width: 991px) {
-    .hwmListFilters {
-        padding: 32px 24px;
-        gap: 24px;
-    }
-
-    .hwmListFilter {
-        font-size: 20px;
-        line-height: 28px;
-    }
-
-    .hwmArticleGrid {
-        padding: 0 24px 64px;
-        gap: 48px 32px;
-    }
-
-    .hwmArticleGrid--3 {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 40px 24px;
-        padding: 0 24px 64px;
-    }
-
-    .hwmH3Listing {
-        font-size: 32px;
-        line-height: 30px;
-    }
-
-    .hwmBlogDetail {
-        padding: 32px 24px 64px;
-    }
-
-    .hwmBlogDetailInner {
-        grid-template-columns: 1fr;
-        gap: 56px;
-    }
-
-    .hwmDetailCrumb {
-        padding: 16px 24px 0;
-    }
-
-    .hwmEventMeta {
-        padding: 48px 24px;
-    }
-
-    .hwmEventMetaInner {
-        grid-template-columns: 1fr;
-        gap: 32px;
-    }
-
-    .hwmEventMetaValue {
-        font-size: 40px;
-        line-height: 40px;
-    }
-
-    .hwmEventFeatures,
-    .hwmEventCopy {
-        padding: 48px 24px;
-    }
-
-    .hwmEventFeaturesGrid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .hwmEventCopyGrid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-
-    .hwmEventBrands {
-        padding: 48px 24px;
-    }
-
-    .hwmEventBrandsGrid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 24px;
-    }
-
-    .hwmEventInventory {
-        padding: 64px 0 48px;
-    }
-
-    .hwmEventInventoryHead {
-        padding: 0 24px;
-    }
-
-    .hwmEventInventoryTrack {
-        gap: 16px;
-        padding: 0 24px;
-    }
-
-    .hwmEventInventoryTrack .hwmArrivalCard {
-        width: 320px;
-        flex: 0 0 320px;
-    }
-}
-
-/* ============================================================
-   RESPONSIVE — Blog / Events / Event Detail — ≤ 575px
-   ============================================================ */
-@media (max-width: 575px) {
-    .hwmListFilters {
-        gap: 16px;
-    }
-
-    .hwmListFilter {
-        font-size: 18px;
-        line-height: 24px;
-    }
-
-    .hwmArticleGrid--2,
-    .hwmArticleGrid--3 {
-        grid-template-columns: 1fr;
-    }
-
-    .hwmH3Listing {
-        font-size: 26px;
-        line-height: 28px;
-    }
-
-    .hwmEventMetaValue {
-        font-size: 32px;
-        line-height: 32px;
-    }
-
-    .hwmEventBrandsGrid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
 
 /* ============================================================
    INTERIOR PAGES — Brand / Storage / Custom Hull Graphics
@@ -4802,140 +3737,6 @@ select.hwmInput {
     letter-spacing: 0.5px;
 }
 
-/* ============================================================
-   RESPONSIVE — Brand / Storage / Custom Hull — ≤ 991px
-   ============================================================ */
-@media (max-width: 991px) {
-    .hwmHero.hwmHeroPage--brand {
-        height: auto;
-        min-height: 520px;
-    }
-
-    .hwmHero.hwmHeroPage--brand .hwmHeroInner {
-        grid-template-columns: 1fr;
-        gap: 32px;
-        padding: 64px 24px;
-    }
-
-    .hwmBrandLogo {
-        max-width: 220px;
-    }
-
-    .hwmPromoStrip {
-        padding: 32px 24px;
-    }
-
-    .hwmModels {
-        padding: 64px 24px;
-    }
-
-    .hwmModelsGrid {
-        grid-template-columns: 1fr 1fr;
-        gap: 24px;
-    }
-
-    .hwmModelCardSize {
-        font-size: 40px;
-        line-height: 36px;
-    }
-
-    .hwmBrandStripItem {
-        flex: 0 0 400px;
-        height: 280px;
-    }
-
-    .hwmInventorySection {
-        padding: 56px 0 0;
-    }
-
-    .hwmWays {
-        padding: 64px 24px;
-    }
-
-    .hwmWaysGrid {
-        grid-template-columns: 1fr;
-        gap: 48px;
-    }
-
-    .hwmWayCardTitle {
-        font-size: 32px;
-        line-height: 30px;
-    }
-
-    .hwmStorageLocs {
-        padding: 64px 24px;
-    }
-
-    .hwmStorageLocsHead {
-        grid-template-columns: 1fr;
-        gap: 24px;
-    }
-
-    .hwmStorageLocsGrid {
-        grid-template-columns: 1fr;
-        gap: 48px;
-    }
-
-    .hwmStorageLocCardTitle {
-        font-size: 32px;
-        line-height: 30px;
-    }
-
-    .hwmQuoteSection {
-        padding: 64px 24px;
-    }
-
-    .hwmQuoteText {
-        font-size: 18px;
-        line-height: 28px;
-    }
-
-    .hwmWhyGrid--4 {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .hwmBeforeAfter {
-        padding: 56px 24px;
-    }
-
-    .hwmBeforeAfterGrid {
-        grid-template-columns: 1fr;
-        gap: 8px;
-    }
-
-    .hwmBaLabel {
-        font-size: 28px;
-        line-height: 28px;
-    }
-}
-
-/* ============================================================
-   RESPONSIVE — Brand / Storage / Custom Hull — ≤ 575px
-   ============================================================ */
-@media (max-width: 575px) {
-    .hwmModelsGrid {
-        grid-template-columns: 1fr;
-    }
-
-    .hwmModelCardSize {
-        font-size: 32px;
-        line-height: 30px;
-    }
-
-    .hwmBrandStripItem {
-        flex: 0 0 280px;
-        height: 200px;
-    }
-
-    .hwmStorageLocCardTag {
-        font-size: 20px;
-        line-height: 28px;
-    }
-
-    .hwmWhyGrid--4 {
-        grid-template-columns: 1fr;
-    }
-}
 
 /* ============================================================
    INTERIOR PAGES — Location / FAQ
@@ -5300,101 +4101,6 @@ select.hwmInput {
 }
 
 /* ============================================================
-   RESPONSIVE — Location / FAQ — ≤ 991px
-   ============================================================ */
-@media (max-width: 991px) {
-    .hwmHero.hwmHeroPage--loc {
-        height: 720px;
-    }
-
-    .hwmHero.hwmHeroPage--loc .hwmHeroInner {
-        padding: 96px 24px 0;
-    }
-
-    .hwmLocPanels {
-        padding: 0 24px 40px;
-        margin-top: -240px;
-    }
-
-    .hwmLocPanelsInner {
-        grid-template-columns: 1fr;
-        gap: 16px;
-    }
-
-    .hwmLocPanel,
-    .hwmLocPanel--map {
-        border-radius: 4px;
-        min-height: 240px;
-    }
-
-    .hwmLocPanelPhone {
-        font-size: 40px;
-        line-height: 40px;
-    }
-
-    .hwmHours {
-        padding: 0 24px 64px;
-    }
-
-    .hwmHoursHead {
-        padding: 0;
-    }
-
-    .hwmHoursGrid {
-        grid-template-columns: 1fr;
-        gap: 16px;
-    }
-
-    .hwmAmenities {
-        padding: 64px 24px;
-    }
-
-    .hwmAmenitiesGrid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 32px 16px;
-    }
-
-    .hwmLocStrip {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .hwmFaqPage {
-        padding: 56px 24px 64px;
-    }
-
-    .hwmFaqSectionBody {
-        padding: 4px 16px 24px;
-    }
-
-    .hwmFaqSection>summary {
-        font-size: 20px;
-        line-height: 28px;
-    }
-}
-
-/* ============================================================
-   RESPONSIVE — Location / FAQ — ≤ 575px
-   ============================================================ */
-@media (max-width: 575px) {
-    .hwmHero.hwmHeroPage--loc {
-        height: 640px;
-    }
-
-    .hwmAmenitiesGrid {
-        grid-template-columns: 1fr;
-    }
-
-    .hwmLocStrip {
-        grid-template-columns: 1fr;
-    }
-
-    .hwmLocPanelPhone {
-        font-size: 32px;
-        line-height: 32px;
-    }
-}
-
-/* ============================================================
    INTERIOR PAGES — Awards / Marina Facilities / Ship Store / Links
    ============================================================ */
 
@@ -5714,83 +4420,8 @@ select.hwmInput {
     margin: 0;
 }
 
-/* ============================================================
-   RESPONSIVE — Awards / Ship Store / Links — ≤ 991px
-   ============================================================ */
-@media (max-width: 991px) {
-    .hwmIconRow {
-        padding: 16px 24px 48px;
-    }
 
-    .hwmIconRowGrid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
 
-    .hwmAwards {
-        padding: 16px 24px 64px;
-    }
-
-    .hwmShipProducts {
-        padding: 56px 24px 72px;
-    }
-
-    .hwmShipProductsGrid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 24px;
-    }
-
-    .hwmShipProductTitle {
-        font-size: 32px;
-        line-height: 30px;
-    }
-
-    .hwmShipStrip {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .hwmShipCallout {
-        padding: 64px 24px;
-    }
-
-    .hwmShipCalloutPhone {
-        font-size: 32px;
-    }
-
-    .hwmLinksPage {
-        padding: 40px 24px 72px;
-    }
-
-    .hwmLinksGrid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-    }
-}
-
-/* ============================================================
-   RESPONSIVE — Awards / Ship Store / Links — ≤ 575px
-   ============================================================ */
-@media (max-width: 575px) {
-    .hwmShipProductsGrid {
-        grid-template-columns: 1fr;
-    }
-
-    .hwmShipStrip {
-        grid-template-columns: 1fr;
-    }
-
-    .hwmShipCalloutPhone {
-        font-size: 28px;
-    }
-
-    .hwmLinksGrid {
-        grid-template-columns: 1fr;
-    }
-
-    .hwmLinksGrid--center {
-        grid-template-columns: 1fr;
-    }
-}
 
 /* ============================================================
    INTERIOR PAGES — Careers
@@ -5897,9 +4528,468 @@ select.hwmInput {
 }
 
 /* ============================================================
-   RESPONSIVE — Careers — ≤ 991px
+   RESPONSIVE — ≤ 1200px
+   ============================================================ */
+@media (max-width: 1200px) {
+    .hwmHeaderInner {
+        padding: 0 32px;
+    }
+
+    .hwmNav {
+        gap: 24px;
+    }
+
+    .hwmNavLink,
+    .hwmHeaderLocPhone,
+    .hwmHeaderMore {
+        font-size: 18px;
+    }
+
+    .hwmHeaderRight {
+        gap: 20px;
+    }
+
+    .hwmLogo img {
+        height: 76px;
+    }
+
+    /* Hero */
+    .hwmH1 {
+        font-size: 76px;
+        line-height: 76px;
+    }
+
+    .hwmHeroInner {
+        padding: 0 8%;
+    }
+
+    /* Intro */
+    .hwmIntroHead,
+    .hwmArrivalsHead,
+    .hwmMarinasHead {
+        gap: 60px;
+    }
+
+    .hwmH2 {
+        font-size: 48px;
+        line-height: 48px;
+    }
+
+    .hwmCtaCards {
+        gap: 32px;
+    }
+
+    .hwmServiceCardBody {
+        padding: 80px 56px;
+    }
+
+    /* Contact / Financing — split heroes */
+    .hwmHero.hwmHeroPage--split .hwmHeroInner,
+    .hwmHero.hwmHeroPage--finance .hwmHeroInner {
+        gap: 48px;
+    }
+
+    .hwmLocationsHead {
+        gap: 60px;
+    }
+
+    .hwmStat {
+        font-size: 64px;
+        line-height: 60px;
+    }
+}
+
+/* ============================================================
+   RESPONSIVE — Parts / About — ≤ 991px
    ============================================================ */
 @media (max-width: 991px) {
+    .hwmHeroBtnRow {
+        position: static;
+        transform: none;
+        margin-top: 32px;
+        padding: 0;
+        gap: 12px;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hwmHeroBtnRow .hwmBtnMaroon {
+        min-width: 0;
+        width: 100%;
+    }
+
+    .hwmCams {
+        padding: 0 24px 64px;
+        margin-top: -40px;
+    }
+
+    .hwmCamsGrid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .hwmCamTitle {
+        font-size: 30px;
+        line-height: 32px;
+    }
+
+    .hwmVideoFilters {
+        gap: 20px;
+    }
+
+    .hwmVideos {
+        padding: 48px 24px 64px;
+    }
+
+    .hwmVideosGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px 24px;
+    }
+
+    .hwmStaff {
+        padding: 64px 24px 0;
+    }
+
+    .hwmStaff:last-of-type {
+        padding-bottom: 64px;
+    }
+
+    .hwmStaffSectionHead {
+        gap: 16px;
+        margin-bottom: 40px;
+    }
+
+    .hwmStaffRule {
+        max-width: 120px;
+    }
+
+    .hwmStaffGrid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 40px 24px;
+    }
+
+    .hwmStaffName {
+        font-size: 18px;
+    }
+
+    .hwmStaffTitle {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .hwmListFilters {
+        padding: 32px 24px;
+        gap: 24px;
+    }
+
+    .hwmListFilter {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .hwmArticleGrid {
+        padding: 0 24px 64px;
+        gap: 48px 32px;
+    }
+
+    .hwmArticleGrid--3 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px 24px;
+        padding: 0 24px 64px;
+    }
+
+    .hwmH3Listing {
+        font-size: 32px;
+        line-height: 30px;
+    }
+
+    .hwmBlogDetail {
+        padding: 32px 24px 64px;
+    }
+
+    .hwmBlogDetailInner {
+        grid-template-columns: 1fr;
+        gap: 56px;
+    }
+
+    .hwmDetailCrumb {
+        padding: 16px 24px 0;
+    }
+
+    .hwmEventMeta {
+        padding: 48px 24px;
+    }
+
+    .hwmEventMetaInner {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .hwmEventMetaValue {
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    .hwmEventFeatures,
+    .hwmEventCopy {
+        padding: 48px 24px;
+    }
+
+    .hwmEventFeaturesGrid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .hwmEventCopyGrid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .hwmEventBrands {
+        padding: 48px 24px;
+    }
+
+    .hwmEventBrandsGrid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+    }
+
+    .hwmEventInventory {
+        padding: 64px 0 48px;
+    }
+
+    .hwmEventInventoryHead {
+        padding: 0 24px;
+    }
+
+    .hwmEventInventoryTrack {
+        gap: 16px;
+        padding: 0 24px;
+    }
+
+    .hwmEventInventoryTrack .hwmArrivalCard {
+        width: 320px;
+        flex: 0 0 320px;
+    }
+
+    .hwmHero.hwmHeroPage--brand {
+        height: auto;
+        min-height: 520px;
+    }
+
+    .hwmHero.hwmHeroPage--brand .hwmHeroInner {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        padding: 64px 24px;
+    }
+
+    .hwmBrandLogo {
+        max-width: 220px;
+    }
+
+    .hwmPromoStrip {
+        padding: 32px 24px;
+    }
+
+    .hwmModels {
+        padding: 64px 24px;
+    }
+
+    .hwmModelsGrid {
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+    }
+
+    .hwmModelCardSize {
+        font-size: 40px;
+        line-height: 36px;
+    }
+
+    .hwmBrandStripItem {
+        flex: 0 0 400px;
+        height: 280px;
+    }
+
+    .hwmInventorySection {
+        padding: 56px 0 0;
+    }
+
+    .hwmWays {
+        padding: 64px 24px;
+    }
+
+    .hwmWaysGrid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    .hwmWayCardTitle {
+        font-size: 32px;
+        line-height: 30px;
+    }
+
+    .hwmStorageLocs {
+        padding: 64px 24px;
+    }
+
+    .hwmStorageLocsHead {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .hwmStorageLocsGrid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    .hwmStorageLocCardTitle {
+        font-size: 32px;
+        line-height: 30px;
+    }
+
+    .hwmQuoteSection {
+        padding: 64px 24px;
+    }
+
+    .hwmQuoteText {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .hwmWhyGrid--4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hwmBeforeAfter {
+        padding: 56px 24px;
+    }
+
+    .hwmBeforeAfterGrid {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .hwmBaLabel {
+        font-size: 28px;
+        line-height: 28px;
+    }
+
+    .hwmHero.hwmHeroPage--loc {
+        height: 720px;
+    }
+
+    .hwmHero.hwmHeroPage--loc .hwmHeroInner {
+        padding: 96px 24px 0;
+    }
+
+    .hwmLocPanels {
+        padding: 0 24px 40px;
+        margin-top: -240px;
+    }
+
+    .hwmLocPanelsInner {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .hwmLocPanel,
+    .hwmLocPanel--map {
+        border-radius: 4px;
+        min-height: 240px;
+    }
+
+    .hwmLocPanelPhone {
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    .hwmHours {
+        padding: 0 24px 64px;
+    }
+
+    .hwmHoursHead {
+        padding: 0;
+    }
+
+    .hwmHoursGrid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .hwmAmenities {
+        padding: 64px 24px;
+    }
+
+    .hwmAmenitiesGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px 16px;
+    }
+
+    .hwmLocStrip {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hwmFaqPage {
+        padding: 56px 24px 64px;
+    }
+
+    .hwmFaqSectionBody {
+        padding: 4px 16px 24px;
+    }
+
+    .hwmFaqSection>summary {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .hwmIconRow {
+        padding: 16px 24px 48px;
+    }
+
+    .hwmIconRowGrid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .hwmAwards {
+        padding: 16px 24px 64px;
+    }
+
+    .hwmShipProducts {
+        padding: 56px 24px 72px;
+    }
+
+    .hwmShipProductsGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+
+    .hwmShipProductTitle {
+        font-size: 32px;
+        line-height: 30px;
+    }
+
+    .hwmShipStrip {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hwmShipCallout {
+        padding: 64px 24px;
+    }
+
+    .hwmShipCalloutPhone {
+        font-size: 32px;
+    }
+
+    .hwmLinksPage {
+        padding: 40px 24px 72px;
+    }
+
+    .hwmLinksGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
     .hwmCareers {
         padding: 56px 24px 72px;
     }
@@ -5908,10 +4998,860 @@ select.hwmInput {
         grid-template-columns: repeat(2, 1fr);
         gap: 16px;
     }
+
+    .hwmHeader {
+        height: 72px;
+    }
+
+    .hwmHeroCta {
+        min-height: 0;
+        padding: 24px;
+    }
+
+    .hwmHeaderInner {
+        height: 72px;
+        padding: 0 20px;
+    }
+
+    .hwmNav,
+    .hwmHeaderLoc {
+        display: none;
+    }
+
+    .hwmLogo {
+        position: static;
+        transform: none;
+        margin-right: auto;
+    }
+
+    .hwmLogo img {
+        height: 56px;
+    }
+
+    .hwmHeaderRight {
+        flex: 0 0 auto;
+        gap: 0;
+    }
+
+    .hwmHeaderMore span:first-child {
+        display: none;
+    }
+
+    /* Footer */
+    .hwmFooterTop {
+        flex-direction: column;
+        min-height: 0;
+        padding: 0;
+    }
+
+    .hwmFooterImage img {
+        min-height: 360px;
+        height: 360px;
+    }
+
+    .hwmNewsletter {
+        padding: 56px 24px;
+    }
+
+    .hwmNewsletter .hwmH2 {
+        font-size: 42px;
+        line-height: 44px;
+    }
+
+    .hwmFooterMid {
+        margin: 0;
+        padding: 56px 32px;
+    }
+
+    .hwmFooterMidInner {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    .hwmFooterCols {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
+    }
+
+    .hwmFooterPhone {
+        font-size: 32px;
+    }
+
+    .hwmFooterPolicy p {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    /* Hero */
+    .hwmHero {
+        height: 720px;
+    }
+
+    .hwmH1 {
+        font-size: 52px;
+        line-height: 56px;
+    }
+
+    .hwmHeroBtn {
+        margin-top: 40px;
+    }
+
+    /* Intro */
+    .hwmIntro {
+        padding: 64px 0 0;
+    }
+
+    .hwmIntroHead,
+    .hwmArrivalsHead,
+    .hwmMarinasHead {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 0 24px;
+        margin-bottom: 40px;
+    }
+
+    .hwmH2 {
+        font-size: 40px;
+        line-height: 44px;
+    }
+
+    .hwmCtaCards {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 0 24px;
+        margin-bottom: 56px;
+    }
+
+    .hwmCtaCard {
+        height: 100px;
+    }
+
+    .hwmCtaCardText {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .hwmBrandGrid,
+    .hwmMarinaGrid {
+        grid-template-columns: 1fr 1fr;
+        gap: 4px;
+        padding: 0;
+    }
+
+    .hwmBrandCard,
+    .hwmMarinaCard {
+        aspect-ratio: 4 / 5;
+        min-height: 0;
+    }
+
+    .hwmBrandCardBody,
+    .hwmMarinaBody {
+        height: 50%;
+        padding: 32px 24px 24px;
+    }
+
+    .hwmMarinaBody {
+        padding: 60px 24px 24px;
+    }
+
+    .hwmBrandWordmark {
+        font-size: 30px;
+        margin-bottom: 24px;
+    }
+
+    .hwmMarinaBody .hwmH4 {
+        font-size: 30px;
+        line-height: 28px;
+        margin-bottom: 12px;
+    }
+
+    /* Arrivals */
+    .hwmArrivals {
+        padding: 64px 0;
+    }
+
+    .hwmArrivalsInner {
+        padding: 0 24px;
+    }
+
+    .hwmArrivalsCarouselWrap {
+        padding: 0;
+    }
+
+    .hwmArrivalsPrev {
+        left: -8px;
+    }
+
+    .hwmArrivalsNext {
+        right: -8px;
+    }
+
+    /* Service + Storage */
+    .hwmServiceStorage {
+        grid-template-columns: 1fr;
+    }
+
+    .hwmServiceCard {
+        min-height: 480px;
+    }
+
+    .hwmServiceCardBody {
+        padding: 0 32px;
+        max-width: 100%;
+    }
+
+    /* Marinas */
+    .hwmMarinas {
+        padding: 64px 0 0;
+    }
+
+    /* CTA Bar */
+    .hwmCtaBar {
+        padding: 48px 24px;
+    }
+
+    .hwmCtaBarInner {
+        gap: 16px;
+    }
+
+    .hwmCtaBarItem {
+        height: 100px;
+        gap: 12px;
+    }
+
+    .hwmCtaBarIcon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .hwmCtaBarText {
+        font-size: 24px;
+    }
+
+    /* Interior pages */
+    .hwmHero.hwmHeroPage,
+    .hwmHero.hwmHeroPage--short {
+        height: 520px;
+    }
+
+    .hwmHero.hwmHeroPage .hwmHeroInner {
+        padding: 64px 24px;
+    }
+
+    .hwmSplit {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 64px 24px;
+    }
+
+    .hwmCardGrid {
+        padding: 0 24px;
+    }
+
+    .hwmCardGrid--3 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .hwmTravelLift,
+    .hwmReasons,
+    .hwmFormSection,
+    .hwmSteps {
+        padding: 64px 24px;
+    }
+
+    .hwmTravelLiftGrid {
+        gap: 16px;
+    }
+
+    .hwmStepsGrid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .hwmReasonsInner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .hwmReasonsGrid {
+        gap: 32px;
+    }
+
+    .hwmFormGrid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    .hwmGalleryItem {
+        height: 360px;
+        width: 440px;
+    }
+
+    .hwmLogoStripInner {
+        gap: 24px 56px;
+    }
+
+    .hwmLogoStripItem {
+        font-size: 28px;
+    }
+
+    /* Contact split hero stacks */
+    .hwmHero.hwmHeroPage--split {
+        height: auto;
+        min-height: 0;
+    }
+
+    .hwmHero.hwmHeroPage--split .hwmHeroInner {
+        grid-template-columns: 1fr;
+        padding: 64px 24px;
+        gap: 40px;
+    }
+
+    .hwmHeroBody {
+        max-width: 100%;
+    }
+
+    .hwmHeroForm {
+        padding: 32px 24px 24px;
+    }
+
+    /* Locations stack */
+    .hwmLocations {
+        padding: 64px 0 80px;
+    }
+
+    .hwmLocationsHead {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 0 24px;
+        margin-bottom: 40px;
+    }
+
+    .hwmLocationGrid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        padding: 0 24px;
+    }
+
+    .hwmLocationName {
+        font-size: 30px;
+        line-height: 32px;
+    }
+
+    /* Financing hero */
+    .hwmHero.hwmHeroPage--finance .hwmHeroInner {
+        grid-template-columns: 1fr;
+        padding: 64px 24px;
+        gap: 32px;
+    }
+
+    /* Why Finance */
+    .hwmWhy {
+        padding: 64px 24px;
+    }
+
+    .hwmWhyGrid {
+        grid-template-columns: 1fr 1fr;
+        gap: 24px 32px;
+    }
+
+    /* Stat + Calculator */
+    .hwmStatCalcInner {
+        grid-template-columns: 1fr;
+        gap: 48px;
+        padding: 64px 24px;
+    }
+
+    .hwmStat {
+        font-size: 56px;
+        line-height: 56px;
+        max-width: 100%;
+    }
+
+    .hwmCalc {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 32px;
+    }
+
+    .hwmHero.hwmHeroPage--parts {
+        height: 480px;
+    }
+
+    .hwmHero.hwmHeroPage--parts .hwmHeroInner,
+    .hwmHero.hwmHeroPage--about .hwmHeroInner {
+        padding: 64px 24px;
+    }
+
+    .hwmHero.hwmHeroPage--about {
+        height: 560px;
+    }
+
+    .hwmAboutSubHero {
+        padding: 48px 24px 64px;
+    }
+
+    .hwmAboutSubHeroInner {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .hwmCategories {
+        padding: 64px 24px;
+    }
+
+    .hwmCategoriesGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+
+    .hwmCallout {
+        padding: 40px 24px;
+    }
+
+    .hwmOrderParts {
+        padding: 64px 24px;
+    }
+
+    .hwmOrderPartsInner {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    .hwmOrderForm {
+        margin-left: 0;
+        max-width: 100%;
+    }
+
+    .hwmOrderLocPhone {
+        font-size: 32px;
+    }
 }
 
-@media (max-width: 575px) {
-    .hwmCareersGrid {
+/* ============================================================
+   RESPONSIVE — Parts / About — ≤ 576px
+   ============================================================ */
+@media (max-width: 576px) {
+    .hwmCamTitle {
+        font-size: 24px;
+        line-height: 26px;
+    }
+
+    .hwmCamPlay,
+    .hwmVideoThumbPlay {
+        width: 48px;
+        height: 48px;
+        font-size: 16px;
+    }
+
+    .hwmVideoFilters {
+        gap: 16px;
+    }
+
+    .hwmVideoFilter {
+        font-size: 16px;
+    }
+
+    .hwmVideosGrid {
         grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .hwmStaffSectionHead {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .hwmStaffRule {
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .hwmStaffGrid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        max-width: 320px;
+    }
+    
+    .hwmListFilters {
+        gap: 16px;
+    }
+
+    .hwmListFilter {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .hwmArticleGrid--2,
+    .hwmArticleGrid--3 {
+        grid-template-columns: 1fr;
+    }
+
+    .hwmH3Listing {
+        font-size: 26px;
+        line-height: 28px;
+    }
+
+    .hwmEventMetaValue {
+        font-size: 32px;
+        line-height: 32px;
+    }
+
+    .hwmEventBrandsGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hwmModelsGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .hwmModelCardSize {
+        font-size: 32px;
+        line-height: 30px;
+    }
+
+    .hwmBrandStripItem {
+        flex: 0 0 280px;
+        height: 200px;
+    }
+
+    .hwmStorageLocCardTag {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .hwmWhyGrid--4 {
+        grid-template-columns: 1fr;
+    }
+
+    .hwmHero.hwmHeroPage--loc {
+        height: 640px;
+    }
+
+    .hwmAmenitiesGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .hwmLocStrip {
+        grid-template-columns: 1fr;
+    }
+
+    .hwmLocPanelPhone {
+        font-size: 32px;
+        line-height: 32px;
+    }
+
+    .hwmShipProductsGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .hwmShipStrip {
+        grid-template-columns: 1fr;
+    }
+
+    .hwmShipCalloutPhone {
+        font-size: 28px;
+    }
+
+    .hwmLinksGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .hwmLinksGrid--center {
+        grid-template-columns: 1fr;
+    }
+
+        .hwmCareersGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .hwmHeaderInner {
+        padding: 0 16px;
+    }
+
+    .hwmLogo img {
+        height: 48px;
+    }
+
+    .hwmNewsletter .hwmH2 {
+        font-size: 32px;
+        line-height: 36px;
+    }
+
+    .hwmFooterMid {
+        padding: 48px 24px;
+    }
+
+    .hwmFooterCols {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        text-align: center;
+    }
+
+    .hwmFooterCol .hwmH4 {
+        margin-bottom: 14px;
+    }
+
+    .hwmFooterPhoneLabel {
+        font-size: 20px;
+    }
+
+    .hwmFooterPhone {
+        font-size: 28px;
+    }
+
+    .hwmFooterPolicy {
+        padding: 24px 16px;
+    }
+
+    .hwmFooterPolicy p {
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    /* Hero */
+    .hwmHero {
+        height: 600px;
+    }
+
+    .hwmH1 {
+        font-size: 38px;
+        line-height: 42px;
+    }
+
+    .hwmHeroInner {
+        padding: 0 24px;
+    }
+
+    /* Sections */
+    .hwmH2 {
+        font-size: 32px;
+        line-height: 36px;
+    }
+
+    .hwmIntro,
+    .hwmArrivals {
+        padding: 48px 0 0;
+    }
+
+    .hwmArrivals {
+        padding-bottom: 56px;
+    }
+
+    .hwmMarinas {
+        padding: 48px 0 0;
+    }
+
+    .hwmCtaCard {
+        height: 88px;
+    }
+
+    .hwmCtaCardText {
+        font-size: 22px;
+    }
+
+    .hwmBrandGrid,
+    .hwmMarinaGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .hwmBrandCard,
+    .hwmMarinaCard {
+        aspect-ratio: 3 / 4;
+    }
+
+    .hwmBrandCardBody,
+    .hwmMarinaBody {
+        padding: 28px 20px 20px;
+    }
+
+    .hwmMarinaBody {
+        padding: 52px 20px 20px;
+    }
+
+    .hwmBrandWordmark {
+        font-size: 26px;
+        margin-bottom: 20px;
+    }
+
+    .hwmMarinaBody .hwmH4 {
+        font-size: 26px;
+        line-height: 26px;
+    }
+
+    .hwmServiceCardBody {
+        padding: 0 24px;
+    }
+
+    .hwmCtaBarInner {
+        grid-template-columns: 1fr;
+    }
+
+    .hwmCtaBarItem {
+        height: 88px;
+    }
+
+    .hwmCtaBarText {
+        font-size: 22px;
+    }
+
+    .hwmArrivalsHead {
+        padding: 0 16px;
+    }
+
+    .hwmArrivalsInner {
+        padding: 0 16px;
+    }
+
+    .hwmArrivalInfo {
+        padding: 20px 24px 14px;
+        height: auto;
+    }
+
+    .hwmArrivalTitle {
+        font-size: 22px;
+        line-height: 28px;
+        min-height: 0;
+    }
+
+    .hwmArrivalPrice {
+        font-size: 24px;
+    }
+
+    /* Interior pages — mobile */
+    .hwmHero.hwmHeroPage,
+    .hwmHero.hwmHeroPage--short {
+        height: 460px;
+    }
+
+    .hwmHero.hwmHeroPage .hwmHeroInner {
+        padding: 48px 16px;
+    }
+
+    .hwmBreadcrumb {
+        font-size: 12px;
+        margin-bottom: 16px;
+    }
+
+    .hwmHeroSub {
+        margin-top: 20px;
+    }
+
+    .hwmSplit,
+    .hwmTravelLift,
+    .hwmReasons,
+    .hwmFormSection,
+    .hwmSteps {
+        padding: 48px 16px;
+    }
+
+    .hwmCardGrid {
+        padding: 0 16px;
+    }
+
+    .hwmCardGrid--3 {
+        grid-template-columns: 1fr;
+    }
+
+    .hwmTravelLiftGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .hwmReasonsGrid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .hwmFormCard {
+        padding: 24px;
+    }
+
+    .hwmFieldRow {
+        grid-template-columns: 1fr;
+    }
+
+    .hwmGalleryItem {
+        height: 260px;
+        width: 320px;
+    }
+
+    .hwmLogoStripItem {
+        font-size: 24px;
+    }
+
+    .hwmContactPhone {
+        font-size: 22px;
+    }
+
+    .hwmHeroForm {
+        padding: 24px 20px 20px;
+    }
+
+    .hwmHeroFormTitle {
+        font-size: 36px;
+        line-height: 40px;
+    }
+
+    .hwmLocationName {
+        font-size: 26px;
+        line-height: 30px;
+    }
+
+    .hwmLocationPhoneLink {
+        font-size: 26px;
+        line-height: 28px;
+    }
+
+    .hwmWhyGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .hwmStat {
+        font-size: 42px;
+        line-height: 44px;
+    }
+
+    .hwmCalc {
+        padding: 24px;
+    }
+
+    .hwmCalcTitle {
+        font-size: 32px;
+        line-height: 36px;
+    }
+
+    .hwmHero.hwmHeroPage--parts {
+        height: 420px;
+    }
+
+    .hwmHero.hwmHeroPage--about {
+        height: 480px;
+    }
+
+    .hwmAboutSubHeroLabel {
+        font-size: 18px;
+    }
+
+    .hwmCategoriesGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .hwmCategoryName {
+        font-size: 18px;
+    }
+
+    .hwmCalloutInner .hwmH2 {
+        font-size: 32px;
+        line-height: 36px;
+    }
+
+    .hwmOrderLocPhone {
+        font-size: 28px;
+    }
+
+    .hwmQuote {
+        font-size: 16px;
+        line-height: 24px;
     }
 }
