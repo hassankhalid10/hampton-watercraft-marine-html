@@ -1289,7 +1289,7 @@ img {
 }
 
 .hwmHero.hwmHeroPage--short {
-    height: 600px;
+    height: 700px;
 }
 
 /* Dark CTA strip directly below hero (Service) */
@@ -2021,6 +2021,15 @@ select.hwmInput {
    ============================================================ */
 
 /* --- Hero split: title left / description right --- */
+.hwmHero.hwmHeroPage--finance .hwmHeroOverlay {
+    background: linear-gradient(180deg,
+            rgba(0, 5, 37, 0.25) 0%,
+            rgba(0, 5, 37, 0.45) 25%,
+            rgba(0, 5, 37, 0.7) 45%,
+            var(--navy) 70%,
+            var(--navy) 100%);
+}
+
 .hwmHero.hwmHeroPage--finance .hwmHeroInner {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -2128,7 +2137,7 @@ select.hwmInput {
     grid-template-columns: 1fr 1fr;
     align-items: center;
     gap: 80px;
-    padding: 120px 8.54%;
+    padding: 120px 16.54%;
 }
 
 .hwmStat {
