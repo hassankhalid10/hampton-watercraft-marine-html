@@ -251,12 +251,12 @@ img {
     color: var(--maroon);
 }
 
-.hwmBrandLogoWrap{
+.hwmBrandLogoWrap {
     max-width: 200px;
     margin-bottom: 40px;
 }
 
-.hwmBrandLogoWrap img{
+.hwmBrandLogoWrap img {
     width: 100%;
     object-fit: contain;
 }
@@ -804,7 +804,7 @@ img {
     object-fit: cover;
 }
 
-.hwmBrandCard::after{
+.hwmBrandCard::after {
     content: "";
     position: absolute;
     left: 0;
@@ -992,47 +992,91 @@ img {
 
 .hwmArrivalInfo {
     padding: 24px 40px 16px;
-    background-color: var(--white);
+    background-color: #F7F7F7;
     flex: 1;
     margin-top: 4px;
     height: 240px;
 }
 
 .hwmArrivalStatus {
+    color: #79797B;
     font-family: var(--amiri);
     font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
     line-height: 32px;
-    letter-spacing: -0.5px;
+    letter-spacing: -1.2px;
     text-transform: uppercase;
     margin-bottom: 8px;
 }
 
 .hwmArrivalTitle {
+    color: #000525;
     font-family: var(--holland);
-    font-size: 28px;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
     line-height: 32px;
-    letter-spacing: 0.5px;
     text-transform: uppercase;
     margin-bottom: 16px;
-    min-height: 64px;
 }
 
 .hwmArrivalPrice {
-    font-family: var(--holland);
-    font-size: 28px;
-    line-height: 1;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 24px;
     margin-bottom: 16px;
 }
 
-.hwmArrivalPrice span {
-    font-family: var(--regular-segoe-ui);
+.boatInfoList {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    width: fit-content;
+}
+
+.boatInfoText {
+    color: var(--Text-Gray, #3D3E42);
+    font-family: "Segoe UI";
     font-size: 16px;
-    text-transform: none;
-    letter-spacing: 0;
-    color: var(--text-gray);
-    margin-left: 8px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.boatInfoList li {
+    position: relative;
+}
+
+.boatInfoList li:not(:first-child)::after {
+    content: "";
+    position: absolute;
+    left: -16px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #79797B;
+    width: 2px;
+    height: 15px;
+}
+
+.actualPrice {
+    color: #7D1317;
+    font-family: var(--holland);
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    text-transform: uppercase;
+}
+
+.monthlyPrice {
+    color: #7A693B;
+    font-family: "Segoe UI";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px;
 }
 
 .hwmArrivalSpec {
@@ -1042,23 +1086,24 @@ img {
 }
 
 .hwmArrivalBtn {
-    display: block;
-    text-align: center;
-    background-color: var(--navy);
-    color: var(--white);
-    padding: 12px 16px;
-    margin-top: 4px;
-    height: 48px;
-    line-height: 24px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     font-family: var(--holland);
-    font-size: 16px;
-    letter-spacing: 1.5px;
+    background-color: var(--navy);
+    text-align: center;
+    padding: 12px 16px;
+    font-size: 18px;
+    color: #FFF;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.9px;
     text-transform: uppercase;
     transition: background-color 0.2s ease;
 }
 
 .hwmArrivalBtn:hover {
-    background-color: var(--maroon);
     color: var(--white);
 }
 
