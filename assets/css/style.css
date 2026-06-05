@@ -1471,6 +1471,15 @@ img {
     transform: translateY(-50%);
 }
 
+.hwmHero.hwmHeroPage .hwmHeroInnerCentered {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    padding: 0 15px;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
 .hwmBreadcrumb {
     font-family: var(--regular-segoe-ui);
     font-size: 14px;
@@ -1547,17 +1556,12 @@ img {
 }
 
 .hwmSplitImg {
-    position: relative;
     width: 100%;
-    padding-top: 100%;
     overflow: hidden;
     border-radius: 4px;
 }
 
 .hwmSplitImg img {
-    position: absolute;
-    left: 0;
-    top: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -3282,7 +3286,6 @@ select.hwmInput {
 
 .hwmHero.hwmHeroPage--center .hwmHeroSub {
     margin-top: 24px;
-    max-width: 600px;
 }
 
 .hwmHero.hwmHeroPage--center .hwmHeroBtn {
