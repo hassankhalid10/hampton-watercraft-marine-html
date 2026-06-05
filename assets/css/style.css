@@ -125,6 +125,16 @@ img {
     text-transform: uppercase;
 }
 
+.hwmH2White {
+    color: var(--wt, #FFF);
+    font-family: var(--holland);
+    font-size: 56px;
+    font-weight: 400;
+    line-height: 48px;
+    letter-spacing: 0;
+    text-transform: uppercase;
+}
+
 .hwmH4 {
     font-family: var(--amiri);
     font-size: 24px;
@@ -146,6 +156,15 @@ img {
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
+}
+
+.whitePara {
+    color: var(--wt, #FFF);
+    font-family: var(--regular-segoe-ui);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px;
 }
 
 /* --- Colour helpers --- */
@@ -237,9 +256,9 @@ img {
 .hwmNavLink {
     font-family: var(--holland);
     font-size: 20px;
+    font-style: normal;
     font-weight: 400;
-    line-height: 1;
-    letter-spacing: 1px;
+    line-height: normal;
     text-transform: uppercase;
     color: var(--navy);
     transition: color 0.2s ease;
@@ -298,9 +317,8 @@ img {
 .hwmHeaderLocLabel {
     font-family: var(--amiri);
     font-size: 12px;
+    font-style: normal;
     font-weight: 400;
-    line-height: 14px;
-    letter-spacing: 0.3px;
     text-transform: uppercase;
     color: var(--navy);
     text-align: right;
@@ -310,9 +328,9 @@ img {
 .hwmHeaderLocPhone {
     font-family: var(--holland);
     font-size: 20px;
+    font-style: normal;
     font-weight: 400;
-    line-height: 1;
-    letter-spacing: 0.5px;
+    line-height: normal;
     text-transform: uppercase;
     color: var(--navy);
     transition: color 0.2s ease;
@@ -474,7 +492,8 @@ img {
 
 .hwmFooterLogo {
     display: block;
-    margin-bottom: 36px;
+    max-width: 400px;
+    margin: 0 auto 36px auto;
 }
 
 .hwmFooterLogo img {
@@ -531,7 +550,7 @@ img {
 .hwmFooterSocial a {
     width: 36px;
     height: 36px;
-    border: 1px solid rgba(255, 255, 255, 0.6);
+    border: 2px solid rgba(122, 105, 59, 0.60);
     border-radius: 4px;
     display: inline-flex;
     align-items: center;
@@ -553,8 +572,13 @@ img {
     gap: 40px;
 }
 
+.hwmFooterCol{
+    max-width: 200px;
+    margin: 0 auto;
+}
+
 .hwmFooterCol .hwmH4 {
-    margin-bottom: 20px;
+    margin-bottom: 16px;
 }
 
 .hwmFooterLinks li {
@@ -589,6 +613,43 @@ img {
     color: var(--text-gray);
 }
 
+.footerBottom{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+}
+
+.footerBottom li{
+    position: relative;
+}
+
+.footerBottom *:not(:first-child)::after{
+    content: '';
+    position: absolute;
+    left: -16px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 16px;
+    width: 1px;
+    background-color: #3D3E42;
+}
+
+.footerBottomLink{
+    color:  #3D3E42;
+    text-align: center;
+    font-family: var(--regular-segoe-ui);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; 
+}
+
+.footerBottomLink:hover{
+    color:  #3D3E42;
+}
+
 /* ============================================================
    HERO
    ============================================================ */
@@ -614,12 +675,10 @@ img {
     background: linear-gradient(180deg, rgba(0, 5, 37, 0.35) 0%, rgba(0, 5, 37, 0.7) 100%);
 }
 
-.ss-event{
-background: linear-gradient(
-  to left,
-  rgba(0, 5, 37, 0.6) 0%,
-  rgba(0, 5, 37, 1) 100%
-) !important;
+.ss-event {
+    background: linear-gradient(to left,
+            rgba(0, 5, 37, 0.6) 0%,
+            rgba(0, 5, 37, 1) 100%) !important;
 }
 
 .hwmHeroInner {
@@ -993,7 +1052,7 @@ background: linear-gradient(
     transition: all 0.2s ease;
 }
 
-.hwmArrivalPlay img{
+.hwmArrivalPlay img {
     background-color: #FFFFFF33;
     border-radius: 50%;
     width: 32px !important;
@@ -1248,10 +1307,12 @@ background: linear-gradient(
 }
 
 .hwmServiceCardBody {
-    position: relative;
+    position: absolute;
     z-index: 2;
-    padding: 0 120px;
-    max-width: 720px;
+    padding: 0 15px;
+    max-width: 600px;
+    bottom: 12%;
+    left: 8%;
 }
 
 .hwmServiceCardBody .hwmH2 {
@@ -1297,6 +1358,17 @@ background: linear-gradient(
     aspect-ratio: 560 / 720;
 }
 
+.hwmMarinaCard::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 50%;
+    width: 100%;
+    opacity: 0.8;
+    background: linear-gradient(180deg, rgba(0, 5, 37, 0.00) 0%, #000525 100%);
+}
+
 .hwmMarinaImg {
     position: absolute;
     inset: 0;
@@ -1307,15 +1379,11 @@ background: linear-gradient(
 
 .hwmMarinaBody {
     position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 47.22%;
-    padding: 100px 48px 40px;
-    display: flex;
-    flex-direction: column;
-    background: linear-gradient(180deg, rgba(0, 5, 37, 0) 0%, rgba(0, 5, 37, 0.9) 32%, var(--navy) 56%);
+    left: 5%;
+    bottom: 48px;
+    padding: 0 15px;
     z-index: 2;
+    max-width: 380px;
 }
 
 .hwmMarinaBody .hwmH4 {
@@ -1324,11 +1392,6 @@ background: linear-gradient(
     line-height: 32px;
     letter-spacing: 0.5px;
     margin-bottom: 16px;
-}
-
-.hwmMarinaBody .hwmPara {
-    max-width: 380px;
-    opacity: 0.9;
 }
 
 /* ============================================================
@@ -1352,17 +1415,11 @@ background: linear-gradient(
     gap: 20px;
     height: 120px;
     background-color: var(--white);
-    border: 1px solid var(--d9);
     border-radius: 4px;
     transition: all 0.25s ease;
     color: var(--navy);
 }
 
-.hwmCtaBarItem:hover {
-    background-color: var(--navy);
-    border-color: var(--navy);
-    color: var(--white);
-}
 
 .hwmCtaBarIcon {
     width: 48px;
@@ -1372,33 +1429,18 @@ background: linear-gradient(
     transition: filter 0.25s ease;
 }
 
-.hwmCtaBarItem:hover .hwmCtaBarIcon {
-    filter: brightness(0) invert(1);
-}
 
 .hwmCtaBarText {
-    font-family: var(--holland);
-    font-size: 36px;
-    line-height: 1;
-    letter-spacing: 0.5px;
+    font-family: var(--amiri);
+    color:  #000525;
+    font-family: Amiri;
+    font-size: 40px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 40px; 
     text-transform: uppercase;
-    display: inline-flex;
-    align-items: center;
-    gap: 14px;
 }
 
-.hwmCtaBarText::after {
-    content: "\203A";
-    font-size: 32px;
-    line-height: 1;
-    color: var(--tan);
-    transition: transform 0.25s ease, color 0.25s ease;
-}
-
-.hwmCtaBarItem:hover .hwmCtaBarText::after {
-    color: var(--white);
-    transform: translateX(4px);
-}
 
 /* ============================================================
    INTERIOR PAGES — Service / Sell-Trade
@@ -5408,10 +5450,6 @@ select.hwmInput {
         gap: 32px;
     }
 
-    .hwmServiceCardBody {
-        padding: 80px 56px;
-    }
-
     /* Contact / Financing — split heroes */
     .hwmHero.hwmHeroPage--split .hwmHeroInner,
     .hwmHero.hwmHeroPage--finance .hwmHeroInner {
@@ -6023,11 +6061,6 @@ select.hwmInput {
         min-height: 480px;
     }
 
-    .hwmServiceCardBody {
-        padding: 0 32px;
-        max-width: 100%;
-    }
-
     /* Marinas */
     .hwmMarinas {
         padding: 64px 0 0;
@@ -6506,10 +6539,6 @@ select.hwmInput {
     .hwmMarinaBody .hwmH4 {
         font-size: 26px;
         line-height: 26px;
-    }
-
-    .hwmServiceCardBody {
-        padding: 0 24px;
     }
 
     .hwmCtaBarInner {
