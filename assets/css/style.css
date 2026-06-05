@@ -882,7 +882,7 @@ img {
 }
 
 .hwmArrivalsInner {
-    padding: 0 6.04%;
+    padding: 0 0 0 3%;
 }
 
 .hwmArrivalsHead {
@@ -909,9 +909,9 @@ img {
     top: calc(360px / 2);
     transform: translateY(-50%);
     z-index: 5;
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
+    width: 48px;
+    height: 80px;
+    border-radius: 4px;
     background-color: var(--navy);
     color: var(--white);
     border: none;
@@ -934,7 +934,7 @@ img {
 }
 
 .hwmArrivalsNext {
-    right: 0;
+    right: 2%;
 }
 
 /* --- Arrival card --- */

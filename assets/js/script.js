@@ -15,7 +15,7 @@ $(document).ready(function () {
             responsive: {
                 0: { items: 1.05, margin: 20 },
                 576: { items: 2, margin: 32 },
-                992: { items: 3, margin: 64 }
+                992: { items: 3.3, margin: 64 }
             }
         });
 
