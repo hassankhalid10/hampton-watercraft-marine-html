@@ -63,10 +63,27 @@ $(document).ready(function () {
             autoplayTimeout: 4000,
             autoplayHoverPause: true,
             responsive: {
-                0:    { items: 1,   margin: 16 },
-                576:  { items: 1,   margin: 16 },
-                992:  { items: 2,   margin: 24 },
-                1400: { items: 2,   margin: 24 }
+                0: { items: 1, margin: 16 },
+                576: { items: 1, margin: 16 },
+                992: { items: 2, margin: 24 },
+                1400: { items: 2, margin: 24 }
+            }
+        });
+    }
+
+    if ($('.locationGalleryCarousel').length) {
+        $('.locationGalleryCarousel').owlCarousel({
+            loop: false,
+            dots: false,
+            nav: false,
+            smartSpeed: 700,
+            autoplay: true,
+            autoplayTimeout: 4000,
+            autoplayHoverPause: true,
+            responsive: {
+                0: { items: 1, margin: 4 },
+                576: { items: 2, margin: 4 },
+                992: { items: 3, margin: 4 },
             }
         });
     }

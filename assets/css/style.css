@@ -665,6 +665,12 @@ img {
     padding-top: 37%;
 }
 
+.hwmHeroLocationPage{
+    position: relative;
+    min-height: 600px;
+    padding-top: 70%;
+}
+
 .hwmHeroImg {
     position: absolute;
     inset: 0;
@@ -1470,6 +1476,8 @@ img {
     padding: 0 15px;
     transform: translateY(-50%);
 }
+
+
 
 .hwmHero.hwmHeroPage .hwmHeroInnerCentered {
     position: absolute;
@@ -3996,7 +4004,7 @@ select.hwmInput {
 /* --- Info panels overlaying the hero bottom --- */
 .hwmLocPanels {
     background-color: var(--navy);
-    padding: 0 14.58% 64px;
+    padding: 64px 0;
     margin-top: -400px;
     position: relative;
     z-index: 2;
@@ -4074,11 +4082,10 @@ select.hwmInput {
 /* --- Hours section (navy bg, 3 card grid) --- */
 .hwmHours {
     background-color: var(--navy);
-    padding: 0 6.04% 100px;
+    padding:  100px 0;
 }
 
 .hwmHoursHead {
-    padding: 0 8.54%;
     margin-bottom: 32px;
 }
 
@@ -4086,13 +4093,10 @@ select.hwmInput {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
-    max-width: 1680px;
-    margin: 0 auto;
 }
 
 .hwmHoursCard {
     background-color: rgba(230, 230, 230, 0.07);
-    border: 2px solid var(--white);
     border-radius: 4px;
     padding: 32px;
     color: var(--white);
@@ -4167,13 +4171,29 @@ select.hwmInput {
 }
 
 .hwmAmenityImg {
-    width: 100%;
-    aspect-ratio: 1 / 1;
+    padding-top: 77%;
     background-color: #c4c4c4;
     position: relative;
 }
 
+.locationGalleryWrap{
+    position: relative;
+    padding-top: 57%;
+}
+
+.locationGalleryWrap img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .hwmAmenityImg .hwmImageMedia {
+    position: absolute;
+    left: 0;
+    top: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -4216,16 +4236,9 @@ select.hwmInput {
 }
 
 /* --- Location 5-image strip (reuse pattern of hwmBrandStrip) --- */
-.hwmLocStrip {
-    width: 100%;
-    overflow: hidden;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-}
 
-.hwmLocStrip>div {
-    aspect-ratio: 720 / 520;
-    overflow: hidden;
+.hwmLocStrip{
+    margin: 4px 0 80px 0;
 }
 
 .hwmLocStrip img {
@@ -5208,7 +5221,7 @@ select.hwmInput {
 
 
     .hwmLocPanels {
-        padding: 0 24px 40px;
+        padding: 40px 0;
         margin-top: -240px;
     }
 
@@ -5228,14 +5241,6 @@ select.hwmInput {
         line-height: 40px;
     }
 
-    .hwmHours {
-        padding: 0 24px 64px;
-    }
-
-    .hwmHoursHead {
-        padding: 0;
-    }
-
     .hwmHoursGrid {
         grid-template-columns: 1fr;
         gap: 16px;
@@ -5248,10 +5253,6 @@ select.hwmInput {
     .hwmAmenitiesGrid {
         grid-template-columns: repeat(2, 1fr);
         gap: 32px 16px;
-    }
-
-    .hwmLocStrip {
-        grid-template-columns: repeat(2, 1fr);
     }
 
     .hwmFaqPage {
@@ -6171,9 +6172,6 @@ select.hwmInput {
         grid-template-columns: 1fr;
     }
 
-    .hwmLocStrip {
-        grid-template-columns: 1fr;
-    }
 
     .hwmLocPanelPhone {
         font-size: 32px;
