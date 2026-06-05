@@ -28,6 +28,30 @@ $(document).ready(function () {
         });
     }
 
+    // --- Event "Inventory Featured at this Event" carousel (Owl Carousel) ---
+    if ($('.hwmEventCarousel').length) {
+        var eventInv = $('.hwmEventCarousel').owlCarousel({
+            loop: true,
+            dots: false,
+            nav: false,
+            margin: 24,
+            smartSpeed: 600,
+            responsive: {
+                0: { items: 1.05, margin: 20 },
+                576: { items: 2, margin: 24 },
+                992: { items: 3.15, margin: 24 }
+            }
+        });
+
+        $('.hwmEventPrev').on('click', function () {
+            eventInv.trigger('prev.owl.carousel');
+        });
+
+        $('.hwmEventNext').on('click', function () {
+            eventInv.trigger('next.owl.carousel');
+        });
+    }
+
     // --- Mercury Award gallery carousel (Owl Carousel) ---
     if ($('.hwmAwardCarousel').length) {
         $('.hwmAwardCarousel').owlCarousel({
