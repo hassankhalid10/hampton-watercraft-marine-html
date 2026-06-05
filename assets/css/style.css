@@ -4632,7 +4632,7 @@ select.hwmInput {
 }
 
 .hwmLinkCardIcon {
-    color: var(--navy);
+    color: #7A693B;
     font-size: 32px;
     line-height: 1;
 }
