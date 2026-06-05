@@ -4167,18 +4167,24 @@ select.hwmInput {
     width: 100%;
     aspect-ratio: 1 / 1;
     background-color: #c4c4c4;
-    overflow: hidden;
+    position: relative;
 }
 
-.hwmAmenityImg img {
+.hwmAmenityImg .hwmImageMedia {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
+.hwmAmenityImg .hwmAmenityIcon {
+    position: absolute;
+    left: 40px;
+    bottom: -40px;
+}
+
 .hwmAmenityBody {
     background-color: var(--white);
-    padding: 32px 30px;
+    padding: 55px 30px 20px 30px;
     flex: 1;
 }
 
