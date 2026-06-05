@@ -158,6 +158,10 @@ img {
     line-height: 24px;
 }
 
+.addressPara{
+    text-decoration: underline;
+}
+
 .whitePara {
     color: var(--wt, #FFF);
     font-family: var(--regular-segoe-ui);
@@ -663,6 +667,7 @@ img {
     width: 100%;
     overflow: hidden;
     min-height: 450px;
+    padding-top: 37%;
 }
 
 .hwmHeroImg {
@@ -1797,6 +1802,9 @@ img {
     background-color: var(--navy);
     padding: 100px 6.04%;
     overflow: hidden;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
 }
 
 .hwmReasonsBg {
@@ -1811,7 +1819,8 @@ img {
 .hwmReasonsOverlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, rgba(0, 5, 37, 0.7) 0%, rgba(0, 5, 37, 0.9) 100%);
+    background: #000525B3;
+    opacity: 0.7;
 }
 
 .hwmReasonsInner {
@@ -1997,7 +2006,7 @@ select.hwmInput {
 .hwmRadio input[type="radio"] {
     width: 16px;
     height: 16px;
-    accent-color: var(--navy);
+    accent-color: #7A693B;
     cursor: pointer;
 }
 
