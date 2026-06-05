@@ -1547,13 +1547,17 @@ img {
 }
 
 .hwmSplitImg {
+    position: relative;
     width: 100%;
-    aspect-ratio: 720 / 480;
+    padding-top: 100%;
     overflow: hidden;
     border-radius: 4px;
 }
 
 .hwmSplitImg img {
+    position: absolute;
+    left: 0;
+    top: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -2710,15 +2714,15 @@ select.hwmInput {
 }
 
 .hwmCultureList {
-    list-style: none;
     padding-left: 0;
     margin-top: 16px;
     margin-bottom: 28px;
+    list-style: disc;
+    margin-left: 24px;
 }
 
 .hwmCultureList li {
     position: relative;
-    padding-left: 22px;
     font-family: var(--regular-segoe-ui);
     font-size: 16px;
     line-height: 24px;
@@ -2726,15 +2730,6 @@ select.hwmInput {
     margin-bottom: 8px;
 }
 
-.hwmCultureList li::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 9px;
-    width: 8px;
-    height: 8px;
-    background-color: var(--tan);
-}
 
 .hwmCultureList li strong {
     font-family: var(--bold-segoe-ui);
