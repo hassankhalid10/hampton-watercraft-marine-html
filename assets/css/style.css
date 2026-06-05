@@ -1467,6 +1467,7 @@ img {
     position: absolute;
     left: 13%;
     top: 50%;
+    padding: 0 15px;
     transform: translateY(-50%);
 }
 
@@ -4895,6 +4896,10 @@ select.hwmInput {
    RESPONSIVE — ≤ 991px (tablet)
    ============================================================ */
 @media (max-width: 991px) {
+
+    .hwmHero.hwmHeroPage .hwmHeroInner{
+        left: 4%;
+    }
 
     .hwmStatCalc{
         margin-bottom: 40px;
