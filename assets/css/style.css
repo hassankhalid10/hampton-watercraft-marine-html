@@ -614,6 +614,14 @@ img {
     background: linear-gradient(180deg, rgba(0, 5, 37, 0.35) 0%, rgba(0, 5, 37, 0.7) 100%);
 }
 
+.ss-event{
+background: linear-gradient(
+  to left,
+  rgba(0, 5, 37, 0.6) 0%,
+  rgba(0, 5, 37, 1) 100%
+) !important;
+}
+
 .hwmHeroInner {
     position: relative;
     z-index: 2;
@@ -1404,7 +1412,7 @@ img {
 }
 
 .hwmHero.hwmHeroPage--short {
-    height: 700px;
+    height: 600px;
 }
 
 /* Dark CTA strip directly below hero (Service) */
@@ -1432,6 +1440,14 @@ img {
     color: var(--white);
     opacity: 0.8;
     margin-bottom: 24px;
+}
+
+.hwmHeroBreadcrumb {
+    position: absolute;
+    top: 14px;
+    left: 14.58%;
+    z-index: 3;
+    margin: 0;
 }
 
 .hwmHeroSub {
@@ -1511,11 +1527,28 @@ img {
 }
 
 .hwmCardItem {
-    background-color: var(--white);
-    border: 1px solid var(--d9);
-    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.hwmCardItemImg {
+    height: 260px;
+    background-color: #c4c4c4;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.hwmCardItemImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hwmCardItemBody {
+    background-color: var(--f7);
     padding: 32px;
-    min-height: 260px;
+    flex: 1;
 }
 
 .hwmCardItemIcon {
@@ -1523,46 +1556,50 @@ img {
     height: 48px;
     object-fit: contain;
     margin-bottom: 16px;
+    display: block;
 }
 
-.hwmCardItem .hwmH4 {
-    font-size: 24px;
+.hwmCardTitle {
+    font-family: var(--bold-segoe-ui);
+    font-size: 20px;
+    font-weight: 700;
     line-height: 24px;
+    text-transform: uppercase;
     margin-bottom: 16px;
 }
 
-/* --- Horizontal gallery strip (Mercury Award images) --- */
+/* Bold paragraph utility */
+.hwmParaBold {
+    font-family: var(--bold-segoe-ui);
+    font-weight: 700;
+}
+
+/* --- Horizontal gallery carousel (Mercury Award images) --- */
+/*
+ * .hwmServiceGrid has padding: 100px 6.04% on each side.
+ * Negative margin-right pulls the gallery flush to the right viewport edge.
+ * -6.04vw of right padding / 87.92% content width = -6.87% of content width.
+ */
 .hwmGallery {
+    padding-top: 56px;
+    margin-right: -6.87%;
+    overflow: hidden;
+}
+
+.hwmAwardCarousel {
     width: 100%;
-    overflow-x: auto;
-    padding: 56px 0 0;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-}
-
-.hwmGallery::-webkit-scrollbar {
-    display: none;
-}
-
-.hwmGalleryTrack {
-    display: flex;
-    gap: 24px;
-    padding: 0 6.04%;
-    width: max-content;
 }
 
 .hwmGalleryItem {
-    flex: 0 0 auto;
     height: 520px;
-    width: 600px;
     overflow: hidden;
-    border-radius: 4px;
 }
 
 .hwmGalleryItem img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
 }
 
 /* --- Travel Lift (dark section, centered head, 2 images) --- */
@@ -1654,6 +1691,13 @@ img {
     letter-spacing: 3px;
     text-transform: uppercase;
     color: var(--navy);
+}
+
+.hwmLogoStripImg {
+    height: 64px;
+    width: auto;
+    max-width: 280px;
+    object-fit: contain;
 }
 
 /* --- Steps section (How It Works) --- */
@@ -1784,7 +1828,7 @@ img {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 80px;
-    max-width: 1500px;
+    max-width: 1050px;
     margin: 0 auto;
     align-items: flex-start;
 }
@@ -1829,7 +1873,6 @@ img {
 }
 
 .hwmFormCard {
-    background-color: var(--white);
     padding: 32px;
     border-radius: 4px;
     box-shadow: 0 4px 20px rgba(0, 5, 37, 0.08);
@@ -2125,6 +2168,16 @@ select.hwmInput {
    INTERIOR PAGES — Financing
    ============================================================ */
 
+/* --- Service hero: fade image into the dark CTA strip below --- */
+.hwmHero.hwmHeroPage--service .hwmHeroOverlay {
+    background: linear-gradient(180deg,
+            rgba(0, 5, 37, 0.25) 0%,
+            rgba(0, 5, 37, 0.45) 25%,
+            rgba(0, 5, 37, 0.7) 45%,
+            var(--navy) 70%,
+            var(--navy) 100%);
+}
+
 /* --- Hero split: title left / description right --- */
 .hwmHero.hwmHeroPage--finance .hwmHeroOverlay {
     background: linear-gradient(180deg,
@@ -2279,6 +2332,719 @@ select.hwmInput {
 }
 
 
+/* ============================================================
+   RESPONSIVE — ≤ 1200px
+   ============================================================ */
+@media (max-width: 1200px) {
+    .hwmHeaderInner {
+        padding: 0 32px;
+    }
+
+    .hwmNav {
+        gap: 24px;
+    }
+
+    .hwmNavLink,
+    .hwmHeaderLocPhone,
+    .hwmHeaderMore {
+        font-size: 18px;
+    }
+
+    .hwmHeaderRight {
+        gap: 20px;
+    }
+
+    .hwmLogo img {
+        height: 76px;
+    }
+
+    /* Hero */
+    .hwmH1 {
+        font-size: 76px;
+        line-height: 76px;
+    }
+
+    .hwmHeroInner {
+        padding: 0 8%;
+    }
+
+    /* Intro */
+    .hwmIntroHead,
+    .hwmArrivalsHead,
+    .hwmMarinasHead {
+        gap: 60px;
+    }
+
+    .hwmH2 {
+        font-size: 48px;
+        line-height: 48px;
+    }
+
+    .hwmCtaCards {
+        gap: 32px;
+    }
+
+    .hwmServiceCardBody {
+        padding: 80px 56px;
+    }
+
+    /* Contact / Financing — split heroes */
+    .hwmHero.hwmHeroPage--split .hwmHeroInner,
+    .hwmHero.hwmHeroPage--finance .hwmHeroInner {
+        gap: 48px;
+    }
+
+    .hwmLocationsHead {
+        gap: 60px;
+    }
+
+    .hwmStat {
+        font-size: 64px;
+        line-height: 60px;
+    }
+}
+
+/* ============================================================
+   RESPONSIVE — ≤ 991px (tablet)
+   ============================================================ */
+@media (max-width: 991px) {
+    .hwmHeader {
+        height: 72px;
+    }
+
+    .hwmHeaderInner {
+        height: 72px;
+        padding: 0 20px;
+    }
+
+    .hwmNav,
+    .hwmHeaderLoc {
+        display: none;
+    }
+
+    .hwmLogo {
+        position: static;
+        transform: none;
+        margin-right: auto;
+    }
+
+    .hwmLogo img {
+        height: 56px;
+    }
+
+    .hwmHeaderRight {
+        flex: 0 0 auto;
+        gap: 0;
+    }
+
+    .hwmHeaderMore span:first-child {
+        display: none;
+    }
+
+    /* Footer */
+    .hwmFooterTop {
+        flex-direction: column;
+        min-height: 0;
+        padding: 0;
+    }
+
+    .hwmFooterImage img {
+        min-height: 360px;
+        height: 360px;
+    }
+
+    .hwmNewsletter {
+        padding: 56px 24px;
+    }
+
+    .hwmNewsletter .hwmH2 {
+        font-size: 42px;
+        line-height: 44px;
+    }
+
+    .hwmFooterMid {
+        margin: 0;
+        padding: 56px 32px;
+    }
+
+    .hwmFooterMidInner {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    .hwmFooterCols {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
+    }
+
+    .hwmFooterPhone {
+        font-size: 32px;
+    }
+
+    .hwmFooterPolicy p {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    /* Hero */
+    .hwmHero {
+        height: 720px;
+    }
+
+    .hwmH1 {
+        font-size: 52px;
+        line-height: 56px;
+    }
+
+    .hwmHeroBtn {
+        margin-top: 40px;
+    }
+
+    /* Intro */
+    .hwmIntro {
+        padding: 64px 0 0;
+    }
+
+    .hwmIntroHead,
+    .hwmArrivalsHead,
+    .hwmMarinasHead {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 0 24px;
+        margin-bottom: 40px;
+    }
+
+    .hwmH2 {
+        font-size: 40px;
+        line-height: 44px;
+    }
+
+    .hwmCtaCards {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 0 24px;
+        margin-bottom: 56px;
+    }
+
+    .hwmCtaCard {
+        height: 100px;
+    }
+
+    .hwmCtaCardText {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .hwmBrandGrid,
+    .hwmMarinaGrid {
+        grid-template-columns: 1fr 1fr;
+        gap: 4px;
+        padding: 0;
+    }
+
+    .hwmBrandCard,
+    .hwmMarinaCard {
+        aspect-ratio: 4 / 5;
+        min-height: 0;
+    }
+
+    .hwmBrandCardBody,
+    .hwmMarinaBody {
+        height: 50%;
+        padding: 32px 24px 24px;
+    }
+
+    .hwmMarinaBody {
+        padding: 60px 24px 24px;
+    }
+
+    .hwmBrandWordmark {
+        font-size: 30px;
+        margin-bottom: 24px;
+    }
+
+    .hwmMarinaBody .hwmH4 {
+        font-size: 30px;
+        line-height: 28px;
+        margin-bottom: 12px;
+    }
+
+    /* Arrivals */
+    .hwmArrivals {
+        padding: 64px 0;
+    }
+
+    .hwmArrivalsInner {
+        padding: 0 24px;
+    }
+
+    .hwmArrivalsCarouselWrap {
+        padding: 0;
+    }
+
+    .hwmArrivalsPrev {
+        left: -8px;
+    }
+
+    .hwmArrivalsNext {
+        right: -8px;
+    }
+
+    /* Service + Storage */
+    .hwmServiceStorage {
+        grid-template-columns: 1fr;
+    }
+
+    .hwmServiceCard {
+        min-height: 480px;
+    }
+
+    .hwmServiceCardBody {
+        padding: 0 32px;
+        max-width: 100%;
+    }
+
+    /* Marinas */
+    .hwmMarinas {
+        padding: 64px 0 0;
+    }
+
+    /* CTA Bar */
+    .hwmCtaBar {
+        padding: 48px 24px;
+    }
+
+    .hwmCtaBarInner {
+        gap: 16px;
+    }
+
+    .hwmCtaBarItem {
+        height: 100px;
+        gap: 12px;
+    }
+
+    .hwmCtaBarIcon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .hwmCtaBarText {
+        font-size: 24px;
+    }
+
+    /* Interior pages */
+    .hwmHero.hwmHeroPage,
+    .hwmHero.hwmHeroPage--short {
+        height: 520px;
+    }
+
+    .hwmHero.hwmHeroPage .hwmHeroInner {
+        padding: 64px 24px;
+    }
+
+    .hwmSplit {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 64px 24px;
+    }
+
+    .hwmCardGrid {
+        padding: 0 24px;
+    }
+
+    .hwmCardGrid--3 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .hwmCardItemImg {
+        height: 200px;
+    }
+
+    .hwmTravelLift,
+    .hwmReasons,
+    .hwmFormSection,
+    .hwmSteps {
+        padding: 64px 24px;
+    }
+
+    .hwmTravelLiftGrid {
+        gap: 16px;
+    }
+
+    .hwmStepsGrid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .hwmReasonsInner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .hwmReasonsGrid {
+        gap: 32px;
+    }
+
+    .hwmFormGrid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    .hwmGalleryItem {
+        height: 360px;
+    }
+
+    .hwmLogoStripInner {
+        gap: 24px 56px;
+    }
+
+    .hwmLogoStripItem {
+        font-size: 28px;
+    }
+
+    /* Contact split hero stacks */
+    .hwmHero.hwmHeroPage--split {
+        height: auto;
+        min-height: 0;
+    }
+
+    .hwmHero.hwmHeroPage--split .hwmHeroInner {
+        grid-template-columns: 1fr;
+        padding: 64px 24px;
+        gap: 40px;
+    }
+
+    .hwmHeroBody {
+        max-width: 100%;
+    }
+
+    .hwmHeroForm {
+        padding: 32px 24px 24px;
+    }
+
+    /* Locations stack */
+    .hwmLocations {
+        padding: 64px 0 80px;
+    }
+
+    .hwmLocationsHead {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 0 24px;
+        margin-bottom: 40px;
+    }
+
+    .hwmLocationGrid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        padding: 0 24px;
+    }
+
+    .hwmLocationName {
+        font-size: 30px;
+        line-height: 32px;
+    }
+
+    /* Financing hero */
+    .hwmHero.hwmHeroPage--finance .hwmHeroInner {
+        grid-template-columns: 1fr;
+        padding: 64px 24px;
+        gap: 32px;
+    }
+
+    /* Why Finance */
+    .hwmWhy {
+        padding: 64px 24px;
+    }
+
+    .hwmWhyGrid {
+        grid-template-columns: 1fr 1fr;
+        gap: 24px 32px;
+    }
+
+    /* Stat + Calculator */
+    .hwmStatCalcInner {
+        grid-template-columns: 1fr;
+        gap: 48px;
+        padding: 64px 24px;
+    }
+
+    .hwmStat {
+        font-size: 56px;
+        line-height: 56px;
+        max-width: 100%;
+    }
+
+    .hwmCalc {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 32px;
+    }
+}
+
+/* ============================================================
+   RESPONSIVE — ≤ 575px (mobile)
+   ============================================================ */
+@media (max-width: 575px) {
+    .hwmHeaderInner {
+        padding: 0 16px;
+    }
+
+    .hwmLogo img {
+        height: 48px;
+    }
+
+    .hwmNewsletter .hwmH2 {
+        font-size: 32px;
+        line-height: 36px;
+    }
+
+    .hwmFooterMid {
+        padding: 48px 24px;
+    }
+
+    .hwmFooterCols {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        text-align: center;
+    }
+
+    .hwmFooterCol .hwmH4 {
+        margin-bottom: 14px;
+    }
+
+    .hwmFooterPhoneLabel {
+        font-size: 20px;
+    }
+
+    .hwmFooterPhone {
+        font-size: 28px;
+    }
+
+    .hwmFooterPolicy {
+        padding: 24px 16px;
+    }
+
+    .hwmFooterPolicy p {
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    /* Hero */
+    .hwmHero {
+        height: 600px;
+    }
+
+    .hwmH1 {
+        font-size: 38px;
+        line-height: 42px;
+    }
+
+    .hwmHeroInner {
+        padding: 0 24px;
+    }
+
+    /* Sections */
+    .hwmH2 {
+        font-size: 32px;
+        line-height: 36px;
+    }
+
+    .hwmIntro,
+    .hwmArrivals {
+        padding: 48px 0 0;
+    }
+
+    .hwmArrivals {
+        padding-bottom: 56px;
+    }
+
+    .hwmMarinas {
+        padding: 48px 0 0;
+    }
+
+    .hwmCtaCard {
+        height: 88px;
+    }
+
+    .hwmCtaCardText {
+        font-size: 22px;
+    }
+
+    .hwmBrandGrid,
+    .hwmMarinaGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .hwmBrandCard,
+    .hwmMarinaCard {
+        aspect-ratio: 3 / 4;
+    }
+
+    .hwmBrandCardBody,
+    .hwmMarinaBody {
+        padding: 28px 20px 20px;
+    }
+
+    .hwmMarinaBody {
+        padding: 52px 20px 20px;
+    }
+
+    .hwmBrandWordmark {
+        font-size: 26px;
+        margin-bottom: 20px;
+    }
+
+    .hwmMarinaBody .hwmH4 {
+        font-size: 26px;
+        line-height: 26px;
+    }
+
+    .hwmServiceCardBody {
+        padding: 0 24px;
+    }
+
+    .hwmCtaBarInner {
+        grid-template-columns: 1fr;
+    }
+
+    .hwmCtaBarItem {
+        height: 88px;
+    }
+
+    .hwmCtaBarText {
+        font-size: 22px;
+    }
+
+    .hwmArrivalsHead {
+        padding: 0 16px;
+    }
+
+    .hwmArrivalsInner {
+        padding: 0 16px;
+    }
+
+    .hwmArrivalInfo {
+        padding: 20px 24px 14px;
+        height: auto;
+    }
+
+    .hwmArrivalTitle {
+        font-size: 22px;
+        line-height: 28px;
+        min-height: 0;
+    }
+
+    .hwmArrivalPrice {
+        font-size: 24px;
+    }
+
+    /* Interior pages — mobile */
+    .hwmHero.hwmHeroPage,
+    .hwmHero.hwmHeroPage--short {
+        height: 460px;
+    }
+
+    .hwmHero.hwmHeroPage .hwmHeroInner {
+        padding: 48px 16px;
+    }
+
+    .hwmBreadcrumb {
+        font-size: 12px;
+        margin-bottom: 16px;
+    }
+
+    .hwmHeroSub {
+        margin-top: 20px;
+    }
+
+    .hwmSplit,
+    .hwmTravelLift,
+    .hwmReasons,
+    .hwmFormSection,
+    .hwmSteps {
+        padding: 48px 16px;
+    }
+
+    .hwmCardGrid {
+        padding: 0 16px;
+    }
+
+    .hwmCardGrid--3 {
+        grid-template-columns: 1fr;
+    }
+
+    .hwmCardItemImg {
+        height: 220px;
+    }
+
+    .hwmTravelLiftGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .hwmReasonsGrid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .hwmFormCard {
+        padding: 24px;
+    }
+
+    .hwmFieldRow {
+        grid-template-columns: 1fr;
+    }
+
+    .hwmGalleryItem {
+        height: 240px;
+    }
+
+    .hwmLogoStripItem {
+        font-size: 24px;
+    }
+
+    .hwmContactPhone {
+        font-size: 22px;
+    }
+
+    .hwmHeroForm {
+        padding: 24px 20px 20px;
+    }
+
+    .hwmHeroFormTitle {
+        font-size: 36px;
+        line-height: 40px;
+    }
+
+    .hwmLocationName {
+        font-size: 26px;
+        line-height: 30px;
+    }
+
+    .hwmLocationPhoneLink {
+        font-size: 26px;
+        line-height: 28px;
+    }
+
+    .hwmWhyGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .hwmStat {
+        font-size: 42px;
+        line-height: 44px;
+    }
+
+    .hwmCalc {
+        padding: 24px;
+    }
+
+    .hwmCalcTitle {
+        font-size: 32px;
+        line-height: 36px;
+    }
+}
 
 /* ============================================================
    BUTTONS — TAN VARIANT
