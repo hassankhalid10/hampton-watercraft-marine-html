@@ -2620,15 +2620,18 @@ select.hwmInput {
         padding: 0 24px;
     }
 
-    .hwmArrivalsCarouselWrap {
+    .hwmArrivalsCarouselWrap,
+    .hwmEventInventory .hwmArrivalsCarouselWrap {
         padding: 0;
     }
 
-    .hwmArrivalsPrev {
+    .hwmArrivalsPrev,
+    .hwmEventInventory .hwmArrivalsPrev {
         left: -8px;
     }
 
-    .hwmArrivalsNext {
+    .hwmArrivalsNext,
+    .hwmEventInventory .hwmArrivalsNext {
         right: -8px;
     }
 
@@ -3267,7 +3270,7 @@ select.hwmInput {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 80px;
-    max-width: 1500px;
+    max-width: 1050px;
     margin: 0 auto;
     align-items: flex-start;
 }
@@ -4030,7 +4033,7 @@ select.hwmInput {
     margin: 0 0 16px;
 }
 
-/* --- Event 2x2 image gallery + features text --- */
+/* --- Event features: image + heading + copy, 2x2 --- */
 .hwmEventFeatures {
     padding: 80px 10.42%;
 }
@@ -4038,7 +4041,8 @@ select.hwmInput {
 .hwmEventFeaturesGrid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 32px;
+    column-gap: 80px;
+    row-gap: 56px;
     max-width: 1520px;
     margin: 0 auto;
 }
@@ -4048,34 +4052,24 @@ select.hwmInput {
     aspect-ratio: 720 / 440;
     background-color: #c4c4c4;
     overflow: hidden;
+    margin-bottom: 24px;
 }
 
 .hwmEventFeatureImg img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
+}
+
+.hwmEventFeatureItem .hwmH3Listing {
+    margin: 0 0 16px;
 }
 
 .hwmEventFeaturesFoot {
     display: flex;
     justify-content: center;
     margin-top: 56px;
-}
-
-.hwmEventCopy {
-    padding: 0 10.42% 40px;
-}
-
-.hwmEventCopyGrid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
-    max-width: 1520px;
-    margin: 0 auto;
-}
-
-.hwmEventCopyItem .hwmH3Listing {
-    margin: 0 0 16px;
 }
 
 /* --- Event brands strip --- */
@@ -4137,6 +4131,71 @@ select.hwmInput {
 
 .hwmEventInventoryTrack .hwmArrivalImg {
     aspect-ratio: 520 / 360;
+}
+
+/* --- Event gallery: full-bleed 3x2 grid --- */
+.hwmEventGallery {
+    width: 100%;
+}
+
+.hwmEventGalleryGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+}
+
+.hwmEventGalleryItem {
+    aspect-ratio: 638 / 397;
+    overflow: hidden;
+    padding: 2px;
+}
+
+.hwmEventGalleryItem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* --- Event hero: solid navy background (per Figma) --- */
+.hwmHero.hwmHeroPage--event {
+    background-color: var(--navy);
+}
+
+.hwmHero.hwmHeroPage--event .hwmHeroImg {
+    display: none;
+}
+
+.hwmHero.hwmHeroPage--event .hwmHeroOverlay {
+    background: var(--navy);
+}
+
+/* --- Event inventory carousel (Owl) — reuse arrival arrows --- */
+.hwmEventInventory .hwmArrivalsCarouselWrap {
+    padding: 0 6.04%;
+}
+
+.hwmEventInventory .hwmArrivalsPrev {
+    left: 40px;
+}
+
+.hwmEventInventory .hwmArrivalsNext {
+    right: 40px;
+}
+
+/* Equal-height cards: stretch Owl stage/items so every card matches the tallest */
+.hwmEventCarousel.owl-carousel .owl-stage {
+    display: flex;
+}
+
+.hwmEventCarousel.owl-carousel .owl-item {
+    display: flex;
+    flex: 0 0 auto;
+}
+
+.hwmEventCarousel .hwmArrivalCard {
+    height: 100%;
+    width: 100%;
 }
 
 
@@ -5596,19 +5655,18 @@ select.hwmInput {
         line-height: 40px;
     }
 
-    .hwmEventFeatures,
-    .hwmEventCopy {
+    .hwmEventFeatures {
         padding: 48px 24px;
     }
 
     .hwmEventFeaturesGrid {
         grid-template-columns: 1fr;
-        gap: 20px;
+        column-gap: 0;
+        row-gap: 40px;
     }
 
-    .hwmEventCopyGrid {
-        grid-template-columns: 1fr;
-        gap: 40px;
+    .hwmEventGalleryGrid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .hwmEventBrands {
@@ -6040,15 +6098,18 @@ select.hwmInput {
         padding: 0 24px;
     }
 
-    .hwmArrivalsCarouselWrap {
+    .hwmArrivalsCarouselWrap,
+    .hwmEventInventory .hwmArrivalsCarouselWrap {
         padding: 0;
     }
 
-    .hwmArrivalsPrev {
+    .hwmArrivalsPrev,
+    .hwmEventInventory .hwmArrivalsPrev {
         left: -8px;
     }
 
-    .hwmArrivalsNext {
+    .hwmArrivalsNext,
+    .hwmEventInventory .hwmArrivalsNext {
         right: -8px;
     }
 
@@ -6710,5 +6771,24 @@ select.hwmInput {
     .hwmQuote {
         font-size: 16px;
         line-height: 24px;
+    }
+}
+
+/* --- Event inventory carousel: keep arrows inside the viewport on mobile/tablet --- */
+@media (max-width: 991px) {
+    .hwmEventInventory {
+        overflow: hidden;
+    }
+
+    .hwmEventInventory .hwmArrivalsCarouselWrap {
+        padding: 0 16px;
+    }
+
+    .hwmEventInventory .hwmArrivalsPrev {
+        left: 4px;
+    }
+
+    .hwmEventInventory .hwmArrivalsNext {
+        right: 4px;
     }
 }

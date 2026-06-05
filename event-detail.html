@@ -49,7 +49,7 @@
     </header>
 
     <!-- ==================== HERO ==================== -->
-    <section class="hwmHero hwmHeroPage hwmHeroPage--center">
+    <section class="hwmHero hwmHeroPage hwmHeroPage--center hwmHeroPage--event">
         <img src="./assets/images/home/home-img-6.jpg" alt="" class="hwmHeroImg">
         <div class="hwmHeroOverlay"></div>
         <div class="hwmHeroInner">
@@ -80,33 +80,27 @@
         </div>
     </section>
 
-    <!-- ==================== EVENT FEATURE GALLERY (2x2) ==================== -->
+    <!-- ==================== EVENT FEATURES (image + heading + copy, 2x2) ==================== -->
     <section class="hwmEventFeatures">
         <div class="hwmEventFeaturesGrid">
-            <div class="hwmEventFeatureImg"><img src="./assets/images/home/home-img-1.jpg" alt=""></div>
-            <div class="hwmEventFeatureImg"><img src="./assets/images/home/home-img-2.jpg" alt=""></div>
-            <div class="hwmEventFeatureImg"><img src="./assets/images/home/home-img-3.jpg" alt=""></div>
-            <div class="hwmEventFeatureImg"><img src="./assets/images/home/home-img-4.jpg" alt=""></div>
-        </div>
-    </section>
-
-    <!-- ==================== EVENT FEATURE COPY ==================== -->
-    <section class="hwmEventCopy">
-        <div class="hwmEventCopyGrid">
-            <div class="hwmEventCopyItem">
-                <h3 class="hwmH3Listing">Event Feature</h3>
+            <div class="hwmEventFeatureItem">
+                <div class="hwmEventFeatureImg"><img src="./assets/images/event/ge12.png" alt=""></div>
+                <h3 class="hwmH3Listing hwmNavyText">Event Feature</h3>
                 <p class="hwmPara hwmGrayText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             </div>
-            <div class="hwmEventCopyItem">
-                <h3 class="hwmH3Listing">Event Feature</h3>
+            <div class="hwmEventFeatureItem">
+                <div class="hwmEventFeatureImg"><img src="./assets/images/event/ge8.png" alt=""></div>
+                <h3 class="hwmH3Listing hwmNavyText">Event Feature</h3>
                 <p class="hwmPara hwmGrayText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             </div>
-            <div class="hwmEventCopyItem">
-                <h3 class="hwmH3Listing">Event Feature</h3>
+            <div class="hwmEventFeatureItem">
+                <div class="hwmEventFeatureImg"><img src="./assets/images/event/ge123.png" alt=""></div>
+                <h3 class="hwmH3Listing hwmNavyText">Event Feature</h3>
                 <p class="hwmPara hwmGrayText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             </div>
-            <div class="hwmEventCopyItem">
-                <h3 class="hwmH3Listing">Event Feature</h3>
+            <div class="hwmEventFeatureItem">
+                <div class="hwmEventFeatureImg"><img src="./assets/images/event/ge124.png" alt=""></div>
+                <h3 class="hwmH3Listing hwmNavyText">Event Feature</h3>
                 <p class="hwmPara hwmGrayText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
             </div>
         </div>
@@ -134,31 +128,43 @@
         <div class="hwmEventInventoryHead">
             <h2 class="hwmH2 hwmNavyText">Inventory Featured at this Event</h2>
         </div>
-        <div class="hwmEventInventoryStrip">
-            <div class="hwmEventInventoryTrack">
+        <div class="hwmArrivalsCarouselWrap hwmEventCarouselWrap">
+            <button type="button" class="hwmArrivalsBtn hwmArrivalsPrev hwmEventPrev" aria-label="Previous">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button type="button" class="hwmArrivalsBtn hwmArrivalsNext hwmEventNext" aria-label="Next">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+            <div class="hwmEventCarousel owl-carousel owl-theme">
                 <article class="hwmArrivalCard">
                     <div class="hwmArrivalImg">
                         <img src="./assets/images/home/home-img-1.jpg" alt="">
-                        <button type="button" class="hwmArrivalPlay"><i class="fa-solid fa-play"></i> Play Video</button>
+                        <a href="javascript:void(0)" class="hwmArrivalPlay"><img src="./assets/images/home/play-icon.svg" alt="play"> <span>Play Video</span></a>
                     </div>
                     <div class="hwmArrivalInfo">
                         <p class="hwmArrivalStatus hwmTanText">Pre-Owned</p>
                         <h3 class="hwmArrivalTitle hwmNavyText">2024 Boston Whaler 280 Vantage w/ Seakeeper</h3>
-                        <p class="hwmArrivalPrice hwmNavyText">$299,995 <span>$795/mo*</span></p>
-                        <p class="hwmArrivalSpec hwmGrayText">28&rsquo; &nbsp;&middot;&nbsp; Hampton Bays</p>
+                        <p class="hwmArrivalPrice"><span class="actualPrice">$299,995</span> <span class="monthlyPrice">$795/mo*</span></p>
+                        <ul class="boatInfoList">
+                            <li class="boatInfoText">28&rsquo;</li>
+                            <li class="boatInfoText">Hampton Bays</li>
+                        </ul>
                     </div>
                     <a href="#" class="hwmArrivalBtn">View Boat Details</a>
                 </article>
                 <article class="hwmArrivalCard">
                     <div class="hwmArrivalImg">
                         <img src="./assets/images/home/home-img-9.jpg" alt="">
-                        <button type="button" class="hwmArrivalPlay"><i class="fa-solid fa-play"></i> Play Video</button>
+                        <a href="javascript:void(0)" class="hwmArrivalPlay"><img src="./assets/images/home/play-icon.svg" alt="play"> <span>Play Video</span></a>
                     </div>
                     <div class="hwmArrivalInfo">
                         <p class="hwmArrivalStatus hwmTanText">New</p>
                         <h3 class="hwmArrivalTitle hwmNavyText">2027 Tiara Yachts 39LE</h3>
-                        <p class="hwmArrivalPrice hwmNavyText">Request Price</p>
-                        <p class="hwmArrivalSpec hwmGrayText">39&rsquo; &nbsp;&middot;&nbsp; Eastport</p>
+                        <p class="hwmArrivalPrice"><span class="actualPrice">Request Price</span></p>
+                        <ul class="boatInfoList">
+                            <li class="boatInfoText">39&rsquo;</li>
+                            <li class="boatInfoText">Eastport</li>
+                        </ul>
                     </div>
                     <a href="#" class="hwmArrivalBtn">View Boat Details</a>
                 </article>
@@ -169,8 +175,11 @@
                     <div class="hwmArrivalInfo">
                         <p class="hwmArrivalStatus hwmTanText">Pre-Owned</p>
                         <h3 class="hwmArrivalTitle hwmNavyText">2024 Boston Whaler 280 Vantage w/ Seakeeper</h3>
-                        <p class="hwmArrivalPrice hwmNavyText">$299,995 <span>$795/mo*</span></p>
-                        <p class="hwmArrivalSpec hwmGrayText">28&rsquo; &nbsp;&middot;&nbsp; Hampton Bays</p>
+                        <p class="hwmArrivalPrice"><span class="actualPrice">$299,995</span> <span class="monthlyPrice">$795/mo*</span></p>
+                        <ul class="boatInfoList">
+                            <li class="boatInfoText">28&rsquo;</li>
+                            <li class="boatInfoText">Hampton Bays</li>
+                        </ul>
                     </div>
                     <a href="#" class="hwmArrivalBtn">View Boat Details</a>
                 </article>
@@ -181,8 +190,11 @@
                     <div class="hwmArrivalInfo">
                         <p class="hwmArrivalStatus hwmTanText">New</p>
                         <h3 class="hwmArrivalTitle hwmNavyText">2027 Tiara Yachts 39LE</h3>
-                        <p class="hwmArrivalPrice hwmNavyText">Request Price</p>
-                        <p class="hwmArrivalSpec hwmGrayText">39&rsquo; &nbsp;&middot;&nbsp; Eastport</p>
+                        <p class="hwmArrivalPrice"><span class="actualPrice">Request Price</span></p>
+                        <ul class="boatInfoList">
+                            <li class="boatInfoText">39&rsquo;</li>
+                            <li class="boatInfoText">Eastport</li>
+                        </ul>
                     </div>
                     <a href="#" class="hwmArrivalBtn">View Boat Details</a>
                 </article>
@@ -193,8 +205,11 @@
                     <div class="hwmArrivalInfo">
                         <p class="hwmArrivalStatus hwmTanText">Pre-Owned</p>
                         <h3 class="hwmArrivalTitle hwmNavyText">2024 Boston Whaler 280 Vantage w/ Seakeeper</h3>
-                        <p class="hwmArrivalPrice hwmNavyText">$299,995 <span>$795/mo*</span></p>
-                        <p class="hwmArrivalSpec hwmGrayText">28&rsquo; &nbsp;&middot;&nbsp; Hampton Bays</p>
+                        <p class="hwmArrivalPrice"><span class="actualPrice">$299,995</span> <span class="monthlyPrice">$795/mo*</span></p>
+                        <ul class="boatInfoList">
+                            <li class="boatInfoText">28&rsquo;</li>
+                            <li class="boatInfoText">Hampton Bays</li>
+                        </ul>
                     </div>
                     <a href="#" class="hwmArrivalBtn">View Boat Details</a>
                 </article>
@@ -202,13 +217,15 @@
         </div>
     </section>
 
-    <!-- ==================== EVENT GALLERY (horizontal strip) ==================== -->
-    <section class="hwmGallery">
-        <div class="hwmGalleryTrack">
-            <div class="hwmGalleryItem"><img src="./assets/images/home/home-img-1.jpg" alt=""></div>
-            <div class="hwmGalleryItem"><img src="./assets/images/home/home-img-2.jpg" alt=""></div>
-            <div class="hwmGalleryItem"><img src="./assets/images/home/home-img-3.jpg" alt=""></div>
-            <div class="hwmGalleryItem"><img src="./assets/images/home/home-img-4.jpg" alt=""></div>
+    <!-- ==================== EVENT GALLERY (3x2 full-bleed grid) ==================== -->
+    <section class="hwmEventGallery">
+        <div class="hwmEventGalleryGrid">
+            <div class="hwmEventGalleryItem"><img src="./assets/images/event/Rectangle 185.png" alt=""></div>
+            <div class="hwmEventGalleryItem"><img src="./assets/images/event/Rectangle 204.png" alt=""></div>
+            <div class="hwmEventGalleryItem"><img src="./assets/images/event/Rectangle 201.png" alt=""></div>
+            <div class="hwmEventGalleryItem"><img src="./assets/images/event/Rectangle 189.png" alt=""></div>
+            <div class="hwmEventGalleryItem"><img src="./assets/images/event/Rectangle 190.png" alt=""></div>
+            <div class="hwmEventGalleryItem"><img src="./assets/images/event/Rectangle 194.png" alt=""></div>
         </div>
     </section>
 
