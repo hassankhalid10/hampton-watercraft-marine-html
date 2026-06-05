@@ -307,6 +307,10 @@ img {
     justify-content: flex-end;
 }
 
+.hwmHero{
+    min-height: 450px;
+}
+
 .hwmHeaderLoc {
     display: flex;
     flex-direction: column;
@@ -657,9 +661,8 @@ img {
 .hwmHero {
     position: relative;
     width: 100%;
-    height: 1080px;
-    max-height: 100vh;
     overflow: hidden;
+    min-height: 450px;
 }
 
 .hwmHeroImg {
@@ -686,7 +689,6 @@ img {
     position: relative;
     z-index: 2;
     height: 100%;
-    padding: 0 14.58%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -756,7 +758,6 @@ img {
 
 .hwmHero--collage .hwmHeroInner {
     width: 50%;
-    padding: 80px 64px;
     justify-content: center;
 }
 
@@ -1450,15 +1451,7 @@ img {
    Page-specific patterns layered on top of the home utilities.
    ============================================================ */
 
-/* --- Hero modifier for interior pages --- */
-.hwmHero.hwmHeroPage {
-    height: 720px;
-    max-height: none;
-}
 
-.hwmHero.hwmHeroPage--short {
-    height: 600px;
-}
 
 /* Dark CTA strip directly below hero (Service) */
 .hwmHeroCta {
@@ -1471,9 +1464,10 @@ img {
 
 
 .hwmHero.hwmHeroPage .hwmHeroInner {
-    padding: 80px 14.58% 80px;
-    justify-content: center;
-    align-items: flex-start;
+    position: absolute;
+    left: 13%;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .hwmBreadcrumb {
@@ -2022,10 +2016,6 @@ select.hwmInput {
    INTERIOR PAGES — Contact
    ============================================================ */
 
-/* --- Hero split: text left / form right --- */
-.hwmHero.hwmHeroPage--split {
-    height: 880px;
-}
 
 .hwmHero.hwmHeroPage--split .hwmHeroInner {
     display: grid;
@@ -2238,7 +2228,6 @@ select.hwmInput {
     grid-template-columns: 1fr 1fr;
     gap: 80px;
     align-items: center;
-    padding: 0 8.54%;
 }
 
 .hwmHeroDescBlock {
@@ -2415,17 +2404,12 @@ select.hwmInput {
    INTERIOR PAGES — Parts
    ============================================================ */
 
-/* --- Parts hero: image right, gradient navy left --- */
-.hwmHero.hwmHeroPage--parts {
-    height: 600px;
-}
 
 .hwmHero.hwmHeroPage--parts .hwmHeroOverlay {
     background: linear-gradient(90deg, var(--navy) 0%, rgba(0, 5, 37, 0.4) 100%);
 }
 
 .hwmHero.hwmHeroPage--parts .hwmHeroInner {
-    padding: 80px 14.58%;
     justify-content: center;
     align-items: flex-start;
 }
@@ -2638,17 +2622,11 @@ select.hwmInput {
    INTERIOR PAGES — About
    ============================================================ */
 
-/* --- About hero: image top + navy panel below with secondary heading --- */
-.hwmHero.hwmHeroPage--about {
-    height: 720px;
-}
-
 .hwmHero.hwmHeroPage--about .hwmHeroOverlay {
     background: linear-gradient(180deg, rgba(0, 5, 37, 0) 0%, var(--navy) 100%);
 }
 
 .hwmHero.hwmHeroPage--about .hwmHeroInner {
-    padding: 0 14.58%;
     justify-content: center;
     align-items: flex-start;
 }
@@ -2800,8 +2778,8 @@ select.hwmInput {
     background-color: var(--navy);
     padding: 0 12.92% 100px;
     margin-top: -80px;
-    position: relative;
     z-index: 2;
+    margin-bottom: 80px;
 }
 
 .hwmCamsGrid {
@@ -2811,20 +2789,33 @@ select.hwmInput {
 }
 
 .hwmCamCard {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+    position: relative;
+}
+
+.hwmCamCard::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 .hwmCamMedia {
     position: relative;
-    aspect-ratio: 680 / 440;
+    padding-top: 56%;
     overflow: hidden;
     cursor: pointer;
     background-color: #1a1f3a;
+    margin-bottom: 16px;
+    min-height: 400px;
 }
 
-.hwmCamMedia img {
+.hwmCamMedia .camMedia {
+    position: absolute;
+    left: 0;
+    top: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -2840,17 +2831,15 @@ select.hwmInput {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-    border: 2px solid rgba(255, 255, 255, 0.95);
-    background-color: rgba(0, 5, 37, 0.45);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--white);
     font-size: 20px;
     padding-left: 4px;
+    border: none;
+    outline: none;
+    background: transparent;
+    z-index: 5;
 }
 
 .hwmCamTitle {
@@ -3261,7 +3250,6 @@ select.hwmInput {
 
 /* --- Centered hero variant --- */
 .hwmHero.hwmHeroPage--center .hwmHeroInner {
-    padding: 0 14.58%;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -3491,7 +3479,6 @@ select.hwmInput {
 
 /* --- Hero variant: brand (logo left, body right, dark bg) --- */
 .hwmHero.hwmHeroPage--brand {
-    height: 720px;
     background-color: var(--navy);
 }
 
@@ -3504,7 +3491,6 @@ select.hwmInput {
     grid-template-columns: 320px 1fr;
     gap: 80px;
     align-items: center;
-    padding: 0 14.58%;
 }
 
 .hwmBrandLogo {
@@ -3960,7 +3946,6 @@ select.hwmInput {
 
 /* --- Location hero (tall, full image, gradient overlay) --- */
 .hwmHero.hwmHeroPage--loc {
-    height: 1080px;
     max-height: none;
 }
 
@@ -3969,7 +3954,6 @@ select.hwmInput {
 }
 
 .hwmHero.hwmHeroPage--loc .hwmHeroInner {
-    padding: 80px 14.58% 0;
     justify-content: flex-start;
     align-items: flex-start;
     padding-top: 200px;
@@ -4795,10 +4779,6 @@ select.hwmInput {
         line-height: 76px;
     }
 
-    .hwmHeroInner {
-        padding: 0 8%;
-    }
-
     /* Intro */
     .hwmIntroHead,
     .hwmArrivalsHead,
@@ -4858,9 +4838,6 @@ select.hwmInput {
         line-height: 76px;
     }
 
-    .hwmHeroInner {
-        padding: 0 8%;
-    }
 
     /* Intro */
     .hwmIntroHead,
@@ -4931,6 +4908,7 @@ select.hwmInput {
     .hwmCams {
         padding: 0 24px 64px;
         margin-top: -40px;
+        margin-bottom: 40px;
     }
 
     .hwmCamsGrid {
@@ -5081,15 +5059,9 @@ select.hwmInput {
         flex: 0 0 320px;
     }
 
-    .hwmHero.hwmHeroPage--brand {
-        height: auto;
-        min-height: 520px;
-    }
-
     .hwmHero.hwmHeroPage--brand .hwmHeroInner {
         grid-template-columns: 1fr;
         gap: 32px;
-        padding: 64px 24px;
     }
 
     .hwmBrandLogo {
@@ -5183,13 +5155,6 @@ select.hwmInput {
         line-height: 28px;
     }
 
-    .hwmHero.hwmHeroPage--loc {
-        height: 720px;
-    }
-
-    .hwmHero.hwmHeroPage--loc .hwmHeroInner {
-        padding: 96px 24px 0;
-    }
 
     .hwmLocPanels {
         padding: 0 24px 40px;
@@ -5391,11 +5356,6 @@ select.hwmInput {
         line-height: 22px;
     }
 
-    /* Hero */
-    .hwmHero {
-        height: 720px;
-    }
-
     .hwmH1 {
         font-size: 52px;
         line-height: 56px;
@@ -5529,15 +5489,6 @@ select.hwmInput {
         font-size: 24px;
     }
 
-    /* Interior pages */
-    .hwmHero.hwmHeroPage,
-    .hwmHero.hwmHeroPage--short {
-        height: 520px;
-    }
-
-    .hwmHero.hwmHeroPage .hwmHeroInner {
-        padding: 64px 24px;
-    }
 
     .hwmSplit {
         grid-template-columns: 1fr;
@@ -5599,13 +5550,11 @@ select.hwmInput {
 
     /* Contact split hero stacks */
     .hwmHero.hwmHeroPage--split {
-        height: auto;
         min-height: 0;
     }
 
     .hwmHero.hwmHeroPage--split .hwmHeroInner {
         grid-template-columns: 1fr;
-        padding: 64px 24px;
         gap: 40px;
     }
 
@@ -5643,7 +5592,6 @@ select.hwmInput {
     /* Financing hero */
     .hwmHero.hwmHeroPage--finance .hwmHeroInner {
         grid-template-columns: 1fr;
-        padding: 64px 24px;
         gap: 32px;
     }
 
@@ -5676,18 +5624,6 @@ select.hwmInput {
         padding: 32px;
     }
 
-    .hwmHero.hwmHeroPage--parts {
-        height: 480px;
-    }
-
-    .hwmHero.hwmHeroPage--parts .hwmHeroInner,
-    .hwmHero.hwmHeroPage--about .hwmHeroInner {
-        padding: 64px 24px;
-    }
-
-    .hwmHero.hwmHeroPage--about {
-        height: 560px;
-    }
 
     .hwmAboutSubHero {
         padding: 48px 24px 64px;
@@ -5805,11 +5741,6 @@ select.hwmInput {
     .hwmFooterPolicy p {
         font-size: 14px;
         line-height: 22px;
-    }
-
-    /* Hero */
-    .hwmHero {
-        height: 720px;
     }
 
     .hwmH1 {
@@ -5949,16 +5880,6 @@ select.hwmInput {
         font-size: 24px;
     }
 
-    /* Interior pages */
-    .hwmHero.hwmHeroPage,
-    .hwmHero.hwmHeroPage--short {
-        height: 520px;
-    }
-
-    .hwmHero.hwmHeroPage .hwmHeroInner {
-        padding: 64px 24px;
-    }
-
     .hwmSplit {
         grid-template-columns: 1fr;
         gap: 40px;
@@ -6020,15 +5941,8 @@ select.hwmInput {
         font-size: 28px;
     }
 
-    /* Contact split hero stacks */
-    .hwmHero.hwmHeroPage--split {
-        height: auto;
-        min-height: 0;
-    }
-
     .hwmHero.hwmHeroPage--split .hwmHeroInner {
         grid-template-columns: 1fr;
-        padding: 64px 24px;
         gap: 40px;
     }
 
@@ -6066,7 +5980,6 @@ select.hwmInput {
     /* Financing hero */
     .hwmHero.hwmHeroPage--finance .hwmHeroInner {
         grid-template-columns: 1fr;
-        padding: 64px 24px;
         gap: 32px;
     }
 
@@ -6196,10 +6109,6 @@ select.hwmInput {
         grid-template-columns: 1fr;
     }
 
-    .hwmHero.hwmHeroPage--loc {
-        height: 640px;
-    }
-
     .hwmAmenitiesGrid {
         grid-template-columns: 1fr;
     }
@@ -6281,18 +6190,10 @@ select.hwmInput {
         line-height: 20px;
     }
 
-    /* Hero */
-    .hwmHero {
-        height: 600px;
-    }
 
     .hwmH1 {
         font-size: 38px;
         line-height: 42px;
-    }
-
-    .hwmHeroInner {
-        padding: 0 24px;
     }
 
     /* Sections */
@@ -6380,16 +6281,6 @@ select.hwmInput {
 
     .hwmArrivalPrice {
         font-size: 24px;
-    }
-
-    /* Interior pages — mobile */
-    .hwmHero.hwmHeroPage,
-    .hwmHero.hwmHeroPage--short {
-        height: 460px;
-    }
-
-    .hwmHero.hwmHeroPage .hwmHeroInner {
-        padding: 48px 16px;
     }
 
     .hwmBreadcrumb {
@@ -6484,14 +6375,6 @@ select.hwmInput {
         line-height: 36px;
     }
 
-    .hwmHero.hwmHeroPage--parts {
-        height: 420px;
-    }
-
-    .hwmHero.hwmHeroPage--about {
-        height: 480px;
-    }
-
     .hwmAboutSubHeroLabel {
         font-size: 18px;
     }
@@ -6562,19 +6445,12 @@ select.hwmInput {
         line-height: 20px;
     }
 
-    /* Hero */
-    .hwmHero {
-        height: 600px;
-    }
 
     .hwmH1 {
         font-size: 38px;
         line-height: 42px;
     }
 
-    .hwmHeroInner {
-        padding: 0 24px;
-    }
 
     /* Sections */
     .hwmH2 {
@@ -6667,15 +6543,6 @@ select.hwmInput {
         font-size: 24px;
     }
 
-    /* Interior pages — mobile */
-    .hwmHero.hwmHeroPage,
-    .hwmHero.hwmHeroPage--short {
-        height: 460px;
-    }
-
-    .hwmHero.hwmHeroPage .hwmHeroInner {
-        padding: 48px 16px;
-    }
 
     .hwmBreadcrumb {
         font-size: 12px;
